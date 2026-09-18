@@ -19,6 +19,9 @@ mkdir dist\en
 
 copy /y "sitio-para-subir\index.html"    "dist\"    >nul
 copy /y "sitio-para-subir\404.html"      "dist\"    >nul
+copy /y "sitio-para-subir\sitemap.xml"   "dist\"    >nul
+copy /y "sitio-para-subir\robots.txt"    "dist\"    >nul
+copy /y "sitio-para-subir\llms.txt"      "dist\"    >nul
 copy /y "sitio-para-subir\en\index.html" "dist\en\" >nul
 xcopy /e /i /y "sitio-para-subir\fotos"  "dist\fotos" >nul
 

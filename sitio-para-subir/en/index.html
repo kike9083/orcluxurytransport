@@ -5,9 +5,10 @@
 
   ORDEN DE LA PÁGINA
     1. Resumen  : quiénes somos + foto del vehículo
-    2. Reserva  : el formulario, lo antes posible
-    3. Pestañas : Servicios · Destinos · Por qué elegirnos
-    4. Opiniones: reseñas con estrellas, puntuación, nombre y foto
+    2. Reserva  : el formulario, bajo el hero
+    3. Destinos : carrusel de fotos
+    4. Pestañas : Servicios · Por qué elegirnos
+    5. Opiniones: reseñas con estrellas, puntuación, nombre y foto
 
   >>> VERSIÓN EN INGLÉS <<<  Copia traducida de ../index.html
   Si cambia un texto en el español, cámbielo también aquí.
@@ -46,8 +47,12 @@
   <link rel="alternate" hreflang="en" href="https://orcluxurytransport.com/en/">
   <link rel="alternate" hreflang="x-default" href="https://orcluxurytransport.com/">
 
+  <link rel="preload" as="image" href="../fotos/portada.webp" media="(min-width:601px)" fetchpriority="high">
+  <link rel="preload" as="image" href="../fotos/portada-movil.webp" media="(max-width:600px)" fetchpriority="high">
+
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_PA">
   <meta property="og:site_name" content="OrcLuxuryTransport">
   <meta property="og:title" content="Tourist &amp; Executive Transportation in Panama | OrcLuxuryTransport">
   <meta property="og:description" content="Airport transfers, sightseeing tours and corporate transportation in Panama. Punctuality, safety and comfort on every trip.">
@@ -65,19 +70,60 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "OrcLuxuryTransport",
-    "description": "Tourist and executive transportation service in Panama: airport transfers, sightseeing tours, corporate transportation and custom trips.",
-    "url": "https://orcluxurytransport.com/",
-    "telephone": "+507 6802-6916",
-    "email": "orielca507@gmail.com",
-    "areaServed": { "@type": "Country", "name": "Panamá" },
-    "address": { "@type": "PostalAddress", "addressCountry": "PA" },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-      "opens": "00:00", "closes": "23:59"
-    }
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://orcluxurytransport.com/en/#webpage",
+        "url": "https://orcluxurytransport.com/en/",
+        "name": "Tourist &amp; Executive Transportation in Panama | OrcLuxuryTransport",
+        "inLanguage": "en",
+        "isPartOf": { "@id": "https://orcluxurytransport.com/#website" },
+        "about": { "@id": "https://orcluxurytransport.com/#business" }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://orcluxurytransport.com/#business",
+        "name": "OrcLuxuryTransport",
+        "description": "Tourist and executive transportation service in Panama: airport transfers, sightseeing tours, corporate transportation and custom trips.",
+        "url": "https://orcluxurytransport.com/",
+        "telephone": "+507 6802-6916",
+        "email": "orielca507@gmail.com",
+        "image": "https://orcluxurytransport.com/fotos/nosotros.webp",
+        "priceRange": "$$",
+        "address": { "@type": "PostalAddress", "addressLocality": "Panama City", "addressCountry": "PA" },
+        "geo": { "@type": "GeoCoordinates", "latitude": 8.9824, "longitude": -79.5199 },
+        "areaServed": [
+          { "@type": "Country", "name": "Panama" },
+          { "@type": "City", "name": "Panama City" },
+          { "@type": "Place", "name": "Tocumen International Airport" },
+          { "@type": "Place", "name": "Albrook Marcos A. Gelabert International Airport" }
+        ],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "00:00", "closes": "23:59"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+507 6802-6916",
+          "contactType": "customer service",
+          "availableLanguage": ["es","en"]
+        },
+        "knowsLanguage": ["es","en"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Transportation services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Airport Transfers", "description": "Tocumen and Albrook, with flight tracking. We wait even if your flight is late.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate Transportation", "description": "Executives and staff between meetings, hotels and offices, on a coordinated schedule.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Private Service", "description": "A vehicle and driver just for you, per trip or for the whole day.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tours & Sightseeing", "description": "Casco Antiguo, the Canal, beaches and highlands. Routes built around your time.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Special Events", "description": "Weddings, conferences and celebrations, with on-time transport for your guests.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Trips", "description": "Tell us your itinerary and we will build it for you.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } }
+          ]
+        }
+      }
+    ]
   }
   </script>
 
@@ -324,7 +370,7 @@ p:last-child{ margin-bottom:0; }
   transition:border-color var(--transicion), background var(--transicion);
 }
 .campo textarea{ min-height:92px; resize:vertical; }
-.campo input::placeholder,.campo textarea::placeholder{ color:rgba(255,255,255,.32); }
+.campo input::placeholder,.campo textarea::placeholder{ color:rgba(255,255,255,.62); }
 .campo input:focus,.campo textarea:focus{ outline:none; border-color:var(--dorado); background:rgba(255,255,255,.06); }
 .campo input[type="date"],.campo input[type="time"]{ color-scheme:dark; }
 .formulario__pie{ margin-top:20px; grid-column:1/-1; }
@@ -436,6 +482,7 @@ p:last-child{ margin-bottom:0; }
   transition:opacity var(--transicion), transform var(--transicion);
 }
 .galeria__item:hover .galeria__pie,.galeria__item:focus-within .galeria__pie{ opacity:1; transform:none; }
+@media (hover:none){ .galeria__pie{ opacity:1; transform:none; } }
 
 .carrusel__flecha{
   position:absolute; top:calc(50% - 24px); z-index:5;
@@ -451,7 +498,8 @@ p:last-child{ margin-bottom:0; }
 .carrusel__flecha:disabled{ opacity:.25; cursor:default; }
 
 .carrusel__puntos{ display:flex; justify-content:center; flex-wrap:wrap; gap:9px; margin-top:24px; }
-.carrusel__punto{ width:8px; height:8px; padding:0; background:rgba(255,255,255,.24); border:none; border-radius:50%; transition:background var(--transicion), transform var(--transicion); }
+.carrusel__punto{ position:relative; width:8px; height:8px; padding:0; background:rgba(255,255,255,.24); border:none; border-radius:50%; transition:background var(--transicion), transform var(--transicion); }
+.carrusel__punto::before{ content:""; position:absolute; inset:-8px; }
 .carrusel__punto:hover{ background:rgba(255,255,255,.5); }
 .carrusel__punto.activo{ background:var(--dorado); transform:scale(1.4); }
 
@@ -628,7 +676,7 @@ p:last-child{ margin-bottom:0; }
 
 @media (max-width:600px){
   body{ font-size:16px; }
-  :root{ --alto-header:64px; }
+  :root{ --alto-header:64px; --img-portada:url("../fotos/portada-movil.webp"); }
 
   .seccion{ padding:44px 0; }
   .contenedor,.header__interior{ padding:0 18px; }
@@ -708,7 +756,7 @@ p:last-child{ margin-bottom:0; }
     </a>
 
     <div class="header__acciones">
-      <a class="idioma-movil" href="../" hreflang="es" lang="es" aria-label="Ver esta página en español">
+      <a class="idioma-movil" href="../" hreflang="es" lang="es" aria-label="View this page in Spanish">
         <svg class="ico" aria-hidden="true"><use href="#i-idioma"></use></svg>
         <span>Español</span>
       </a>
@@ -725,7 +773,7 @@ p:last-child{ margin-bottom:0; }
         <li><a class="nav__enlace" href="#destinos">Destinations</a></li>
         <li><a class="nav__enlace" href="#opiniones">Reviews</a></li>
         <li class="nav__idioma">
-          <a href="../" hreflang="es" lang="es" aria-label="Ver en español">ES</a>
+          <a href="../" hreflang="es" lang="es" aria-label="Switch to Spanish">ES</a>
           <span class="nav__idioma-sep" aria-hidden="true">/</span>
           <span class="nav__idioma-actual" aria-current="true">EN</span>
         </li>
@@ -792,9 +840,109 @@ p:last-child{ margin-bottom:0; }
   </section>
 
   <!-- ======================================================================
-       2. DESTINOS — carrusel a la vista, sin pestaña
+       2. RESERVA — el formulario
        ====================================================================== -->
-  <section class="seccion seccion--alterna" id="destinos">
+  <section class="seccion seccion--alterna" id="reservar">
+    <div class="contenedor">
+
+      <div class="seccion__encabezado revelar">
+        <span class="etiqueta">Booking</span>
+        <h2>Request your trip</h2>
+        <p>We reply with a fixed price within minutes.</p>
+        <div class="linea-dorada"></div>
+      </div>
+
+      <div class="reserva__rejilla" id="contacto">
+
+        <div class="revelar">
+          <div class="contacto__datos">
+            <a class="dato" href="tel:+50768026916">
+              <span class="dato__icono"><svg class="ico" aria-hidden="true"><use href="#i-telefono"></use></svg></span>
+              <span>
+                <span class="dato__etiqueta">Phone</span>
+                <span class="dato__valor">6802-6916</span>
+              </span>
+            </a>
+            <a class="dato" href="mailto:orielca507@gmail.com">
+              <span class="dato__icono"><svg class="ico" aria-hidden="true"><use href="#i-correo"></use></svg></span>
+              <span>
+                <span class="dato__etiqueta">Email</span>
+                <span class="dato__valor">orielca507@gmail.com</span>
+              </span>
+            </a>
+            <div class="dato">
+              <span class="dato__icono"><svg class="ico" aria-hidden="true"><use href="#i-reloj"></use></svg></span>
+              <span>
+                <span class="dato__etiqueta">Hours</span>
+                <span class="dato__valor">24 hours, every day</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="revelar" style="--retraso:.1s">
+          <form class="formulario" id="form-reserva" novalidate>
+            <h3 class="formulario__titulo">Booking Request</h3>
+            <p class="formulario__nota">
+              Fields marked <span style="color:var(--dorado)">*</span> are required.
+              When you submit, WhatsApp opens with your request ready to send.
+              No online payments: we confirm the fixed price before your trip.
+            </p>
+
+            <div class="formulario__rejilla">
+              <div class="campo campo--completo">
+                <label for="f-nombre">Full name <span>*</span></label>
+                <input type="text" id="f-nombre" name="nombre" required autocomplete="name" placeholder="First and last name">
+              </div>
+              <div class="campo">
+                <label for="f-correo">Email address</label>
+                <input type="email" id="f-correo" name="correo" autocomplete="email" placeholder="you@example.com">
+              </div>
+              <div class="campo">
+                <label for="f-telefono">Phone <span>*</span></label>
+                <input type="tel" id="f-telefono" name="telefono" required autocomplete="tel" placeholder="6000-0000">
+              </div>
+              <div class="campo">
+                <label for="f-fecha">Trip date <span>*</span></label>
+                <input type="date" id="f-fecha" name="fecha" required>
+              </div>
+              <div class="campo">
+                <label for="f-hora">Time <span>*</span></label>
+                <input type="time" id="f-hora" name="hora" required>
+              </div>
+              <div class="campo">
+                <label for="f-recogida">Pickup location <span>*</span></label>
+                <input type="text" id="f-recogida" name="recogida" required placeholder="Hotel, address or terminal">
+              </div>
+              <div class="campo">
+                <label for="f-destino">Destination <span>*</span></label>
+                <input type="text" id="f-destino" name="destino" required placeholder="Where are you heading?">
+              </div>
+              <div class="campo campo--completo">
+                <label for="f-mensaje">Message or extra details</label>
+                <textarea id="f-mensaje" name="mensaje" placeholder="Passengers, luggage, flight number, stops..."></textarea>
+              </div>
+
+              <div class="formulario__pie">
+                <button class="boton boton--principal boton--ancho" type="submit">
+                  <svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>
+                  Request Booking
+                </button>
+                <div class="formulario__aviso" id="aviso-form" role="status" aria-live="polite"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       3. DESTINOS — carrusel a la vista, sin pestaña
+       ====================================================================== -->
+  <section class="seccion" id="destinos">
     <div class="contenedor">
 
       <div class="seccion__encabezado revelar">
@@ -905,9 +1053,9 @@ p:last-child{ margin-bottom:0; }
   </section>
 
   <!-- ======================================================================
-       3. PESTAÑAS — Servicios · Por qué elegirnos
+       4. PESTAÑAS — Servicios · Por qué elegirnos
        ====================================================================== -->
-  <section class="seccion" id="informacion">
+  <section class="seccion seccion--alterna" id="informacion">
     <div class="contenedor">
 
       <div class="tabs__lista" role="tablist" aria-label="Service information">
@@ -1021,105 +1169,6 @@ p:last-child{ margin-bottom:0; }
 
     </div>
   </section>
-
-  <!-- ======================================================================
-       4. RESERVA — el formulario
-       ====================================================================== -->
-  <section class="seccion seccion--alterna" id="reservar">
-    <div class="contenedor">
-
-      <div class="seccion__encabezado revelar">
-        <span class="etiqueta">Booking</span>
-        <h2>Request your trip</h2>
-        <p>We reply with a fixed price within minutes.</p>
-        <div class="linea-dorada"></div>
-      </div>
-
-      <div class="reserva__rejilla" id="contacto">
-
-        <div class="revelar">
-          <div class="contacto__datos">
-            <a class="dato" href="tel:+50768026916">
-              <span class="dato__icono"><svg class="ico" aria-hidden="true"><use href="#i-telefono"></use></svg></span>
-              <span>
-                <span class="dato__etiqueta">Phone</span>
-                <span class="dato__valor">6802-6916</span>
-              </span>
-            </a>
-            <a class="dato" href="mailto:orielca507@gmail.com">
-              <span class="dato__icono"><svg class="ico" aria-hidden="true"><use href="#i-correo"></use></svg></span>
-              <span>
-                <span class="dato__etiqueta">Email</span>
-                <span class="dato__valor">orielca507@gmail.com</span>
-              </span>
-            </a>
-            <div class="dato">
-              <span class="dato__icono"><svg class="ico" aria-hidden="true"><use href="#i-reloj"></use></svg></span>
-              <span>
-                <span class="dato__etiqueta">Hours</span>
-                <span class="dato__valor">24 hours, every day</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="revelar" style="--retraso:.1s">
-          <form class="formulario" id="form-reserva" novalidate>
-            <h3 class="formulario__titulo">Booking Request</h3>
-            <p class="formulario__nota">
-              Fields marked <span style="color:var(--dorado)">*</span> are required.
-              When you submit, WhatsApp opens with your request ready to send.
-            </p>
-
-            <div class="formulario__rejilla">
-              <div class="campo campo--completo">
-                <label for="f-nombre">Full name <span>*</span></label>
-                <input type="text" id="f-nombre" name="nombre" required autocomplete="name" placeholder="First and last name">
-              </div>
-              <div class="campo">
-                <label for="f-correo">Email address</label>
-                <input type="email" id="f-correo" name="correo" autocomplete="email" placeholder="you@example.com">
-              </div>
-              <div class="campo">
-                <label for="f-telefono">Phone <span>*</span></label>
-                <input type="tel" id="f-telefono" name="telefono" required autocomplete="tel" placeholder="6000-0000">
-              </div>
-              <div class="campo">
-                <label for="f-fecha">Trip date <span>*</span></label>
-                <input type="date" id="f-fecha" name="fecha" required>
-              </div>
-              <div class="campo">
-                <label for="f-hora">Time <span>*</span></label>
-                <input type="time" id="f-hora" name="hora" required>
-              </div>
-              <div class="campo">
-                <label for="f-recogida">Pickup location <span>*</span></label>
-                <input type="text" id="f-recogida" name="recogida" required placeholder="Hotel, address or terminal">
-              </div>
-              <div class="campo">
-                <label for="f-destino">Destination <span>*</span></label>
-                <input type="text" id="f-destino" name="destino" required placeholder="Where are you heading?">
-              </div>
-              <div class="campo campo--completo">
-                <label for="f-mensaje">Message or extra details</label>
-                <textarea id="f-mensaje" name="mensaje" placeholder="Passengers, luggage, flight number, stops..."></textarea>
-              </div>
-
-              <div class="formulario__pie">
-                <button class="boton boton--principal boton--ancho" type="submit">
-                  <svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>
-                  Request Booking
-                </button>
-                <div class="formulario__aviso" id="aviso-form" role="status" aria-live="polite"></div>
-              </div>
-            </div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
 
   <!-- ======================================================================
        5. OPINIONES
