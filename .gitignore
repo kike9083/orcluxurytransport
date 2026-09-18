@@ -1,0 +1,12 @@
+# Dependencies & local tooling
+node_modules/
+.atl/
+.wrangler/
+
+# Build outputs
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini

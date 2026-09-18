@@ -1,0 +1,13 @@
+# Configuración del despliegue de OrcLuxuryTransport en Cloudflare Pages.
+#
+# La carpeta dist/ es lo que se publica; functions/ contiene el código del
+# servidor (la API de opiniones), y DB es la base de datos donde se guardan.
+
+name = "orcluxurytransport"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-08-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "resenas-orcluxury"
+database_id = "cc0a7b94-a75d-4eef-8858-06b2e8a4c816"
