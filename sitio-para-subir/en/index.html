@@ -8,7 +8,8 @@
     2. Reserva  : el formulario, bajo el hero
     3. Destinos : carrusel de fotos
     4. Pestañas : Servicios · Por qué elegirnos
-    5. Opiniones: reseñas con estrellas, puntuación, nombre y foto
+    5. Tarifas  : bloques de precios y preguntas frecuentes
+    6. Opiniones: reseñas con estrellas, puntuación, nombre y foto
 
   >>> VERSIÓN EN INGLÉS <<<  Copia traducida de ../index.html
   Si cambia un texto en el español, cámbielo también aquí.
@@ -38,7 +39,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Tourist &amp; Executive Transportation in Panama | OrcLuxuryTransport</title>
-  <meta name="description" content="Airport transfers, sightseeing tours and corporate transportation in Panama. Comfortable vehicles, professional drivers and 24/7 service. Book via WhatsApp.">
+  <meta name="description" content="Airport transfers from USD 32, tours and executive transportation in Panama. Fixed price, professional drivers, 24/7. Book via WhatsApp.">
   <meta name="author" content="OrcLuxuryTransport">
   <meta name="theme-color" content="#0F0F0F">
   <link rel="canonical" href="https://orcluxurytransport.com/en/">
@@ -110,6 +111,7 @@
           "availableLanguage": ["es","en"]
         },
         "knowsLanguage": ["es","en"],
+        "sameAs": ["https://www.instagram.com/orcluxurytransport/"],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Transportation services",
@@ -374,6 +376,7 @@ p:last-child{ margin-bottom:0; }
 .campo input:focus,.campo textarea:focus{ outline:none; border-color:var(--dorado); background:rgba(255,255,255,.06); }
 .campo input[type="date"],.campo input[type="time"]{ color-scheme:dark; }
 .formulario__pie{ margin-top:20px; grid-column:1/-1; }
+.formulario__garantias{ margin:14px 0 0; font-size:.78rem; text-align:center; color:var(--texto-tenue); }
 .formulario__aviso{
   display:none; align-items:flex-start; gap:11px; margin-top:15px; padding:14px 16px;
   font-size:.88rem; background:rgba(200,164,77,.09);
@@ -424,6 +427,7 @@ p:last-child{ margin-bottom:0; }
 .servicio:hover .servicio__icono{ background:rgba(200,164,77,.16); transform:scale(1.07); }
 .servicio h3{ margin-bottom:0; }
 .servicio p{ font-size:.89rem; line-height:1.6; color:var(--texto-tenue); }
+.servicio__precio{ margin-top:12px; font-size:.78rem; font-weight:700; letter-spacing:.05em; color:var(--dorado); }
 
 .beneficio{
   display:flex; align-items:flex-start; gap:13px; padding:16px 18px;
@@ -451,6 +455,16 @@ p:last-child{ margin-bottom:0; }
 }
 .paso h3{ margin-bottom:2px; font-size:.94rem; }
 .paso p{ font-size:.84rem; line-height:1.5; color:var(--texto-tenue); }
+.tarifas__bloque{ max-width:840px; margin:0 auto 28px; padding:26px 28px; background:rgba(200,164,77,.06); border:1px solid var(--borde-dorado); border-radius:var(--radio); }
+.tarifas__bloque h3{ margin-top:0; }
+.faq{ max-width:840px; margin:0 auto; display:grid; gap:12px; }
+.faq details{ background:rgba(255,255,255,.03); border:1px solid var(--borde); border-radius:12px; }
+.faq summary{ display:flex; justify-content:space-between; align-items:center; gap:14px; padding:16px 18px; font-weight:600; color:var(--blanco); cursor:pointer; list-style:none; }
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary::after{ content:"+"; font-size:1.3rem; line-height:1; color:var(--dorado); }
+.faq details[open] summary::after{ content:"\2013"; }
+.faq details p{ margin:0; padding:0 18px 16px; font-size:.9rem; color:var(--texto-tenue); }
+.faq .pasos__titulo{ margin:18px 0 2px; }
 
 /* ==========================================================================
    6. CARRUSEL DE DESTINOS
@@ -771,6 +785,7 @@ p:last-child{ margin-bottom:0; }
         <li><a class="nav__enlace" href="#inicio">Home</a></li>
         <li><a class="nav__enlace" href="#servicios" data-tab="servicios">Services</a></li>
         <li><a class="nav__enlace" href="#destinos">Destinations</a></li>
+        <li><a class="nav__enlace" href="#tarifas">Rates</a></li>
         <li><a class="nav__enlace" href="#opiniones">Reviews</a></li>
         <li class="nav__idioma">
           <a href="../" hreflang="es" lang="es" aria-label="Switch to Spanish">ES</a>
@@ -801,9 +816,10 @@ p:last-child{ margin-bottom:0; }
         <h1>Tourist &amp; <em>Executive</em> Transportation in Panama</h1>
 
         <p>
-          We are a Panamanian chauffeured transportation service. We handle airport
-          transfers, sightseeing tours and group or corporate travel, with comfortable
-          vehicles and drivers who know the country.
+          OrcLuxuryTransport is a private chauffeured transportation service in Panama
+          City with more than 5 years of experience: Tocumen and Albrook airport
+          transfers, tours, corporate travel and hourly service, 24/7. Airport
+          transfers from USD 32, with a fixed price confirmed before departure.
         </p>
 
         <ul class="resumen__puntos">
@@ -818,6 +834,10 @@ p:last-child{ margin-bottom:0; }
           <li>
             <svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>
             <span><strong>24/7 support</strong> on WhatsApp, before and during your trip.</span>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>
+            <span><strong>More than 5 years</strong> moving passengers around Panama.</span>
           </li>
         </ul>
 
@@ -929,6 +949,7 @@ p:last-child{ margin-bottom:0; }
                   Request Booking
                 </button>
                 <div class="formulario__aviso" id="aviso-form" role="status" aria-live="polite"></div>
+                <p class="formulario__garantias">No deposit required · Fixed price confirmed before departure · 60 minutes of free waiting included.</p>
               </div>
             </div>
           </form>
@@ -1074,6 +1095,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Airport Transfers</h3>
             </div>
             <p>Tocumen and Albrook, with flight tracking. We wait even if your flight is late.</p>
+            <p class="servicio__precio">Tocumen from USD 32 · Albrook from USD 25</p>
           </article>
 
           <article class="servicio">
@@ -1082,6 +1104,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Corporate Transportation</h3>
             </div>
             <p>Executives and staff between meetings, hotels and offices, on a coordinated schedule.</p>
+            <p class="servicio__precio">Hourly service from USD 35</p>
           </article>
 
           <article class="servicio">
@@ -1090,6 +1113,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Private Service</h3>
             </div>
             <p>A vehicle and driver just for you, per trip or for the whole day.</p>
+            <p class="servicio__precio">4 h from USD 120 · 8 h from USD 200</p>
           </article>
 
           <article class="servicio">
@@ -1098,6 +1122,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Tours &amp; Sightseeing</h3>
             </div>
             <p>Casco Antiguo, the Canal, beaches and highlands. Routes built around your time.</p>
+            <p class="servicio__precio">4-hour tours from USD 120</p>
           </article>
 
           <article class="servicio">
@@ -1106,6 +1131,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Special Events</h3>
             </div>
             <p>Weddings, conferences and celebrations, with on-time transport for your guests.</p>
+            <p class="servicio__precio">Custom quote</p>
           </article>
 
           <article class="servicio">
@@ -1114,6 +1140,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Custom Trips</h3>
             </div>
             <p>A different route? Tell us your itinerary and we will build it for you.</p>
+            <p class="servicio__precio">Fixed price per itinerary</p>
           </article>
 
         </div>
@@ -1171,10 +1198,64 @@ p:last-child{ margin-bottom:0; }
   </section>
 
   <!-- ======================================================================
-       5. OPINIONES
+       5. TARIFAS Y PREGUNTAS — bloques citables y FAQ
+       ====================================================================== -->
+  <section class="seccion" id="tarifas">
+    <div class="contenedor">
+
+      <div class="seccion__encabezado revelar">
+        <span class="etiqueta">Rates</span>
+        <h2>Transportation rates in Panama</h2>
+        <p>Reference prices in US dollars. The final price is confirmed on WhatsApp before departure, with no surprise charges.</p>
+        <div class="linea-dorada"></div>
+      </div>
+
+      <div class="tarifas__bloque revelar">
+        <h3>How much does an airport transfer from Tocumen (TO) cost?</h3>
+        <p>
+          A private transfer from Tocumen International Airport (TO) to Panama City
+          starts at USD 32 in a sedan for up to 3 passengers and USD 45 in a minivan
+          for up to 6. The price is fixed: it is confirmed on WhatsApp before
+          departure and includes tolls, parking, flight tracking and 60 minutes of
+          free waiting time on international arrivals. There are no surcharges by
+          schedule: early mornings, weekends and holidays cost the same. The drive
+          takes 25 to 45 minutes depending on traffic, over about 24 kilometres.
+          Transfers from Albrook Airport inside the city start at USD 25. To book,
+          send the date, time, flight number and destination on WhatsApp and you
+          will receive the final price in minutes.
+        </p>
+      </div>
+
+      <div class="tarifas__bloque revelar">
+        <h3>How long does it take from Tocumen to the city?</h3>
+        <p>
+          It is about 24 kilometres: 25 to 45 minutes depending on traffic. Rush
+          hours (12:00-14:00 and 17:00-19:00) are the busiest. For an international
+          departure we recommend leaving the hotel three hours ahead; two hours is
+          usually enough for domestic flights.
+        </p>
+      </div>
+
+      <p class="pasos__titulo">Frequently asked questions</p>
+      <div class="faq revelar">
+        <details><summary>Will you wait if my flight is delayed?</summary><p>Yes. We track your flight and the driver waits in the arrivals hall at no extra charge, up to 60 minutes after you land.</p></details>
+        <details><summary>Where do I meet the driver at Tocumen?</summary><p>The driver waits in the arrivals hall holding a sign with your name, right after customs. If you prefer another pickup point, we can agree on it on WhatsApp.</p></details>
+        <details><summary>How do I pay for the transfer?</summary><p>There are no online payments or deposits: you confirm the fixed price on WhatsApp and pay the driver directly in US dollars or Balboas, in cash or as agreed.</p></details>
+        <details><summary>Do you have child car seats?</summary><p>Yes. Tell us the children's ages when booking and we prepare the appropriate seat at no extra charge, subject to availability.</p></details>
+        <details><summary>How many suitcases fit?</summary><p>The sedan fits 2 or 3 large suitcases; the seven-seater minivan fits 4 to 6 depending on passengers. If you travel with more luggage, we will clarify when confirming.</p></details>
+        <details><summary>Do the drivers speak English?</summary><p>Yes. The team serves in Spanish and English, and the WhatsApp coordination is bilingual, 24/7.</p></details>
+        <details><summary>Is a tip included?</summary><p>The fixed price includes the vehicle, driver, tolls and parking. Tipping is not mandatory; it is entirely your call.</p></details>
+        <details><summary>Can I hire the vehicle by the hour?</summary><p>Yes. Hourly service starts at USD 35 with a two-hour minimum, and half-day or full-day private service includes the stops you choose.</p></details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. OPINIONES
        El contenido se genera desde la lista RESENAS del <script>.
        ====================================================================== -->
-  <section class="seccion" id="opiniones">
+  <section class="seccion seccion--alterna" id="opiniones">
     <div class="contenedor">
 
       <div class="seccion__encabezado revelar">

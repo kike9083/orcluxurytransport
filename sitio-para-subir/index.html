@@ -8,7 +8,8 @@
     2. Reserva  : el formulario, bajo el hero
     3. Destinos : carrusel de fotos
     4. Pestañas : Servicios · Por qué elegirnos
-    5. Opiniones: reseñas con estrellas, puntuación, nombre y foto
+    5. Tarifas  : bloques de precios y preguntas frecuentes
+    6. Opiniones: reseñas con estrellas, puntuación, nombre y foto
 
   GUÍA RÁPIDA DE EDICIÓN
 
@@ -34,7 +35,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Transporte Turístico y Ejecutivo en Panamá | OrcLuxuryTransport</title>
-  <meta name="description" content="Traslados al aeropuerto, tours y transporte ejecutivo en Panamá. Precio cerrado, choferes profesionales y atención 24/7. Reserve por WhatsApp.">
+  <meta name="description" content="Traslados al aeropuerto desde USD 32, tours y transporte ejecutivo en Panamá. Precio cerrado, choferes 24/7. Reserve por WhatsApp.">
   <meta name="author" content="OrcLuxuryTransport">
   <meta name="theme-color" content="#0F0F0F">
   <link rel="canonical" href="https://orcluxurytransport.com/">
@@ -113,6 +114,7 @@
           "availableLanguage": ["es","en"]
         },
         "knowsLanguage": ["es","en"],
+        "sameAs": ["https://www.instagram.com/orcluxurytransport/"],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Servicios de transporte",
@@ -377,6 +379,7 @@ p:last-child{ margin-bottom:0; }
 .campo input:focus,.campo textarea:focus{ outline:none; border-color:var(--dorado); background:rgba(255,255,255,.06); }
 .campo input[type="date"],.campo input[type="time"]{ color-scheme:dark; }
 .formulario__pie{ margin-top:20px; grid-column:1/-1; }
+.formulario__garantias{ margin:14px 0 0; font-size:.78rem; text-align:center; color:var(--texto-tenue); }
 .formulario__aviso{
   display:none; align-items:flex-start; gap:11px; margin-top:15px; padding:14px 16px;
   font-size:.88rem; background:rgba(200,164,77,.09);
@@ -427,6 +430,7 @@ p:last-child{ margin-bottom:0; }
 .servicio:hover .servicio__icono{ background:rgba(200,164,77,.16); transform:scale(1.07); }
 .servicio h3{ margin-bottom:0; }
 .servicio p{ font-size:.89rem; line-height:1.6; color:var(--texto-tenue); }
+.servicio__precio{ margin-top:12px; font-size:.78rem; font-weight:700; letter-spacing:.05em; color:var(--dorado); }
 
 .beneficio{
   display:flex; align-items:flex-start; gap:13px; padding:16px 18px;
@@ -454,6 +458,16 @@ p:last-child{ margin-bottom:0; }
 }
 .paso h3{ margin-bottom:2px; font-size:.94rem; }
 .paso p{ font-size:.84rem; line-height:1.5; color:var(--texto-tenue); }
+.tarifas__bloque{ max-width:840px; margin:0 auto 28px; padding:26px 28px; background:rgba(200,164,77,.06); border:1px solid var(--borde-dorado); border-radius:var(--radio); }
+.tarifas__bloque h3{ margin-top:0; }
+.faq{ max-width:840px; margin:0 auto; display:grid; gap:12px; }
+.faq details{ background:rgba(255,255,255,.03); border:1px solid var(--borde); border-radius:12px; }
+.faq summary{ display:flex; justify-content:space-between; align-items:center; gap:14px; padding:16px 18px; font-weight:600; color:var(--blanco); cursor:pointer; list-style:none; }
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary::after{ content:"+"; font-size:1.3rem; line-height:1; color:var(--dorado); }
+.faq details[open] summary::after{ content:"\2013"; }
+.faq details p{ margin:0; padding:0 18px 16px; font-size:.9rem; color:var(--texto-tenue); }
+.faq .pasos__titulo{ margin:18px 0 2px; }
 
 /* ==========================================================================
    6. CARRUSEL DE DESTINOS
@@ -774,6 +788,7 @@ p:last-child{ margin-bottom:0; }
         <li><a class="nav__enlace" href="#inicio">Inicio</a></li>
         <li><a class="nav__enlace" href="#servicios" data-tab="servicios">Servicios</a></li>
         <li><a class="nav__enlace" href="#destinos">Destinos</a></li>
+        <li><a class="nav__enlace" href="#tarifas">Tarifas</a></li>
         <li><a class="nav__enlace" href="#opiniones">Opiniones</a></li>
         <li class="nav__idioma">
           <span class="nav__idioma-actual" aria-current="true">ES</span>
@@ -804,9 +819,11 @@ p:last-child{ margin-bottom:0; }
         <h1>Transporte Turístico y <em>Ejecutivo</em> en Panamá</h1>
 
         <p>
-          Somos un servicio panameño de transporte con conductor. Hacemos traslados al
-          aeropuerto, recorridos turísticos y movilización de grupos y empresas, con
-          vehículos cómodos y choferes que conocen el país.
+          OrcLuxuryTransport es un servicio privado de transporte con conductor en
+          Ciudad de Panamá, con más de 5 años operando: traslados al aeropuerto de
+          Tocumen y Albrook, tours, transporte corporativo y servicio por hora, 24/7.
+          El traslado al aeropuerto es desde USD 32, con precio cerrado confirmado
+          antes de salir.
         </p>
 
         <ul class="resumen__puntos">
@@ -821,6 +838,10 @@ p:last-child{ margin-bottom:0; }
           <li>
             <svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>
             <span><strong>Atención 24/7</strong> por WhatsApp, antes y durante el viaje.</span>
+          </li>
+          <li>
+            <svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>
+            <span><strong>Más de 5 años</strong> moviendo pasajeros por Panamá.</span>
           </li>
         </ul>
 
@@ -932,6 +953,7 @@ p:last-child{ margin-bottom:0; }
                   Solicitar Reserva
                 </button>
                 <div class="formulario__aviso" id="aviso-form" role="status" aria-live="polite"></div>
+                <p class="formulario__garantias">Sin depósito por adelantado · Precio cerrado confirmado antes de salir · 60 min de espera incluida en llegadas.</p>
               </div>
             </div>
           </form>
@@ -1077,6 +1099,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Traslados al Aeropuerto</h3>
             </div>
             <p>Tocumen y Albrook, con seguimiento del vuelo. Lo esperamos aunque se retrase.</p>
+            <p class="servicio__precio">Tocumen desde USD 32 · Albrook desde USD 25</p>
           </article>
 
           <article class="servicio">
@@ -1085,6 +1108,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Transporte Corporativo</h3>
             </div>
             <p>Ejecutivos y personal entre reuniones, hoteles y oficinas, con horarios coordinados.</p>
+            <p class="servicio__precio">Servicio por hora desde USD 35</p>
           </article>
 
           <article class="servicio">
@@ -1093,6 +1117,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Servicio Privado</h3>
             </div>
             <p>Vehículo y conductor solo para usted, por trayecto o por jornada completa.</p>
+            <p class="servicio__precio">4 h desde USD 120 · 8 h desde USD 200</p>
           </article>
 
           <article class="servicio">
@@ -1101,6 +1126,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Turismo y Recorridos</h3>
             </div>
             <p>Casco Antiguo, Canal, playas y montaña. Rutas según el tiempo que tenga.</p>
+            <p class="servicio__precio">Recorrido de 4 h desde USD 120</p>
           </article>
 
           <article class="servicio">
@@ -1109,6 +1135,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Eventos Especiales</h3>
             </div>
             <p>Bodas, congresos y celebraciones, con transporte puntual para los invitados.</p>
+            <p class="servicio__precio">Cotización a medida</p>
           </article>
 
           <article class="servicio">
@@ -1117,6 +1144,7 @@ p:last-child{ margin-bottom:0; }
               <h3>Viajes Personalizados</h3>
             </div>
             <p>¿Otra ruta? Cuéntenos su itinerario y lo armamos a su medida.</p>
+            <p class="servicio__precio">Precio cerrado según itinerario</p>
           </article>
 
         </div>
@@ -1174,10 +1202,64 @@ p:last-child{ margin-bottom:0; }
   </section>
 
   <!-- ======================================================================
-       5. OPINIONES
+       5. TARIFAS Y PREGUNTAS — bloques citables y FAQ
+       ====================================================================== -->
+  <section class="seccion" id="tarifas">
+    <div class="contenedor">
+
+      <div class="seccion__encabezado revelar">
+        <span class="etiqueta">Tarifas</span>
+        <h2>Tarifas de transporte en Panamá</h2>
+        <p>Precios de referencia en dólares. El precio final se confirma por WhatsApp antes de salir, sin cargos sorpresa.</p>
+        <div class="linea-dorada"></div>
+      </div>
+
+      <div class="tarifas__bloque revelar">
+        <h3>¿Cuánto cuesta un traslado al aeropuerto de Panamá (Tocumen)?</h3>
+        <p>
+          Un traslado privado desde el Aeropuerto Internacional de Tocumen (TO) hasta
+          Ciudad de Panamá cuesta desde USD 32 en sedán para hasta 3 pasajeros y desde
+          USD 45 en minivan para hasta 6. El precio es cerrado: se confirma por WhatsApp
+          antes de salir e incluye peajes, estacionamiento, seguimiento del vuelo y 60
+          minutos de espera gratuita en llegadas internacionales. No hay recargos por
+          horario: madrugadas, fines de semana y feriados cuestan lo mismo. El trayecto
+          toma entre 25 y 45 minutos según el tráfico, en una distancia de unos 24
+          kilómetros. El traslado desde el aeropuerto de Albrook, dentro de la ciudad,
+          parte de USD 25. Para reservar, envíe fecha, hora, número de vuelo y destino
+          por WhatsApp y recibirá el precio final en pocos minutos.
+        </p>
+      </div>
+
+      <div class="tarifas__bloque revelar">
+        <h3>¿Cuánto se tarda de Tocumen a la ciudad?</h3>
+        <p>
+          Son unos 24 kilómetros: entre 25 y 45 minutos según el tráfico. Las horas
+          pico (12:00-14:00 y 17:00-19:00) son las más densas. Para un vuelo
+          internacional de salida, recomendamos dejar el hotel con tres horas de
+          anticipación; para vuelos nacionales bastan dos.
+        </p>
+      </div>
+
+      <p class="pasos__titulo">Preguntas frecuentes</p>
+      <div class="faq revelar">
+        <details><summary>¿Me esperan si mi vuelo se retrasa?</summary><p>Sí. Seguimos el estado de su vuelo y el conductor lo espera en la sala de arribos, sin costo adicional hasta 60 minutos después de aterrizar.</p></details>
+        <details><summary>¿Dónde me encuentro con el conductor en Tocumen?</summary><p>El conductor lo espera en la sala de arribos con un cartel con su nombre, apenas pasa control de aduanas. Si prefiere otro punto de encuentro, lo coordinamos por WhatsApp.</p></details>
+        <details><summary>¿Cómo pago el traslado?</summary><p>No hay pagos online ni depósito por adelantado: confirma el precio cerrado por WhatsApp y paga al conductor en dólares o balboas, en efectivo o según lo coordinado.</p></details>
+        <details><summary>¿Tienen sillas para niños?</summary><p>Sí. Al reservar indique la edad de los niños y preparamos la silla correspondiente, sin costo adicional y sujeta a disponibilidad.</p></details>
+        <details><summary>¿Cuántas maletas caben?</summary><p>En el sedán entran 2 o 3 maletas grandes; en la minivan de siete asientos, entre 4 y 6 según el número de pasajeros. Si viaja con más equipaje, se lo aclaramos al confirmar.</p></details>
+        <details><summary>¿Los conductores hablan inglés?</summary><p>Sí. El equipo atiende en español e inglés, y la coordinación por WhatsApp también es bilingüe, 24/7.</p></details>
+        <details><summary>¿Está incluida la propina?</summary><p>El precio cerrado incluye vehículo, conductor, peajes y estacionamiento. La propina no es obligatoria; es decisión suya.</p></details>
+        <details><summary>¿Puedo contratar el vehículo por varias horas?</summary><p>Sí. El servicio por hora parte de USD 35 con un mínimo de dos horas, y el servicio privado de medio o día completo incluye las paradas que usted elija.</p></details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       6. OPINIONES
        El contenido se genera desde la lista RESENAS del <script>.
        ====================================================================== -->
-  <section class="seccion" id="opiniones">
+  <section class="seccion seccion--alterna" id="opiniones">
     <div class="contenedor">
 
       <div class="seccion__encabezado revelar">

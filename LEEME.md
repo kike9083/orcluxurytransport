@@ -115,3 +115,22 @@ npx wrangler d1 execute resenas-orcluxury --remote --command "DELETE FROM resena
   propietario, en su resolución completa.
 - **El historial de cambios**: está en el repositorio de GitHub.
 - **La carpeta `dist`**: se genera al publicar, no hace falta guardarla.
+
+---
+
+## Tarifas publicadas (batch SEO sep-2026)
+
+Los precios "desde USD ..." publicados en el sitio son **promedios de mercado**
+de referencia (traslado Tocumen desde 32/45, Albrook 25, por hora 35, tour de 4 h
+120, día completo 200). Deben ajustarse a las tarifas reales y definitivas del
+negocio:
+
+1. Buscar "USD" en `sitio-para-subir/index.html` y `en/index.html` (tarjetas de
+   servicio, sección Tarifas/FAQ, párrafo del hero, meta description, llms.txt).
+2. Cambiar español e inglés a la vez para que no se contradigan.
+
+## Plan de reseñas
+
+Ver `PEDIR-RESENAS.md`. El sitio NO publica reseñas inventadas: solo reales y
+aprobadas. Cuando existan 3 o más publicadas se puede agregar `aggregateRating`
+al JSON-LD con valores calculados de las reseñas visibles.
