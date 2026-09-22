@@ -1,43 +1,12 @@
 <!DOCTYPE html>
-<!--
-===============================================================================
-  ORCLUXURYTRANSPORT — Transporte turístico y ejecutivo en Panamá
-
-  ORDEN DE LA PÁGINA
-    1. Resumen  : quiénes somos + foto del vehículo
-    2. Reserva  : el formulario, bajo el hero
-    3. Destinos : carrusel de fotos
-    4. Pestañas : Servicios · Por qué elegirnos
-    5. Tarifas  : bloques de precios y preguntas frecuentes
-    6. Opiniones: reseñas con estrellas, puntuación, nombre y foto
-
-  GUÍA RÁPIDA DE EDICIÓN
-
-  1. OPINIONES ... Se editan en la lista RESENAS, al inicio del <script>.
-                   Cada opinión es un bloque de seis líneas. El promedio y el
-                   conteo se calculan solos. La foto es opcional: sin foto se
-                   muestran las iniciales. Para borrar una, se elimina su bloque.
-
-  2. FOTOS ....... En la carpeta /fotos, en WebP. Para cambiar cualquiera,
-                   reemplace el archivo conservando el nombre. Las fotos de
-                   quienes opinan van en /fotos/resenas/
-
-  3. WHATSAPP .... Sección 1 del <script>, constante CONFIG.whatsapp.
-                   Formato: código de país + número, sin espacios. Panamá=507.
-
-  4. INGLÉS ...... La versión inglesa es /en/index.html. Si cambia un texto
-                   aquí, cámbielo también allá.
-===============================================================================
--->
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Transporte Turístico y Ejecutivo en Panamá | OrcLuxuryTransport</title>
-  <meta name="description" content="Traslados al aeropuerto desde USD 32, tours y transporte ejecutivo en Panamá. Precio cerrado, choferes 24/7. Reserve por WhatsApp.">
+  <title>Traslados Privados en Panamá | Tocumen PTY y Albrook | OrcLuxuryTransport</title>
+  <meta name="description" content="Tu traslado privado en Panamá: sin esperas, sin sorpresas. Tarifa fija desde USD 32, monitoreo de vuelo en tiempo real y conductor esperando con letrero en Tocumen y Albrook. Reserva por WhatsApp 24/7.">
   <meta name="author" content="OrcLuxuryTransport">
-  <meta name="theme-color" content="#0F0F0F">
+  <meta name="theme-color" content="#0B2447">
   <link rel="canonical" href="https://orcluxurytransport.com/">
 
   <link rel="alternate" hreflang="es" href="https://orcluxurytransport.com/">
@@ -50,1966 +19,976 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_PA">
   <meta property="og:site_name" content="OrcLuxuryTransport">
-  <meta property="og:title" content="Transporte Turístico y Ejecutivo en Panamá | OrcLuxuryTransport">
-  <meta property="og:description" content="Traslados al aeropuerto, recorridos turísticos y transporte corporativo en Panamá. Puntualidad, seguridad y comodidad en cada viaje.">
+  <meta property="og:title" content="Traslados Privados en Panamá | Tocumen PTY y Albrook | OrcLuxuryTransport">
+  <meta property="og:description" content="Tarifa fija desde USD 32, monitoreo de vuelo en tiempo real y conductor esperando con letrero. Reserva por WhatsApp 24/7.">
   <meta property="og:url" content="https://orcluxurytransport.com/">
   <meta property="og:image" content="https://orcluxurytransport.com/fotos/social.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F0F0F'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-weight='bold' fill='%23C8A44D' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B2447'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='17' font-weight='bold' fill='%23C8A44D' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 
-  <!-- Datos estructurados. No lleva aggregateRating a propósito: marcar una
-       puntuación que no viene de opiniones reales viola las políticas de
-       Google y puede penalizar el sitio. Se añade cuando existan. -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://orcluxurytransport.com/#website",
-        "url": "https://orcluxurytransport.com/",
-        "name": "OrcLuxuryTransport",
-        "inLanguage": "es",
-        "publisher": { "@id": "https://orcluxurytransport.com/#business" }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://orcluxurytransport.com/#webpage",
-        "url": "https://orcluxurytransport.com/",
-        "name": "Transporte Turístico y Ejecutivo en Panamá | OrcLuxuryTransport",
-        "inLanguage": "es",
-        "isPartOf": { "@id": "https://orcluxurytransport.com/#website" },
-        "about": { "@id": "https://orcluxurytransport.com/#business" }
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://orcluxurytransport.com/#business",
-        "name": "OrcLuxuryTransport",
-        "description": "Servicio de transporte turístico y ejecutivo en Panamá: traslados al aeropuerto, recorridos turísticos, transporte corporativo y viajes personalizados.",
-        "url": "https://orcluxurytransport.com/",
-        "telephone": "+507 6802-6916",
-        "email": "orielca507@gmail.com",
-        "image": "https://orcluxurytransport.com/fotos/nosotros.webp",
-        "priceRange": "$$",
-        "address": { "@type": "PostalAddress", "addressLocality": "Ciudad de Panamá", "addressCountry": "PA" },
-        "geo": { "@type": "GeoCoordinates", "latitude": 8.9824, "longitude": -79.5199 },
-        "areaServed": [
-          { "@type": "Country", "name": "Panamá" },
-          { "@type": "City", "name": "Ciudad de Panamá" },
-          { "@type": "Place", "name": "Aeropuerto Internacional de Tocumen" },
-          { "@type": "Place", "name": "Aeropuerto Albrook Marcos A. Gelabert" }
-        ],
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "00:00", "closes": "23:59"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+507 6802-6916",
-          "contactType": "customer service",
-          "availableLanguage": ["es","en"]
-        },
-        "knowsLanguage": ["es","en"],
-        "sameAs": ["https://www.instagram.com/orcluxurytransport/"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Servicios de transporte",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traslados al Aeropuerto", "description": "Tocumen y Albrook, con seguimiento del vuelo. Lo esperamos aunque se retrase.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transporte Corporativo", "description": "Ejecutivos y personal entre reuniones, hoteles y oficinas, con horarios coordinados.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servicio Privado", "description": "Vehículo y conductor solo para usted, por trayecto o por jornada completa.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Turismo y Recorridos", "description": "Casco Antiguo, Canal, playas y montaña. Rutas según el tiempo que tenga.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eventos Especiales", "description": "Bodas, congresos y celebraciones, con transporte puntual para los invitados.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Viajes Personalizados", "description": "Cuéntenos su itinerario y lo armamos a su medida.", "provider": { "@id": "https://orcluxurytransport.com/#business" } } }
-          ]
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://orcluxurytransport.com/#website",
+      "url": "https://orcluxurytransport.com/",
+      "name": "OrcLuxuryTransport",
+      "inLanguage": "es",
+      "publisher": {
+        "@id": "https://orcluxurytransport.com/#business"
       }
-    ]
-  }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://orcluxurytransport.com/#webpage",
+      "url": "https://orcluxurytransport.com/",
+      "name": "Traslados Privados en Panamá | Tocumen PTY y Albrook | OrcLuxuryTransport",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://orcluxurytransport.com/#website"
+      },
+      "about": {
+        "@id": "https://orcluxurytransport.com/#business"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://orcluxurytransport.com/#business",
+      "name": "OrcLuxuryTransport",
+      "description": "Empresa boutique de transporte turístico y ejecutivo en Panamá: traslados aeroportuarios con tarifa fija, monitoreo de vuelo, meet & greet y tours privados.",
+      "url": "https://orcluxurytransport.com/",
+      "telephone": "+507 6802-6916",
+      "email": "orielca507@gmail.com",
+      "image": "https://orcluxurytransport.com/fotos/nosotros.webp",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, PayPal",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ciudad de Panamá",
+        "addressCountry": "PA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 8.9824,
+        "longitude": -79.5199
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Panamá" },
+        { "@type": "City", "name": "Ciudad de Panamá" },
+        { "@type": "Place", "name": "Aeropuerto Internacional de Tocumen" },
+        { "@type": "Place", "name": "Aeropuerto Albrook Marcos A. Gelabert" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+507 6802-6916",
+        "contactType": "customer service",
+        "availableLanguage": ["es","en"]
+      },
+      "knowsLanguage": ["es","en"],
+      "sameAs": ["https://www.instagram.com/orcluxurytransport/"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de transporte",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traslados al Aeropuerto", "description": "Tocumen PTY y Albrook PAC con tarifa fija, seguimiento del vuelo y meet & greet." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transporte Corporativo", "description": "Ejecutivos y grupos entre reuniones, hoteles y oficinas." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tours y Escalas", "description": "Canal de Panamá, Casco Antiguo, Lago Gatún y comunidad Emberá con reserva ahora y pago después." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traslados a Playas", "description": "Playa Blanca y Riviera Pacífica con tarifa cerrada." } }
+        ]
+      }
+    }
+  ]
+}
   </script>
 
 <style>
-/* ==========================================================================
-   1. VARIABLES Y BASE
-   ========================================================================== */
 :root{
-  --negro:#0F0F0F;
-  --gris-oscuro:#2E2E2E;
-  --dorado:#C8A44D;
-  --blanco:#FFFFFF;
-
-  --negro-suave:#151515;
-  --dorado-claro:#DCC07C;
-  --texto:rgba(255,255,255,.78);
-  --texto-tenue:rgba(255,255,255,.55);
-  --borde:rgba(255,255,255,.10);
-  --borde-dorado:rgba(200,164,77,.35);
-
-  --ancho-max:1200px;
-  --alto-header:74px;
-  --radio:14px;
-  --sombra:0 18px 45px rgba(0,0,0,.45);
-  --transicion:.3s cubic-bezier(.4,0,.2,1);
-
-  --fuente:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --navy:#0B2447; --navy-2:#123B70; --navy-3:#1B4C94; --navy-deep:#071A35;
+  --gold:#C8A44D; --gold-2:#E4C879; --gold-ink:#33270A;
+  --ink:#1C2B3A; --muted:#5B6B7C; --bg:#FFFFFF; --soft:#F6F8FA; --line:#E4E9EF;
+  --wa:#25D366; --ok:#1E8E5A;
+  --radio:20px; --radio-sm:14px;
+  --sombra:0 24px 60px rgba(7,26,53,.18); --sombra-2:0 10px 30px rgba(7,26,53,.10);
+  --t:.3s cubic-bezier(.22,1,.36,1);
+  --fuente:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --img-portada:url("fotos/portada.webp");
-
-  color-scheme:dark;
 }
 *,*::before,*::after{ box-sizing:border-box; }
-
-html{
-  scroll-behavior:smooth;
-  scroll-padding-top:calc(var(--alto-header) + 10px);
-  -webkit-text-size-adjust:100%;
-}
-html,body{ background:var(--negro); color:var(--texto); }
-@media (prefers-color-scheme:light){ html,body{ background:var(--negro); color:var(--texto); } }
-
-body{
-  margin:0;
-  font-family:var(--fuente);
-  font-size:17px;
-  line-height:1.65;
-  overflow-x:hidden;
-}
-img,svg{ display:block; max-width:100%; }
-img{ height:auto; }
-a{ color:inherit; text-decoration:none; }
-button{ font:inherit; color:inherit; cursor:pointer; }
+html{ scroll-behavior:smooth; scroll-padding-top:88px; -webkit-text-size-adjust:100%; }
+body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--fuente); font-size:16.5px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+img,svg{ display:block; max-width:100%; } img{ height:auto; }
+a{ color:inherit; text-decoration:none; } button{ font:inherit; color:inherit; cursor:pointer; }
 ul{ margin:0; padding:0; list-style:none; }
-
-h1,h2,h3{ margin:0; color:var(--blanco); line-height:1.2; font-weight:600; letter-spacing:-.015em; text-wrap:balance; }
-h1{ font-size:clamp(1.95rem,4.6vw,3.2rem); }
-h2{ font-size:clamp(1.5rem,3vw,2.15rem); }
-h3{ font-size:1.04rem; letter-spacing:0; }
-p{ margin:0 0 1em; }
-p:last-child{ margin-bottom:0; }
-
-.contenedor{ width:100%; max-width:var(--ancho-max); margin:0 auto; padding:0 24px; }
-
-.seccion{ padding:72px 0; scroll-margin-top:var(--alto-header); }
-.seccion--alterna{ background:var(--negro-suave); }
-
-.seccion__encabezado{ max-width:640px; margin:0 auto 36px; text-align:center; }
-.etiqueta{
-  display:inline-block; margin-bottom:10px;
-  font-size:.72rem; font-weight:600; letter-spacing:.22em;
-  text-transform:uppercase; color:var(--dorado);
-}
-.seccion__encabezado p{ margin-top:12px; color:var(--texto-tenue); font-size:.95rem; }
-.linea-dorada{ width:54px; height:2px; margin:16px auto 0; background:linear-gradient(90deg,var(--dorado),transparent); }
-.linea-dorada--izq{ margin-left:0; }
-
-/* --- Botones --- */
-.boton{
-  display:inline-flex; align-items:center; justify-content:center; gap:9px;
-  padding:14px 28px;
-  border:1px solid transparent; border-radius:999px;
-  font-size:.92rem; font-weight:600; letter-spacing:.02em; text-align:center;
-  transition:transform var(--transicion), background var(--transicion),
-             color var(--transicion), border-color var(--transicion), box-shadow var(--transicion);
-}
-.boton--principal{ background:var(--dorado); color:var(--negro); }
-.boton--principal:hover{ background:var(--dorado-claro); transform:translateY(-3px); box-shadow:0 12px 28px rgba(200,164,77,.3); }
-.boton--contorno{ border-color:var(--borde-dorado); color:var(--blanco); background:rgba(255,255,255,.04); }
-.boton--contorno:hover{ border-color:var(--dorado); color:var(--dorado); transform:translateY(-3px); }
-.boton--ancho{ width:100%; }
-
-.ico{ width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
-.ico--relleno{ fill:currentColor; stroke:none; }
-
-.js .revelar{ opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s cubic-bezier(.4,0,.2,1); transition-delay:var(--retraso,0s); }
-.js .revelar.visible{ opacity:1; transform:none; }
-
-.salto-contenido{ position:absolute; left:-9999px; z-index:1000; padding:12px 20px; background:var(--dorado); color:var(--negro); border-radius:0 0 8px 0; font-weight:600; }
-.salto-contenido:focus{ left:0; top:0; }
-:focus-visible{ outline:2px solid var(--dorado); outline-offset:3px; border-radius:4px; }
-
-@media (prefers-reduced-motion:reduce){
-  html{ scroll-behavior:auto; }
-  *,*::before,*::after{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
-  .js .revelar{ opacity:1; transform:none; }
-}
-
-/* ==========================================================================
-   2. ENCABEZADO
-   ========================================================================== */
-.header{
-  position:fixed; top:0; left:0; right:0; z-index:100;
-  height:var(--alto-header); display:flex; align-items:center;
-  background:transparent; border-bottom:1px solid transparent;
-  transition:background var(--transicion), height var(--transicion), border-color var(--transicion);
-}
-.header.fijo{
-  height:62px; background:rgba(15,15,15,.95);
-  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
-  border-bottom-color:var(--borde);
-}
-.header__interior{
-  display:flex; align-items:center; justify-content:space-between; gap:24px;
-  width:100%; max-width:var(--ancho-max); margin:0 auto; padding:0 24px;
-}
-.logo{ display:flex; flex-direction:column; line-height:1.1; font-weight:700; letter-spacing:.02em; }
-.logo__nombre{ font-size:1.1rem; color:var(--blanco); }
-.logo__nombre span{ color:var(--dorado); }
-.logo__bajada{ font-size:.54rem; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:var(--texto-tenue); }
-
-.nav__lista{ display:flex; align-items:center; gap:28px; }
-.nav__enlace{ position:relative; padding:6px 0; font-size:.89rem; font-weight:500; color:var(--texto); transition:color var(--transicion); background:none; border:none; }
-.nav__enlace::after{ content:""; position:absolute; bottom:0; left:0; width:0; height:1.5px; background:var(--dorado); transition:width var(--transicion); }
-.nav__enlace:hover, .nav__enlace.activo{ color:var(--blanco); }
-.nav__enlace:hover::after, .nav__enlace.activo::after{ width:100%; }
-.nav__cta{ margin-left:6px; padding:10px 22px; font-size:.85rem; }
-
-.nav__idioma{ display:flex; align-items:center; gap:4px; font-size:.79rem; font-weight:600; letter-spacing:.06em; }
-.nav__idioma-actual,.nav__idioma a{ padding:5px 8px; border-radius:6px; border:1px solid transparent; }
-.nav__idioma-actual{ color:var(--dorado); background:rgba(200,164,77,.09); border-color:var(--borde-dorado); }
-.nav__idioma-sep{ color:rgba(255,255,255,.2); }
-.nav__idioma a{ color:var(--texto-tenue); transition:color var(--transicion), background var(--transicion); }
-.nav__idioma a:hover{ color:var(--blanco); background:rgba(255,255,255,.06); }
-
-.header__acciones{ display:none; align-items:center; gap:10px; }
-.nav__boton{ display:inline-flex; padding:8px; background:none; border:1px solid var(--borde); border-radius:10px; color:var(--blanco); }
-.idioma-movil{
-  display:inline-flex; align-items:center; gap:7px;
-  min-height:40px; padding:9px 15px;
-  font-size:.82rem; font-weight:600; letter-spacing:.03em; white-space:nowrap;
-  color:var(--dorado); background:rgba(200,164,77,.13);
-  border:1px solid var(--borde-dorado); border-radius:999px;
-  transition:background var(--transicion), color var(--transicion), transform var(--transicion);
-}
-.idioma-movil .ico{ width:17px; height:17px; }
-.idioma-movil:active{ transform:scale(.96); }
-@media (hover:hover){ .idioma-movil:hover{ background:var(--dorado); color:var(--negro); } }
-
-/* ==========================================================================
-   3. RESUMEN (quiénes somos + foto del vehículo)
-   ========================================================================== */
-.resumen{
-  position:relative;
-  padding:calc(var(--alto-header) + 54px) 0 64px;
-  overflow:hidden;
-}
-.resumen__fondo{
-  position:absolute; inset:0;
-  background-image:var(--img-portada); background-size:cover; background-position:center;
-}
-.resumen__capa{
-  position:absolute; inset:0;
-  background:
-    linear-gradient(90deg, rgba(15,15,15,.96) 0%, rgba(15,15,15,.86) 55%, rgba(15,15,15,.72) 100%),
-    linear-gradient(0deg, rgba(15,15,15,.98) 0%, rgba(15,15,15,.25) 60%);
-}
-.resumen__rejilla{
-  position:relative; z-index:2;
-  display:grid; grid-template-columns:1.05fr .95fr; gap:52px; align-items:center;
-}
-.resumen h1{ margin-bottom:16px; }
-.resumen h1 em{ font-style:normal; color:var(--dorado); }
-.resumen__texto > p{ font-size:1rem; color:var(--texto); max-width:540px; }
-
-.resumen__puntos{ display:grid; gap:11px; margin:22px 0 28px; }
-.resumen__puntos li{ display:flex; align-items:flex-start; gap:11px; font-size:.94rem; }
-.resumen__puntos .ico{ width:19px; height:19px; margin-top:3px; color:var(--dorado); }
-.resumen__puntos strong{ color:var(--blanco); font-weight:600; }
-
-.resumen__botones{ display:flex; flex-wrap:wrap; gap:13px; }
-
-.resumen__foto{ position:relative; margin:0; }
-.resumen__foto img{
-  width:100%; aspect-ratio:4/3; object-fit:cover;
-  border-radius:var(--radio); box-shadow:var(--sombra); border:1px solid var(--borde);
-}
-.resumen__foto::after{
-  content:""; position:absolute; right:-14px; bottom:6px;
-  width:58%; height:58%; border:1px solid var(--borde-dorado);
-  border-radius:var(--radio); pointer-events:none;
-}
-.resumen__pie{
-  margin-top:12px; text-align:center;
-  font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--texto-tenue);
-}
-
-/* ==========================================================================
-   4. FORMULARIO DE RESERVA
-   ========================================================================== */
-.reserva__rejilla{ display:grid; grid-template-columns:.8fr 1.2fr; gap:44px; align-items:start; }
-
-.contacto__datos{ display:grid; gap:12px; }
-.dato{
-  display:flex; align-items:center; gap:15px; padding:15px 18px;
-  background:rgba(255,255,255,.03); border:1px solid var(--borde); border-radius:12px;
-  transition:border-color var(--transicion), transform var(--transicion);
-}
-.dato:hover{ border-color:var(--borde-dorado); transform:translateX(4px); }
-.dato__icono{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:40px; height:40px; flex-shrink:0;
-  color:var(--dorado); background:rgba(200,164,77,.09); border-radius:10px;
-}
-.dato__icono .ico{ width:19px; height:19px; }
-.dato__etiqueta{ display:block; font-size:.69rem; letter-spacing:.16em; text-transform:uppercase; color:var(--texto-tenue); }
-.dato__valor{ font-size:.99rem; font-weight:600; color:var(--blanco); word-break:break-word; }
-
-.formulario{
-  padding:32px; background:var(--negro-suave);
-  border:1px solid var(--borde-dorado); border-radius:var(--radio); box-shadow:var(--sombra);
-}
-.seccion--alterna .formulario{ background:rgba(255,255,255,.035); }
-.formulario__titulo{ margin-bottom:5px; font-size:1.3rem; }
-.formulario__nota{ margin-bottom:22px; font-size:.86rem; color:var(--texto-tenue); }
-.formulario__rejilla{ display:grid; grid-template-columns:1fr 1fr; gap:15px; }
-.campo{ display:flex; flex-direction:column; gap:7px; }
-.campo--completo{ grid-column:1/-1; }
-.campo label{ font-size:.74rem; font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--texto-tenue); }
-.campo label span{ color:var(--dorado); }
-.campo input,.campo textarea{
-  width:100%; padding:12px 14px;
-  font-family:inherit; font-size:.95rem; color:var(--blanco);
-  background:rgba(255,255,255,.04); border:1px solid var(--borde); border-radius:10px;
-  transition:border-color var(--transicion), background var(--transicion);
-}
-.campo textarea{ min-height:92px; resize:vertical; }
-.campo input::placeholder,.campo textarea::placeholder{ color:rgba(255,255,255,.62); }
-.campo input:focus,.campo textarea:focus{ outline:none; border-color:var(--dorado); background:rgba(255,255,255,.06); }
-.campo input[type="date"],.campo input[type="time"]{ color-scheme:dark; }
-.formulario__pie{ margin-top:20px; grid-column:1/-1; }
-.formulario__garantias{ margin:14px 0 0; font-size:.78rem; text-align:center; color:var(--texto-tenue); }
-.formulario__aviso{
-  display:none; align-items:flex-start; gap:11px; margin-top:15px; padding:14px 16px;
-  font-size:.88rem; background:rgba(200,164,77,.09);
-  border:1px solid var(--borde-dorado); border-radius:10px; color:var(--texto);
-}
-.formulario__aviso.visible{ display:flex; }
-.formulario__aviso .ico{ width:19px; height:19px; color:var(--dorado); margin-top:2px; }
-.formulario__aviso a{ color:var(--dorado); font-weight:600; text-decoration:underline; }
-
-/* ==========================================================================
-   5. PESTAÑAS
-   ========================================================================== */
-.tabs__lista{ display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:32px; }
-.tab{
-  padding:12px 26px;
-  font-size:.9rem; font-weight:600; letter-spacing:.02em;
-  color:var(--texto-tenue);
-  background:rgba(255,255,255,.03);
-  border:1px solid var(--borde); border-radius:999px;
-  transition:color var(--transicion), background var(--transicion), border-color var(--transicion);
-}
-.tab:hover{ color:var(--blanco); background:rgba(255,255,255,.06); }
-.tab[aria-selected="true"]{ color:var(--negro); background:var(--dorado); border-color:var(--dorado); }
-.tab__panel[hidden]{ display:none; }
-.tab__panel{ outline:none; }
-.ancla{ display:block; height:0; scroll-margin-top:calc(var(--alto-header) + 90px); }
-
-.rejilla-3{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
-
-.servicio{
-  position:relative; padding:22px 22px 24px;
-  background:rgba(255,255,255,.03); border:1px solid var(--borde); border-radius:var(--radio);
-  overflow:hidden;
-  transition:transform var(--transicion), border-color var(--transicion);
-}
-.servicio::before{ content:""; position:absolute; top:0; left:0; width:0; height:2px; background:linear-gradient(90deg,var(--dorado),transparent); transition:width .45s cubic-bezier(.4,0,.2,1); }
-.servicio:hover{ transform:translateY(-6px); border-color:var(--borde-dorado); }
-.servicio:hover::before{ width:100%; }
-.servicio__cabecera{ display:flex; align-items:center; gap:12px; margin-bottom:10px; }
-.servicio__icono{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:40px; height:40px; flex-shrink:0;
-  color:var(--dorado); background:rgba(200,164,77,.09);
-  border:1px solid var(--borde-dorado); border-radius:11px;
-  transition:background var(--transicion), transform var(--transicion);
-}
-.servicio__icono .ico{ width:20px; height:20px; }
-.servicio:hover .servicio__icono{ background:rgba(200,164,77,.16); transform:scale(1.07); }
-.servicio h3{ margin-bottom:0; }
-.servicio p{ font-size:.89rem; line-height:1.6; color:var(--texto-tenue); }
-.servicio__precio{ margin-top:12px; font-size:.78rem; font-weight:700; letter-spacing:.05em; color:var(--dorado); }
-
-.beneficio{
-  display:flex; align-items:flex-start; gap:13px; padding:16px 18px;
-  background:rgba(255,255,255,.03); border:1px solid var(--borde); border-radius:var(--radio);
-  transition:transform var(--transicion), border-color var(--transicion);
-}
-.beneficio:hover{ transform:translateY(-4px); border-color:var(--borde-dorado); }
-.beneficio__check{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:28px; height:28px; margin-top:2px; flex-shrink:0;
-  color:var(--negro); background:var(--dorado); border-radius:50%;
-}
-.beneficio__check .ico{ width:15px; height:15px; stroke-width:2.6; }
-.beneficio h3{ margin-bottom:3px; font-size:.96rem; }
-.beneficio p{ font-size:.85rem; line-height:1.5; color:var(--texto-tenue); }
-
-.pasos{ margin-top:26px; padding-top:24px; border-top:1px solid var(--borde); }
-.pasos__titulo{ margin-bottom:16px; font-size:.72rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--dorado); text-align:center; }
-.paso{ display:flex; align-items:flex-start; gap:13px; padding:14px 16px; background:rgba(255,255,255,.02); border:1px solid var(--borde); border-radius:12px; }
-.paso__numero{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:30px; height:30px; flex-shrink:0;
-  font-size:.9rem; font-weight:700; color:var(--dorado);
-  background:rgba(200,164,77,.09); border:1px solid var(--borde-dorado); border-radius:50%;
-}
-.paso h3{ margin-bottom:2px; font-size:.94rem; }
-.paso p{ font-size:.84rem; line-height:1.5; color:var(--texto-tenue); }
-.tarifas__bloque{ max-width:840px; margin:0 auto 28px; padding:26px 28px; background:rgba(200,164,77,.06); border:1px solid var(--borde-dorado); border-radius:var(--radio); }
-.tarifas__bloque h3{ margin-top:0; }
-.faq{ max-width:840px; margin:0 auto; display:grid; gap:12px; }
-.faq details{ background:rgba(255,255,255,.03); border:1px solid var(--borde); border-radius:12px; }
-.faq summary{ display:flex; justify-content:space-between; align-items:center; gap:14px; padding:16px 18px; font-weight:600; color:var(--blanco); cursor:pointer; list-style:none; }
-.faq summary::-webkit-details-marker{ display:none; }
-.faq summary::after{ content:"+"; font-size:1.3rem; line-height:1; color:var(--dorado); }
-.faq details[open] summary::after{ content:"\2013"; }
-.faq details p{ margin:0; padding:0 18px 16px; font-size:.9rem; color:var(--texto-tenue); }
-.faq .pasos__titulo{ margin:18px 0 2px; }
-
-/* ==========================================================================
-   6. CARRUSEL DE DESTINOS
-   ========================================================================== */
-.carrusel{ position:relative; }
-.carrusel__pista{
-  display:flex; gap:18px;
-  overflow-x:auto; overflow-y:hidden;
-  scroll-snap-type:x mandatory; scroll-behavior:smooth;
-  scrollbar-width:none; -ms-overflow-style:none;
-}
-.carrusel__pista::-webkit-scrollbar{ display:none; }
-.carrusel__pista .galeria__item{ flex:0 0 calc((100% - 36px) / 3); scroll-snap-align:start; }
-
-.galeria__item{
-  position:relative; margin:0;
-  border-radius:var(--radio); overflow:hidden; cursor:zoom-in;
-  background:var(--gris-oscuro); box-shadow:var(--sombra); border:1px solid var(--borde);
-  transition:border-color var(--transicion);
-}
-.galeria__item:hover{ border-color:var(--borde-dorado); }
-.galeria__item img{ width:100%; aspect-ratio:4/3; object-fit:cover; transition:transform .6s cubic-bezier(.4,0,.2,1); }
-.galeria__item:hover img{ transform:scale(1.07); }
-.galeria__pie{
-  position:absolute; inset:auto 0 0 0; padding:34px 18px 15px;
-  font-size:.88rem; font-weight:500; color:var(--blanco);
-  background:linear-gradient(0deg,rgba(15,15,15,.92),transparent);
-  opacity:0; transform:translateY(10px);
-  transition:opacity var(--transicion), transform var(--transicion);
-}
-.galeria__item:hover .galeria__pie,.galeria__item:focus-within .galeria__pie{ opacity:1; transform:none; }
-@media (hover:none){ .galeria__pie{ opacity:1; transform:none; } }
-
-.carrusel__flecha{
-  position:absolute; top:calc(50% - 24px); z-index:5;
-  display:inline-flex; align-items:center; justify-content:center;
-  width:46px; height:46px; color:var(--blanco);
-  background:rgba(15,15,15,.86); border:1px solid var(--borde-dorado); border-radius:50%;
-  backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
-  transition:background var(--transicion), color var(--transicion), opacity var(--transicion);
-}
-.carrusel__flecha:hover{ background:var(--dorado); color:var(--negro); }
-.carrusel__flecha--ant{ left:-12px; }
-.carrusel__flecha--sig{ right:-12px; }
-.carrusel__flecha:disabled{ opacity:.25; cursor:default; }
-
-.carrusel__puntos{ display:flex; justify-content:center; flex-wrap:wrap; gap:9px; margin-top:24px; }
-.carrusel__punto{ position:relative; width:8px; height:8px; padding:0; background:rgba(255,255,255,.24); border:none; border-radius:50%; transition:background var(--transicion), transform var(--transicion); }
-.carrusel__punto::before{ content:""; position:absolute; inset:-8px; }
-.carrusel__punto:hover{ background:rgba(255,255,255,.5); }
-.carrusel__punto.activo{ background:var(--dorado); transform:scale(1.4); }
-
-.visor{
-  position:fixed; inset:0; z-index:200; display:none;
-  align-items:center; justify-content:center; padding:70px 20px;
-  background:rgba(8,8,8,.96); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
-}
-.visor.abierto{ display:flex; }
-.visor__medio{ max-width:min(1100px,92vw); max-height:82vh; }
-.visor__medio img{ width:auto; max-width:100%; max-height:82vh; aspect-ratio:auto; border-radius:10px; object-fit:contain; }
-.visor__titulo{ position:absolute; bottom:24px; left:0; right:0; text-align:center; font-size:.92rem; color:var(--texto); }
-.visor__boton{
-  position:absolute; display:inline-flex; align-items:center; justify-content:center;
-  width:46px; height:46px; color:var(--blanco);
-  background:rgba(255,255,255,.07); border:1px solid var(--borde); border-radius:50%;
-  transition:background var(--transicion), color var(--transicion);
-}
-.visor__boton:hover{ background:var(--dorado); color:var(--negro); }
-.visor__boton--cerrar{ top:20px; right:20px; }
-.visor__boton--ant{ left:20px; top:50%; transform:translateY(-50%); }
-.visor__boton--sig{ right:20px; top:50%; transform:translateY(-50%); }
-
-/* ==========================================================================
-   7. OPINIONES
-   ========================================================================== */
-.opiniones__resumen{
-  display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:18px 34px;
-  max-width:620px; margin:0 auto 32px; padding:22px 28px;
-  background:rgba(255,255,255,.035); border:1px solid var(--borde-dorado); border-radius:var(--radio);
-}
-.opiniones__nota{ display:flex; align-items:baseline; gap:7px; }
-.opiniones__numero{ font-size:2.8rem; font-weight:700; line-height:1; color:var(--dorado); letter-spacing:-.03em; }
-.opiniones__sobre{ font-size:1rem; color:var(--texto-tenue); }
-.opiniones__detalle{ text-align:left; }
-.opiniones__conteo{ margin:5px 0 0; font-size:.85rem; color:var(--texto-tenue); }
-
-.estrellas{ display:inline-flex; gap:3px; color:var(--dorado); }
-.estrellas .ico{ width:18px; height:18px; }
-.estrellas .vacia{ color:rgba(255,255,255,.18); }
-
-.opiniones__lista{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:16px; }
-.resena{
-  display:flex; flex-direction:column; padding:24px 22px;
-  background:rgba(255,255,255,.03); border:1px solid var(--borde); border-radius:var(--radio);
-  transition:transform var(--transicion), border-color var(--transicion);
-}
-.resena:hover{ transform:translateY(-5px); border-color:var(--borde-dorado); }
-.resena__cabecera{ display:flex; align-items:center; gap:13px; margin-bottom:13px; }
-.resena__foto,.resena__iniciales{
-  width:48px; height:48px; flex-shrink:0; border-radius:50%; object-fit:cover;
-  border:1px solid var(--borde-dorado);
-}
-.resena__iniciales{
-  display:inline-flex; align-items:center; justify-content:center;
-  font-size:1rem; font-weight:700; color:var(--dorado); background:rgba(200,164,77,.12);
-}
-.resena__nombre{ display:block; font-weight:600; color:var(--blanco); font-size:.97rem; }
-.resena__meta{ font-size:.79rem; color:var(--texto-tenue); }
-.resena__estrellas{ margin-bottom:11px; }
-.resena__estrellas .ico{ width:16px; height:16px; }
-.resena blockquote{ margin:0; font-size:.92rem; line-height:1.65; color:var(--texto); }
-
-.opiniones__vacio{
-  max-width:600px; margin:0 auto; padding:36px 30px; text-align:center;
-  background:rgba(255,255,255,.03); border:1px dashed var(--borde-dorado); border-radius:var(--radio);
-}
-.opiniones__vacio .ico{ width:32px; height:32px; margin:0 auto 13px; color:var(--dorado); }
-.opiniones__vacio h3{ margin-bottom:7px; font-size:1.1rem; }
-.opiniones__vacio p{ font-size:.92rem; color:var(--texto-tenue); }
-
-/* --- Formulario para dejar una opinión --- */
-.dejar{
-  max-width:720px; margin:32px auto 0; padding:28px 26px;
-  background:rgba(255,255,255,.035); border:1px solid var(--borde-dorado); border-radius:var(--radio);
-}
-.dejar__titulo{ margin-bottom:5px; font-size:1.2rem; text-align:center; }
-.dejar__nota{ margin-bottom:20px; font-size:.85rem; color:var(--texto-tenue); text-align:center; }
-
-/* Selector de estrellas, sin JavaScript: los radios van en orden inverso
-   para poder pintar con CSS todas las anteriores a la elegida. */
-.puntuacion{ border:0; padding:0; margin:0; min-width:0; }
-.puntuacion legend{
-  padding:0; font-size:.74rem; font-weight:600; letter-spacing:.09em;
-  text-transform:uppercase; color:var(--texto-tenue);
-}
-.puntuacion legend span{ color:var(--dorado); }
-.puntuacion__grupo{ display:flex; flex-direction:row-reverse; justify-content:flex-end; gap:5px; margin-top:8px; }
-.puntuacion input{ position:absolute; width:1px; height:1px; opacity:0; }
-.puntuacion label{
-  cursor:pointer; color:rgba(255,255,255,.18);
-  transition:color .2s ease, transform .2s ease;
-}
-.puntuacion label .ico{ width:30px; height:30px; }
-.puntuacion input:checked ~ label,
-.puntuacion label:hover,
-.puntuacion label:hover ~ label{ color:var(--dorado); }
-.puntuacion label:hover{ transform:scale(1.12); }
-.puntuacion input:focus-visible + label{ outline:2px solid var(--dorado); outline-offset:3px; border-radius:4px; }
-
-/* Texto solo para lectores de pantalla */
-.oculto{
-  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
-  overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
-}
-/* Campo trampa contra robots: fuera de la vista y del recorrido de tabulación */
+h1,h2,h3,h4{ margin:0; color:var(--ink); line-height:1.16; font-weight:800; letter-spacing:-.02em; text-wrap:balance; }
+h1{ font-size:clamp(2rem,5vw,3.3rem); }
+h2{ font-size:clamp(1.55rem,3vw,2.2rem); }
+h3{ font-size:1.1rem; letter-spacing:-.01em; }
+p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
+.wrap{ width:100%; max-width:1160px; margin:0 auto; padding:0 20px; }
+.seccion{ padding:72px 0; scroll-margin-top:88px; }
+.kicker{ display:inline-flex; align-items:center; gap:10px; margin-bottom:12px; font-size:.72rem; font-weight:800; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); }
+.kicker::before{ content:""; width:26px; height:2px; background:var(--gold); border-radius:2px; }
+.centro{ max-width:700px; margin:0 auto 40px; text-align:center; }
+.centro .kicker{ justify-content:center; }
+.centro .kicker::after{ content:""; width:26px; height:2px; background:var(--gold); border-radius:2px; }
+.centro p{ margin-top:12px; color:var(--muted); }
+.ico{ width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+.boton{ display:inline-flex; align-items:center; justify-content:center; gap:9px; padding:15px 28px; border:1px solid transparent; border-radius:999px; font-size:.95rem; font-weight:700; text-align:center; transition:transform var(--t), box-shadow var(--t), background var(--t), color var(--t), border-color var(--t); }
+.boton:hover{ transform:translateY(-2px); }
+.boton--oro{ background:linear-gradient(135deg,var(--gold-2),var(--gold)); color:var(--gold-ink); box-shadow:0 12px 30px rgba(200,164,77,.35); }
+.boton--oro:hover{ box-shadow:0 16px 38px rgba(200,164,77,.48); }
+.boton--navy{ background:var(--navy); color:#fff; }
+.boton--navy:hover{ background:var(--navy-2); box-shadow:0 12px 28px rgba(11,36,71,.28); }
+.boton--linea{ border-color:var(--line); color:var(--navy); background:#fff; }
+.boton--linea:hover{ border-color:var(--navy); }
+:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; border-radius:8px; }
+.oculto{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
 .trampa{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+.rev{ opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1); transition-delay:var(--d,0s); }
+.rev.on{ opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } *,*::before,*::after{ animation:none!important; transition-duration:.01ms!important; } .rev{ opacity:1; transform:none; } }
 
-/* ==========================================================================
-   8. PIE DE PÁGINA Y FLOTANTE
-   ========================================================================== */
-.footer{ padding:56px 0 26px; background:var(--negro); border-top:1px solid var(--borde); }
-.footer__rejilla{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:36px; }
-.footer__eslogan{ margin-top:14px; max-width:330px; font-size:.9rem; color:var(--texto-tenue); }
-.footer h3{ margin-bottom:15px; font-size:.74rem; letter-spacing:.18em; text-transform:uppercase; color:var(--dorado); }
-.footer__lista{ display:grid; gap:10px; font-size:.9rem; }
-.footer__lista a{ color:var(--texto-tenue); transition:color var(--transicion), padding-left var(--transicion); }
-.footer__lista a:hover{ color:var(--dorado); padding-left:5px; }
-.footer__base{ padding-top:22px; border-top:1px solid var(--borde); text-align:center; font-size:.83rem; color:var(--texto-tenue); }
+.topbar{ position:sticky; top:0; z-index:100; background:rgba(255,255,255,.86); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid var(--line); transition:box-shadow var(--t); }
+.topbar.bajo{ box-shadow:0 10px 28px rgba(7,26,53,.10); }
+.topbar__interior{ display:flex; align-items:center; gap:14px; max-width:1160px; margin:0 auto; padding:12px 20px; }
+.logo{ display:flex; flex-direction:column; line-height:1.1; margin-right:auto; }
+.logo__nombre{ font-size:1.1rem; font-weight:800; color:var(--navy); letter-spacing:-.01em; }
+.logo__nombre b{ color:var(--gold); font-weight:800; }
+.logo__bajada{ font-size:.55rem; font-weight:700; letter-spacing:.3em; text-transform:uppercase; color:var(--muted); }
+.menu{ display:flex; align-items:center; gap:2px; }
+.menu__enlace{ padding:9px 13px; border-radius:10px; font-size:.9rem; font-weight:600; color:var(--ink); transition:background var(--t), color var(--t); }
+.menu__enlace:hover{ background:var(--soft); color:var(--navy); }
+.wa-chip{ display:inline-flex; align-items:center; gap:7px; padding:8px 14px; border-radius:999px; font-size:.8rem; font-weight:700; color:#0B7A43; background:#E7F8EF; border:1px solid #C4EDD6; white-space:nowrap; }
+.wa-chip .ico{ width:16px; height:16px; }
+.idioma{ display:flex; align-items:center; gap:2px; font-size:.82rem; font-weight:700; padding:0 6px; }
+.idioma span{ color:var(--navy); padding:6px 8px; border-radius:8px; background:rgba(200,164,77,.14); }
+.idioma a{ color:var(--muted); padding:6px 8px; border-radius:8px; }
+.idioma a:hover{ color:var(--navy); background:var(--soft); }
+.burger{ display:inline-flex; padding:9px; border:1px solid var(--line); border-radius:10px; background:#fff; color:var(--navy); }
+.panel{ position:fixed; top:0; right:0; bottom:0; z-index:200; width:min(320px,86vw); background:#fff; box-shadow:var(--sombra); padding:18px; transform:translateX(105%); transition:transform .35s cubic-bezier(.22,1,.36,1); display:flex; flex-direction:column; gap:4px; overflow-y:auto; }
+.panel.abierto{ transform:none; }
+.panel a{ padding:13px 12px; border-radius:10px; font-weight:600; }
+.panel a:hover{ background:var(--soft); }
+.panel__cerrar{ align-self:flex-end; padding:9px; border:1px solid var(--line); border-radius:10px; background:#fff; color:var(--navy); margin-bottom:8px; }
+.velo{ position:fixed; inset:0; z-index:150; background:rgba(7,26,53,.45); opacity:0; pointer-events:none; transition:opacity var(--t); }
+.velo.on{ opacity:1; pointer-events:auto; }
 
-.whatsapp{
-  position:fixed; right:20px; bottom:20px; z-index:120;
-  display:inline-flex; align-items:center; gap:10px;
-  padding:13px 20px 13px 17px;
-  font-size:.9rem; font-weight:600; color:#fff; background:#25D366;
-  border-radius:999px; box-shadow:0 12px 30px rgba(37,211,102,.34);
-  transition:transform var(--transicion), box-shadow var(--transicion);
+.hero{ position:relative; overflow:hidden; background:linear-gradient(120deg,var(--navy-deep) 0%,var(--navy) 45%,var(--navy-2) 100%); color:#fff; padding:76px 0 88px; }
+.hero__fondo{ position:absolute; inset:0; background-image:var(--img-portada); background-size:cover; background-position:center; opacity:.30; mix-blend-mode:luminosity; }
+.hero__fondo::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(7,26,53,.20),rgba(7,26,53,.55)); }
+.hero__rejilla{ position:relative; z-index:2; display:grid; gap:40px; align-items:center; }
+.hero .kicker{ color:var(--gold-2); }
+.hero h1{ color:#fff; margin-bottom:16px; }
+.hero h1 em{ font-style:normal; color:var(--gold-2); }
+.hero__sub{ max-width:540px; color:rgba(255,255,255,.88); font-size:1.03rem; }
+.hero__chips{ display:flex; flex-wrap:wrap; gap:9px; margin-top:22px; }
+.chip{ display:inline-flex; align-items:center; gap:7px; padding:8px 14px; border-radius:999px; font-size:.8rem; font-weight:600; color:#fff; background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.22); }
+.chip .ico{ width:16px; height:16px; color:var(--gold-2); }
+
+.widget{ background:#fff; color:var(--ink); border-radius:24px; box-shadow:var(--sombra); padding:24px; max-width:530px; width:100%; justify-self:center; }
+.widget__titulo{ font-size:1.2rem; margin-bottom:4px; }
+.widget__nota{ font-size:.82rem; color:var(--muted); margin-bottom:16px; }
+.tabs{ display:flex; gap:6px; background:var(--soft); border:1px solid var(--line); border-radius:14px; padding:5px; margin-bottom:16px; }
+.tab{ flex:1; padding:10px 8px; border:none; border-radius:10px; background:transparent; font-size:.84rem; font-weight:700; color:var(--muted); transition:background var(--t), color var(--t), box-shadow var(--t); }
+.tab[aria-selected="true"]{ background:var(--navy); color:#fff; box-shadow:0 6px 16px rgba(11,36,71,.25); }
+.f-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+.f-campo{ display:flex; flex-direction:column; gap:6px; }
+.f-campo--todo{ grid-column:1/-1; }
+.f-campo label{ font-size:.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.f-campo label b{ color:var(--gold); }
+.f-campo input,.f-campo select,.f-campo textarea{ width:100%; padding:11px 12px; font-family:inherit; font-size:.95rem; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:12px; transition:border-color var(--t), box-shadow var(--t); }
+.f-campo textarea{ min-height:70px; resize:vertical; grid-column:1/-1; }
+.f-campo input:focus,.f-campo select:focus,.f-campo textarea:focus{ outline:none; border-color:var(--navy); box-shadow:0 0 0 4px rgba(11,36,71,.10); }
+.f-campo input[type="date"],.f-campo input[type="time"]{ color-scheme:light; }
+.f-extras{ grid-column:1/-1; display:flex; flex-direction:column; gap:8px; padding:14px; background:var(--soft); border:1px dashed #D3DCE6; border-radius:14px; }
+.f-extras__titulo{ font-size:.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+.extra-check{ display:flex; align-items:flex-start; gap:10px; font-size:.88rem; color:var(--ink); cursor:pointer; }
+.extra-check input{ width:17px; height:17px; margin:2px 0 0; accent-color:var(--gold); flex-shrink:0; }
+.extra-check small{ display:block; color:var(--muted); font-size:.78rem; }
+.extra-check .etiqueta-free{ display:inline-block; margin-left:6px; padding:2px 8px; border-radius:999px; font-size:.62rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#0B7A43; background:#E7F8EF; border:1px solid #C4EDD6; vertical-align:middle; }
+.f-enviar{ grid-column:1/-1; }
+.f-aviso{ display:none; grid-column:1/-1; align-items:flex-start; gap:10px; padding:13px 15px; border-radius:12px; font-size:.88rem; background:#FDF6E7; border:1px solid #EAD9A6; color:#6B5518; }
+.f-aviso.on{ display:flex; }
+.f-aviso .ico{ width:18px; height:18px; color:var(--gold); margin-top:2px; }
+.f-aviso a{ color:var(--navy); font-weight:700; text-decoration:underline; }
+.f-garantia{ grid-column:1/-1; margin:2px 0 0; text-align:center; font-size:.76rem; color:var(--muted); }
+
+.confianza{ background:var(--soft); border-block:1px solid var(--line); }
+.confianza__rejilla{ display:grid; grid-template-columns:1fr; gap:14px; padding:30px 0; }
+.conf-card{ display:flex; align-items:flex-start; gap:13px; background:#fff; border:1px solid var(--line); border-radius:var(--radio-sm); padding:16px 18px; box-shadow:var(--sombra-2); }
+.conf-icono{ display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:12px; background:rgba(200,164,77,.15); color:var(--gold-ink); flex-shrink:0; }
+.conf-icono .ico{ width:22px; height:22px; color:var(--gold); }
+.conf-card b{ display:block; font-size:.94rem; color:var(--navy); }
+.conf-card small{ display:block; font-size:.8rem; color:var(--muted); }
+.conf-card .estrellas-inline{ display:inline-flex; gap:2px; color:var(--gold); margin-bottom:2px; }
+.conf-card .estrellas-inline .ico{ width:14px; height:14px; fill:currentColor; stroke:none; }
+
+.flota__rejilla{ display:grid; gap:20px; }
+.vehiculo{ display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:var(--radio); overflow:hidden; box-shadow:var(--sombra-2); transition:transform var(--t), box-shadow var(--t), border-color var(--t); }
+.vehiculo:hover{ transform:translateY(-6px); box-shadow:var(--sombra); border-color:#D3DCE6; }
+.vehiculo__visual{ position:relative; min-height:150px; display:flex; align-items:center; justify-content:center; background:linear-gradient(125deg,var(--navy),var(--navy-2) 70%,var(--navy-3)); }
+.vehiculo__visual .ico{ width:64px; height:64px; color:var(--gold-2); opacity:.9; }
+.vehiculo__visual::after{ content:""; position:absolute; right:-24px; bottom:-24px; width:140px; height:140px; border-radius:50%; background:rgba(255,255,255,.06); }
+.vehiculo__capacidad{ position:absolute; top:12px; left:12px; padding:6px 12px; border-radius:999px; font-size:.7rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#fff; background:rgba(7,26,53,.55); border:1px solid rgba(255,255,255,.25); backdrop-filter:blur(4px); }
+.vehiculo__cuerpo{ display:flex; flex-direction:column; gap:12px; padding:20px 22px 22px; flex:1; }
+.vehiculo__cuerpo h3{ color:var(--navy); }
+.vehiculo__modelo{ font-size:.8rem; font-weight:600; color:var(--muted); }
+.specs{ display:grid; gap:8px; font-size:.9rem; color:var(--muted); }
+.specs li{ display:flex; align-items:center; gap:9px; }
+.specs .ico{ width:17px; height:17px; color:var(--ok); }
+.amenidades{ display:flex; flex-wrap:wrap; gap:6px; }
+.amenidad{ display:inline-flex; align-items:center; gap:6px; padding:5px 11px; border-radius:999px; font-size:.74rem; font-weight:600; color:var(--navy); background:var(--soft); border:1px solid var(--line); }
+.amenidad .ico{ width:14px; height:14px; color:var(--gold); }
+.precio-linea{ display:flex; align-items:baseline; gap:8px; margin-top:auto; padding-top:14px; border-top:1px dashed var(--line); }
+.precio-linea small{ font-size:.8rem; color:var(--muted); }
+.precio-linea strong{ font-size:1.35rem; font-weight:800; color:var(--navy); }
+.vehiculo .boton{ width:100%; }
+
+.tours{ background:var(--soft); border-block:1px solid var(--line); }
+.tours__rejilla{ display:grid; gap:20px; }
+.tour{ position:relative; display:flex; flex-direction:column; background:#fff; border:1px solid var(--line); border-radius:var(--radio); overflow:hidden; box-shadow:var(--sombra-2); transition:transform var(--t), box-shadow var(--t), border-color var(--t); }
+.tour:hover{ transform:translateY(-6px); box-shadow:var(--sombra); border-color:#D3DCE6; }
+.tour img{ width:100%; aspect-ratio:16/10; object-fit:cover; }
+.tour__badges{ position:absolute; top:12px; left:12px; display:flex; flex-wrap:wrap; gap:6px; }
+.badge{ padding:6px 11px; border-radius:999px; font-size:.64rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:rgba(7,26,53,.80); border:1px solid rgba(255,255,255,.25); backdrop-filter:blur(4px); }
+.badge--oro{ background:linear-gradient(135deg,var(--gold-2),var(--gold)); color:var(--gold-ink); border-color:transparent; }
+.tour__cuerpo{ display:flex; flex-direction:column; gap:9px; padding:18px 20px 20px; flex:1; }
+.tour__meta{ display:flex; flex-wrap:wrap; gap:6px 16px; font-size:.8rem; color:var(--muted); }
+.tour__meta span{ display:inline-flex; align-items:center; gap:6px; }
+.tour__meta .ico{ width:15px; height:15px; color:var(--gold); }
+.tour__cuerpo p{ font-size:.9rem; color:var(--muted); margin:0; flex:1; }
+.playas{ margin-top:20px; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 22px; padding:24px 26px; border-radius:var(--radio); background:linear-gradient(120deg,var(--navy-deep),var(--navy-2)); color:#fff; text-align:center; }
+.playas p{ margin:0; font-size:.98rem; }
+.playas b{ color:var(--gold-2); }
+.playas .boton{ padding:12px 22px; font-size:.88rem; }
+
+.nosotros__rejilla{ display:grid; gap:36px; align-items:center; }
+.nosotros__foto{ position:relative; }
+.nosotros__foto img{ width:100%; border-radius:var(--radio); box-shadow:var(--sombra); aspect-ratio:4/3; object-fit:cover; }
+.nosotros__placa{ position:absolute; left:16px; bottom:16px; display:flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; background:rgba(255,255,255,.94); backdrop-filter:blur(8px); box-shadow:var(--sombra-2); }
+.nosotros__placa .res-num{ font-size:1.5rem; font-weight:800; color:var(--navy); line-height:1; }
+.nosotros__placa small{ font-size:.76rem; font-weight:600; color:var(--muted); }
+.nosotros__lista{ display:grid; gap:12px; margin:18px 0 26px; }
+.nosotros__lista li{ display:flex; align-items:flex-start; gap:10px; font-size:.95rem; color:var(--ink); }
+.nosotros__lista .ico{ width:19px; height:19px; color:var(--ok); margin-top:3px; }
+.stats{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+.stat{ padding:16px; border-radius:var(--radio-sm); background:var(--soft); border:1px solid var(--line); text-align:center; }
+.stat strong{ display:block; font-size:1.35rem; font-weight:800; color:var(--navy); }
+.stat small{ font-size:.76rem; font-weight:600; color:var(--muted); }
+
+.tarifas__panel{ max-width:780px; margin:0 auto; background:#fff; border:1px solid var(--line); border-radius:var(--radio); box-shadow:var(--sombra-2); overflow:hidden; }
+.tarifas__panel li{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:16px 24px; border-bottom:1px solid var(--line); font-size:.95rem; }
+.tarifas__panel li:last-child{ border-bottom:none; }
+.tarifas__panel li strong{ color:var(--ink); font-weight:700; }
+.tarifas__panel li span{ color:var(--navy); font-weight:800; white-space:nowrap; }
+.tarifas__nota{ max-width:780px; margin:14px auto 0; text-align:center; font-size:.82rem; color:var(--muted); }
+
+.res-summary{ display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; max-width:560px; margin:0 auto 28px; padding:22px 26px; background:var(--soft); border:1px solid var(--line); border-radius:var(--radio); }
+.res-numero{ font-size:2.6rem; font-weight:800; color:var(--navy); line-height:1; }
+.res-estrellas{ display:inline-flex; gap:2px; color:var(--gold); }
+.res-estrellas .ico{ width:17px; height:17px; fill:currentColor; stroke:none; }
+.res-estrellas .vacia{ color:#CBD5DF; }
+.res-carrusel{ position:relative; }
+.res-pista{ display:grid; grid-auto-flow:column; grid-auto-columns:min(340px,82vw); gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 4px 18px; scrollbar-width:none; }
+.res-pista::-webkit-scrollbar{ display:none; }
+.res-card{ scroll-snap-align:start; background:#fff; border:1px solid var(--line); border-radius:var(--radio); padding:20px; box-shadow:var(--sombra-2); display:flex; flex-direction:column; gap:10px; }
+.res-card__cabeza{ display:flex; align-items:center; gap:12px; }
+.res-iniciales{ display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background:rgba(200,164,77,.16); color:var(--gold-ink); font-weight:800; flex-shrink:0; }
+.res-card blockquote{ margin:0; font-size:.94rem; color:var(--ink); }
+.res-flechas{ display:flex; justify-content:center; gap:10px; }
+.res-flecha{ display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:50%; border:1px solid var(--line); background:#fff; color:var(--navy); transition:background var(--t), border-color var(--t); }
+.res-flecha:hover{ background:var(--soft); border-color:var(--navy); }
+.dejar{ max-width:640px; margin:30px auto 0; padding:24px; background:var(--soft); border:1px solid var(--line); border-radius:var(--radio); }
+
+.faq{ max-width:740px; margin:0 auto; display:grid; gap:10px; }
+.faq details{ background:#fff; border:1px solid var(--line); border-radius:var(--radio-sm); transition:border-color var(--t); }
+.faq details:hover,.faq details[open]{ border-color:#C9D5E1; }
+.faq summary{ display:flex; justify-content:space-between; align-items:center; gap:14px; padding:16px 19px; font-weight:700; color:var(--ink); cursor:pointer; list-style:none; }
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary::after{ content:"+"; font-size:1.35rem; line-height:1; color:var(--gold); }
+.faq details[open] summary::after{ content:"\2013"; }
+.faq details p{ margin:0; padding:0 19px 17px; font-size:.92rem; color:var(--muted); }
+
+.pie{ background:var(--navy-deep); color:rgba(255,255,255,.82); padding:56px 0 24px; }
+.pie a{ color:rgba(255,255,255,.82); transition:color var(--t); }
+.pie a:hover{ color:var(--gold-2); }
+.pie__rejilla{ display:grid; gap:30px; }
+.pie h3{ color:#fff; font-size:.74rem; letter-spacing:.2em; text-transform:uppercase; margin-bottom:14px; }
+.pie__lista{ display:grid; gap:9px; font-size:.9rem; }
+.pie .logo__nombre{ color:#fff; }
+.pie .logo__bajada{ color:rgba(255,255,255,.55); }
+.pago-pills{ display:flex; flex-wrap:wrap; gap:8px; }
+.pago-pill{ display:inline-flex; align-items:center; gap:7px; padding:7px 13px; border-radius:999px; font-size:.78rem; font-weight:600; border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.06); }
+.pago-pill .ico{ width:15px; height:15px; color:var(--gold-2); }
+.pie__cancelacion{ display:flex; align-items:flex-start; gap:10px; margin-top:16px; padding:13px 15px; border-radius:12px; background:rgba(30,142,90,.12); border:1px solid rgba(30,142,90,.35); font-size:.84rem; }
+.pie__cancelacion .ico{ width:17px; height:17px; color:#5BD9A2; margin-top:2px; }
+.pie__base{ margin-top:36px; padding-top:20px; border-top:1px solid rgba(255,255,255,.14); text-align:center; font-size:.8rem; color:rgba(255,255,255,.55); }
+
+.wa-float{ position:fixed; right:18px; bottom:18px; z-index:120; display:inline-flex; align-items:center; gap:9px; padding:14px 19px; border-radius:999px; background:var(--wa); color:#fff; font-weight:700; font-size:.9rem; box-shadow:0 14px 32px rgba(37,211,102,.4); transition:transform var(--t), box-shadow var(--t); }
+.wa-float:hover{ transform:translateY(-3px); box-shadow:0 18px 38px rgba(37,211,102,.5); }
+.wa-float .ico{ width:22px; height:22px; }
+.wa-float::before{ content:""; position:absolute; inset:-5px; border-radius:999px; border:2px solid rgba(37,211,102,.45); animation:pulso 2.4s ease-out infinite; }
+@keyframes pulso{ 0%{ transform:scale(.9); opacity:1; } 70%{ transform:scale(1.15); opacity:0; } 100%{ opacity:0; } }
+@media (prefers-reduced-motion:reduce){ .wa-float::before{ animation:none; } }
+
+@media (min-width:700px){
+  .flota__rejilla{ grid-template-columns:repeat(2,1fr); }
+  .tours__rejilla{ grid-template-columns:repeat(2,1fr); }
+  .confianza__rejilla{ grid-template-columns:repeat(2,1fr); gap:16px 20px; }
+  .stats{ grid-template-columns:repeat(4,1fr); }
 }
-.whatsapp:hover{ transform:translateY(-4px) scale(1.03); box-shadow:0 16px 38px rgba(37,211,102,.46); }
-.whatsapp .ico{ width:23px; height:23px; stroke-width:1.9; }
-.whatsapp::after{ content:""; position:absolute; inset:0; border-radius:999px; border:2px solid rgba(37,211,102,.55); animation:onda 2.6s ease-out infinite; }
-@keyframes onda{ 0%{ transform:scale(1); opacity:.7; } 100%{ transform:scale(1.28); opacity:0; } }
-
-/* ==========================================================================
-   9. ADAPTACIÓN
-   ========================================================================== */
-@media (max-width:1024px){
-  .resumen__rejilla{ gap:38px; }
-  .reserva__rejilla{ grid-template-columns:1fr; gap:32px; }
-  .footer__rejilla{ grid-template-columns:1fr 1fr; gap:30px; }
+@media (min-width:980px){
+  .hero{ padding:96px 0 104px; }
+  .hero__rejilla{ grid-template-columns:1.05fr .95fr; gap:52px; }
+  .confianza__rejilla{ grid-template-columns:repeat(4,1fr); }
+  .flota__rejilla{ grid-template-columns:repeat(4,1fr); }
+  .tours__rejilla{ grid-template-columns:repeat(4,1fr); }
+  .nosotros__rejilla{ grid-template-columns:1fr 1.05fr; gap:52px; }
+  .seccion{ padding:92px 0; }
 }
-
-@media (max-width:900px){
-  .seccion{ padding:56px 0; }
-  .seccion__encabezado{ margin-bottom:28px; }
-  .header__acciones{ display:flex; }
-  .nav__idioma{ display:none; }
-
-  .nav{
-    position:fixed; top:var(--alto-header); left:0; right:0;
-    max-height:0; overflow:hidden;
-    background:rgba(15,15,15,.985);
-    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-    border-bottom:1px solid transparent;
-    transition:max-height .4s cubic-bezier(.4,0,.2,1), border-color .3s;
-  }
-  .nav.abierto{ max-height:calc(100vh - var(--alto-header)); border-bottom-color:var(--borde); }
-  .nav__lista{ flex-direction:column; align-items:stretch; gap:0; padding:10px 24px 26px; }
-  .nav__lista li{ border-bottom:1px solid var(--borde); }
-  .nav__lista li:last-child{ border-bottom:none; }
-  .nav__enlace{ display:block; width:100%; padding:15px 0; font-size:1rem; text-align:left; }
-  .nav__enlace::after{ display:none; }
-  .nav__cta{ margin:18px 0 0; width:100%; }
-
-  .resumen{ padding:calc(var(--alto-header) + 38px) 0 46px; }
-  .resumen__rejilla{ grid-template-columns:1fr; gap:30px; }
-  .resumen__foto{ order:-1; max-width:520px; margin:0 auto; width:100%; }
-  .resumen__foto::after{ display:none; }
-
-  .carrusel__pista .galeria__item{ flex:0 0 calc((100% - 18px) / 2); }
-  .carrusel__flecha--ant{ left:-4px; }
-  .carrusel__flecha--sig{ right:-4px; }
+@media (max-width:979px){
+  .menu{ display:none; }
 }
-
+@media (min-width:980px){
+  .burger{ display:none; }
+}
 @media (max-width:600px){
-  body{ font-size:16px; }
-  :root{ --alto-header:64px; --img-portada:url("fotos/portada-movil.webp"); }
-
-  .seccion{ padding:44px 0; }
-  .contenedor,.header__interior{ padding:0 18px; }
-  .logo__nombre{ font-size:1rem; }
-  .idioma-movil{ padding:9px 13px; font-size:.79rem; }
-
-  .resumen__botones{ flex-direction:column; align-items:stretch; }
-  .resumen__botones .boton{ width:100%; }
-
-  .rejilla-3{ grid-template-columns:1fr; gap:11px; }
-  .formulario{ padding:22px 18px; }
-  .formulario__rejilla{ grid-template-columns:1fr; }
-
-  .tabs__lista{ gap:6px; margin-bottom:24px; }
-  .tab{ flex:1 1 auto; padding:11px 12px; font-size:.81rem; }
-
-  .carrusel__pista{ gap:12px; }
-  .carrusel__pista .galeria__item{ flex:0 0 87%; }
-  .carrusel__flecha{ width:38px; height:38px; top:calc(50% - 19px); }
-  .carrusel__flecha--ant{ left:4px; }
-  .carrusel__flecha--sig{ right:4px; }
-
-  .opiniones__resumen{ flex-direction:column; gap:12px; padding:20px; text-align:center; }
-  .opiniones__detalle{ text-align:center; }
-  .opiniones__lista{ grid-template-columns:1fr; }
-
-  .footer__rejilla{ grid-template-columns:1fr; gap:26px; text-align:center; }
-  .footer__eslogan{ margin-left:auto; margin-right:auto; }
-  .footer .linea-dorada--izq{ margin-left:auto; margin-right:auto; }
-
-  .whatsapp{ right:16px; bottom:16px; padding:14px; }
-  .whatsapp span{ display:none; }
-  .visor{ padding:60px 12px; }
+  .wa-texto{ display:none; }
+  .wa-float{ padding:14px; }
+  .f-grid{ grid-template-columns:1fr; }
+  .idioma{ display:none; }
+  .stats{ grid-template-columns:repeat(2,1fr); }
 }
 
-@media (max-width:360px){
-  .header__interior{ gap:12px; }
-  .idioma-movil span{ display:none; }
-  .idioma-movil{ padding:11px; }
-}
+@media (max-width:600px){ :root{ --img-portada:url("fotos/portada-movil.webp"); } }
 </style>
 </head>
 
 <body>
-<a class="salto-contenido" href="#inicio">Saltar al contenido principal</a>
 
-<!-- Biblioteca de íconos. No es contenido visible. -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <defs>
-    <symbol id="i-avion" viewBox="0 0 24 24"><path d="M21.5 2.5 11 13M21.5 2.5l-6.6 19-3.9-8.5L2.5 9.1z"/></symbol>
-    <symbol id="i-maletin" viewBox="0 0 24 24"><rect x="2.8" y="7.5" width="18.4" height="12.5" rx="1.8"/><path d="M8.8 7.5V5.6a1.8 1.8 0 0 1 1.8-1.8h2.8a1.8 1.8 0 0 1 1.8 1.8v1.9M2.8 13h18.4"/></symbol>
-    <symbol id="i-usuario" viewBox="0 0 24 24"><circle cx="12" cy="7.8" r="3.6"/><path d="M5 20.5c0-3.9 3.1-7 7-7s7 3.1 7 7"/></symbol>
-    <symbol id="i-camara" viewBox="0 0 24 24"><path d="M3.6 7.8h3.2l1.6-2.2h7.2l1.6 2.2h3.2v11.4H3.6z"/><circle cx="12" cy="13.4" r="3.2"/></symbol>
-    <symbol id="i-calendario" viewBox="0 0 24 24"><rect x="3.2" y="5.4" width="17.6" height="15.4" rx="1.8"/><path d="M3.2 10.2h17.6M8.2 3v4.4M15.8 3v4.4"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.4s6.8-6.2 6.8-11a6.8 6.8 0 1 0-13.6 0c0 4.8 6.8 11 6.8 11z"/><circle cx="12" cy="10.2" r="2.4"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.4l5 5.1L19.5 6.6"/></symbol>
-    <symbol id="i-estrella" viewBox="0 0 24 24"><path d="M12 2.4l3 6.2 6.8.9-4.9 4.8 1.2 6.7L12 17.8l-6.1 3.2 1.2-6.7L2.2 9.5l6.8-.9z"/></symbol>
-    <symbol id="i-telefono" viewBox="0 0 24 24"><rect x="6.8" y="2.2" width="10.4" height="19.6" rx="2.2"/><path d="M10.8 18.6h2.4"/></symbol>
-    <symbol id="i-correo" viewBox="0 0 24 24"><rect x="2.4" y="4.8" width="19.2" height="14.4" rx="1.8"/><path d="M3 6.2l9 6.6 9-6.6"/></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.6a8.6 8.6 0 0 1-12.5 7.7L3 21.2l1.9-5.7A8.6 8.6 0 1 1 21 11.6z"/><path d="M8.8 11.6h.01M12 11.6h.01M15.2 11.6h.01"/></symbol>
-    <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.2V12l3.4 2"/></symbol>
-    <symbol id="i-idioma" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.4h17.6M3.2 14.6h17.6"/><path d="M12 3a15 15 0 0 0 0 18M12 3a15 15 0 0 1 0 18"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-    <symbol id="i-cerrar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
-    <symbol id="i-flecha-izq" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
-    <symbol id="i-flecha-der" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
-  </defs>
-</svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-avion" viewBox="0 0 24 24"><path d="M21.5 2.5 11 13M21.5 2.5l-6.6 19-3.9-8.5L2.5 9.1z"/></symbol>
+<symbol id="i-usuario" viewBox="0 0 24 24"><circle cx="12" cy="7.8" r="3.6"/><path d="M5 20.5c0-3.9 3.1-7 7-7s7 3.1 7 7"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.4l5 5.1L19.5 6.6"/></symbol>
+<symbol id="i-estrella" viewBox="0 0 24 24"><path d="M12 2.4l3 6.2 6.8.9-4.9 4.8 1.2 6.7L12 17.8l-6.1 3.2 1.2-6.7L2.2 9.5l6.8-.9z"/></symbol>
+<symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.2V12l3.4 2"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.6a8.6 8.6 0 0 1-12.5 7.7L3 21.2l1.9-5.7A8.6 8.6 0 1 1 21 11.6z"/><path d="M8.8 11.6h.01M12 11.6h.01M15.2 11.6h.01"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.4s6.8-6.2 6.8-11a6.8 6.8 0 1 0-13.6 0c0 4.8 6.8 11 6.8 11z"/><circle cx="12" cy="10.2" r="2.4"/></symbol>
+<symbol id="i-maleta" viewBox="0 0 24 24"><rect x="4" y="7.5" width="16" height="13" rx="2"/><path d="M9 7.5V5a1.8 1.8 0 0 1 1.8-1.8h2.4A1.8 1.8 0 0 1 15 5v2.5M9 11v6M15 11v6"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M4.5 15.5 6 11a2 2 0 0 1 1.9-1.4h8.2A2 2 0 0 1 18 11l1.5 4.5"/><rect x="3" y="15.5" width="18" height="3.4" rx="1.4"/><circle cx="7.6" cy="19" r="1.5"/><circle cx="16.4" cy="19" r="1.5"/><path d="M8 9.6 9.3 6h5.4L16 9.6"/></symbol>
+<symbol id="i-suv" viewBox="0 0 24 24"><path d="M3 16.5v-4a2 2 0 0 1 .6-1.4l2.2-2.3A2 2 0 0 1 7.2 8h9.6a2 2 0 0 1 1.4.6l2.2 2.3a2 2 0 0 1 .6 1.4v4.2"/><path d="M3 12.5h18"/><rect x="2.2" y="12.5" width="19.6" height="4" rx="1.4"/><circle cx="7.4" cy="18.9" r="1.5"/><circle cx="16.6" cy="18.9" r="1.5"/></symbol>
+<symbol id="i-van" viewBox="0 0 24 24"><path d="M3 16.5V8.6A2.1 2.1 0 0 1 5.1 6.5h9.2L18.6 11h1.3a2.1 2.1 0 0 1 2.1 2.1v3.4"/><rect x="2.4" y="16.5" width="19.6" height="2.6" rx="1.2"/><circle cx="7.4" cy="19.2" r="1.4"/><circle cx="16.6" cy="19.2" r="1.4"/><path d="M5.5 11h4.2V8.4H6.6a1.1 1.1 0 0 0-1.1 1.1zM11.5 11h4.6l-2.2-2.6h-2.4z"/></symbol>
+<symbol id="i-bus" viewBox="0 0 24 24"><rect x="4" y="4.5" width="16" height="13" rx="2.2"/><path d="M4 11h16M8 4.5V11M13.4 4.5V11"/><circle cx="8.2" cy="19.4" r="1.5"/><circle cx="15.8" cy="19.4" r="1.5"/></symbol>
+<symbol id="i-idioma" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.4h17.6M3.2 14.6h17.6"/><path d="M12 3a15 15 0 0 0 0 18M12 3a15 15 0 0 1 0 18"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+<symbol id="i-cerrar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-flecha-der" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+<symbol id="i-flecha-izq" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+<symbol id="i-rayo" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11L9.5 22 19 10h-6.5z"/></symbol>
+<symbol id="i-tarjeta" viewBox="0 0 24 24"><rect x="2.4" y="5" width="19.2" height="14" rx="2"/><path d="M2.4 9.6h19.2M6.4 15h4"/></symbol>
+<symbol id="i-bebe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9.5 15c.7.7 1.6 1 2.5 1s1.8-.3 2.5-1"/></symbol>
+<symbol id="i-sim" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M9 11h6v6H9z"/></symbol>
+<symbol id="i-agua" viewBox="0 0 24 24"><path d="M12 3s6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 6-11 6-11z"/></symbol>
+<symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9.5a14 14 0 0 1 19 0M5.8 13a9.5 9.5 0 0 1 12.4 0M9.2 16.4a5 5 0 0 1 5.6 0"/><circle cx="12" cy="19.4" r=".8"/></symbol>
+<symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 2.8 4.5 5.6v5.6c0 4.6 3.2 8.3 7.5 10 4.3-1.7 7.5-5.4 7.5-10V5.6z"/><path d="M9 12l2.2 2.2L15.4 10"/></symbol>
+</defs></svg>
 
-<!-- ===== ENCABEZADO ===== -->
-<header class="header" id="encabezado">
-  <div class="header__interior">
-
+<header class="topbar" id="topbar">
+  <div class="topbar__interior">
     <a class="logo" href="#inicio" aria-label="OrcLuxuryTransport, ir al inicio">
-      <span class="logo__nombre">Orc<span>Luxury</span>Transport</span>
+      <span class="logo__nombre">Orc<b>Luxury</b>Transport</span>
       <span class="logo__bajada">Panamá</span>
     </a>
-
-    <div class="header__acciones">
-      <a class="idioma-movil" href="en/" hreflang="en" lang="en" aria-label="Switch to English">
-        <svg class="ico" aria-hidden="true"><use href="#i-idioma"></use></svg>
-        <span>English</span>
-      </a>
-      <button class="nav__boton" id="boton-menu" aria-label="Abrir el menú de navegación"
-              aria-expanded="false" aria-controls="nav-principal">
-        <svg class="ico" id="icono-menu" aria-hidden="true"><use href="#i-menu"></use></svg>
-      </button>
-    </div>
-
-    <nav class="nav" id="nav-principal" aria-label="Navegación principal">
-      <ul class="nav__lista">
-        <li><a class="nav__enlace" href="#inicio">Inicio</a></li>
-        <li><a class="nav__enlace" href="#servicios" data-tab="servicios">Servicios</a></li>
-        <li><a class="nav__enlace" href="#destinos">Destinos</a></li>
-        <li><a class="nav__enlace" href="#tarifas">Tarifas</a></li>
-        <li><a class="nav__enlace" href="#opiniones">Opiniones</a></li>
-        <li class="nav__idioma">
-          <span class="nav__idioma-actual" aria-current="true">ES</span>
-          <span class="nav__idioma-sep" aria-hidden="true">/</span>
-          <a href="en/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
-        </li>
-        <li><a class="boton boton--principal nav__cta" href="#reservar">Reservar</a></li>
-      </ul>
+    <nav class="menu" aria-label="Navegación principal">
+      <a class="menu__enlace" href="#traslados">Traslados</a>
+      <a class="menu__enlace" href="#tours">Tours</a>
+      <a class="menu__enlace" href="#flota">Flota</a>
+      <a class="menu__enlace" href="#nosotros">Sobre Nosotros</a>
+      <a class="menu__enlace" href="#contacto">Contacto</a>
+      <span class="idioma"><span>ES</span><a href="/en/" hreflang="en" lang="en">EN</a></span>
+      <a class="boton boton--oro" href="#traslados" style="padding:11px 20px;font-size:.85rem">Reservar Transfer</a>
     </nav>
-
+    <a class="wa-chip" href="https://wa.me/50768026916?text=Hola%2C%20necesito%20ayuda%20para%20cotizar%20un%20traslado%20desde%20Tocumen." data-wa="Hola, necesito ayuda para cotizar un traslado desde Tocumen." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>Atención 24/7</a>
+    <button class="burger" id="burger" aria-label="Abrir el menú" aria-expanded="false" aria-controls="panel"><svg class="ico" aria-hidden="true"><use href="#i-menu"></use></svg></button>
   </div>
 </header>
 
+<div class="velo" id="velo"></div>
+<nav class="panel" id="panel" aria-label="Navegación principal">
+  <button class="panel__cerrar" id="cerrar-panel" aria-label="Cerrar el menú"><svg class="ico" aria-hidden="true"><use href="#i-cerrar"></use></svg></button>
+  <a href="#traslados">Traslados</a>
+  <a href="#tours">Tours</a>
+  <a href="#flota">Flota</a>
+  <a href="#nosotros">Sobre Nosotros</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#traslados" style="color:var(--navy)">Reservar Transfer</a>
+  <span class="idioma" style="padding:10px 12px"><span>ES</span><a href="/en/" hreflang="en" lang="en">EN</a></span>
+</nav>
+
 <main>
 
-  <!-- ======================================================================
-       1. RESUMEN — quiénes somos y el vehículo
-       ====================================================================== -->
-  <section class="resumen" id="inicio">
-    <div class="resumen__fondo" role="img"
-         aria-label="Buque de carga atravesando las esclusas del Canal de Panamá"></div>
-    <div class="resumen__capa"></div>
-
-    <div class="contenedor resumen__rejilla">
-
-      <div class="resumen__texto">
-        <span class="etiqueta">Transporte turístico y ejecutivo · Panamá</span>
-        <h1>Transporte Turístico y <em>Ejecutivo</em> en Panamá</h1>
-
-        <p>
-          OrcLuxuryTransport es un servicio privado de transporte con conductor en
-          Ciudad de Panamá, con más de 5 años operando: traslados al aeropuerto de
-          Tocumen y Albrook, tours, transporte corporativo y servicio por hora, 24/7.
-          El traslado al aeropuerto es desde USD 32, con precio cerrado confirmado
-          antes de salir.
-        </p>
-
-        <ul class="resumen__puntos">
-          <li>
-            <svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>
-            <span><strong>Precio cerrado</strong> antes de salir, sin tarifas variables.</span>
-          </li>
-          <li>
-            <svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>
-            <span><strong>Seguimiento de vuelo.</strong> Lo esperamos aunque se retrase.</span>
-          </li>
-          <li>
-            <svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>
-            <span><strong>Atención 24/7</strong> por WhatsApp, antes y durante el viaje.</span>
-          </li>
-          <li>
-            <svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>
-            <span><strong>Más de 5 años</strong> moviendo pasajeros por Panamá.</span>
-          </li>
-        </ul>
-
-        <div class="resumen__botones">
-          <a class="boton boton--principal" href="#reservar">Reservar Ahora</a>
-          <a class="boton boton--contorno" id="whatsapp-directo" href="#" target="_blank" rel="noopener">
-            <svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>
-            Escribir por WhatsApp
-          </a>
+  <section class="hero" id="inicio">
+    <div class="hero__fondo" role="img" aria-label="Buque de carga atravesando las esclusas del Canal de Panamá"></div>
+    <div class="wrap hero__rejilla">
+      <div>
+        <span class="kicker">Transporte turístico y ejecutivo · Panamá</span>
+        <h1>Tu traslado privado en Panamá: <em>sin esperas, sin sorpresas</em>.</h1>
+        <p class="hero__sub">Traslados puntuales desde el Aeropuerto de Tocumen (PTY) y Albrook (PAC) hacia tu hotel, tour o escala. Conductor esperando con letrero, tarifa fija cerrada y monitoreo de tu vuelo en tiempo real.</p>
+        <div class="hero__chips">
+          <span class="chip"><svg class="ico" aria-hidden="true"><use href="#i-avion"></use></svg>Tocumen (PTY) · Albrook (PAC)</span>
+          <span class="chip"><svg class="ico" aria-hidden="true"><use href="#i-reloj"></use></svg>Atención 24/7</span>
+          <span class="chip"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>Confirmación instantánea por WhatsApp</span>
         </div>
       </div>
 
-      <figure class="resumen__foto">
-        <img src="fotos/nosotros.webp" width="1200" height="900" decoding="async"
-             alt="Vehículo de OrcLuxuryTransport, una minivan blanca de siete plazas lista para un traslado en Panamá">
-        <figcaption class="resumen__pie">Nuestro vehículo</figcaption>
-      </figure>
-
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       2. RESERVA — el formulario
-       ====================================================================== -->
-  <section class="seccion seccion--alterna" id="reservar">
-    <div class="contenedor">
-
-      <div class="seccion__encabezado revelar">
-        <span class="etiqueta">Reserva</span>
-        <h2>Solicite su viaje</h2>
-        <p>Le respondemos con el precio cerrado en pocos minutos.</p>
-        <div class="linea-dorada"></div>
-      </div>
-
-      <div class="reserva__rejilla" id="contacto">
-
-        <div class="revelar">
-          <div class="contacto__datos">
-            <a class="dato" href="tel:+50768026916">
-              <span class="dato__icono"><svg class="ico" aria-hidden="true"><use href="#i-telefono"></use></svg></span>
-              <span>
-                <span class="dato__etiqueta">Teléfono</span>
-                <span class="dato__valor">6802-6916</span>
-              </span>
-            </a>
-            <a class="dato" href="mailto:orielca507@gmail.com">
-              <span class="dato__icono"><svg class="ico" aria-hidden="true"><use href="#i-correo"></use></svg></span>
-              <span>
-                <span class="dato__etiqueta">Correo</span>
-                <span class="dato__valor">orielca507@gmail.com</span>
-              </span>
-            </a>
-            <div class="dato">
-              <span class="dato__icono"><svg class="ico" aria-hidden="true"><use href="#i-reloj"></use></svg></span>
-              <span>
-                <span class="dato__etiqueta">Horario</span>
-                <span class="dato__valor">24 horas, todos los días</span>
-              </span>
-            </div>
+      <div class="widget" id="traslados">
+        <h2 class="widget__titulo">Cotiza tu traslado en 30 segundos</h2>
+        <p class="widget__nota">Tarifa fija por zona: lo que te cotizamos es lo que pagas.</p>
+        <div class="tabs" role="tablist" aria-label="Tipo de servicio">
+          <button class="tab" role="tab" id="tab-traslado" aria-selected="true" aria-controls="f-form">Traslado punto a punto</button>
+          <button class="tab" role="tab" id="tab-horas" aria-selected="false" aria-controls="f-form">Por horas o tour</button>
+        </div>
+        <form class="f-grid" id="f-form" novalidate>
+          <div class="f-campo f-campo--todo">
+            <label for="f-recogida">Lugar de recogida <b>*</b></label>
+            <select id="f-recogida" name="recogida" required>
+              <option>Aeropuerto de Tocumen (PTY)</option><option>Aeropuerto de Albrook (PAC)</option><option>Hotel en Ciudad de Panamá</option><option>Playa Blanca / Riviera Pacífica</option><option>Otro (lo detallo en el mensaje)</option>
+            </select>
           </div>
-        </div>
-
-        <div class="revelar" style="--retraso:.1s">
-          <form class="formulario" id="form-reserva" novalidate>
-            <h3 class="formulario__titulo">Solicitud de Reserva</h3>
-            <p class="formulario__nota">
-              Los campos con <span style="color:var(--dorado)">*</span> son obligatorios.
-              Al enviar se abrirá WhatsApp con su solicitud lista.
-              Sin pagos online: confirmamos el precio cerrado antes de salir.
-            </p>
-
-            <div class="formulario__rejilla">
-              <div class="campo campo--completo">
-                <label for="f-nombre">Nombre completo <span>*</span></label>
-                <input type="text" id="f-nombre" name="nombre" required autocomplete="name" placeholder="Su nombre y apellido">
-              </div>
-              <div class="campo">
-                <label for="f-correo">Correo electrónico</label>
-                <input type="email" id="f-correo" name="correo" autocomplete="email" placeholder="correo@ejemplo.com">
-              </div>
-              <div class="campo">
-                <label for="f-telefono">Teléfono <span>*</span></label>
-                <input type="tel" id="f-telefono" name="telefono" required autocomplete="tel" placeholder="6000-0000">
-              </div>
-              <div class="campo">
-                <label for="f-fecha">Fecha del viaje <span>*</span></label>
-                <input type="date" id="f-fecha" name="fecha" required>
-              </div>
-              <div class="campo">
-                <label for="f-hora">Hora <span>*</span></label>
-                <input type="time" id="f-hora" name="hora" required>
-              </div>
-              <div class="campo">
-                <label for="f-recogida">Lugar de recogida <span>*</span></label>
-                <input type="text" id="f-recogida" name="recogida" required placeholder="Hotel, dirección o terminal">
-              </div>
-              <div class="campo">
-                <label for="f-destino">Destino <span>*</span></label>
-                <input type="text" id="f-destino" name="destino" required placeholder="¿Hacia dónde va?">
-              </div>
-              <div class="campo campo--completo">
-                <label for="f-mensaje">Mensaje o detalles adicionales</label>
-                <textarea id="f-mensaje" name="mensaje" placeholder="Pasajeros, equipaje, número de vuelo, paradas..."></textarea>
-              </div>
-
-              <div class="formulario__pie">
-                <button class="boton boton--principal boton--ancho" type="submit">
-                  <svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>
-                  Solicitar Reserva
-                </button>
-                <div class="formulario__aviso" id="aviso-form" role="status" aria-live="polite"></div>
-                <p class="formulario__garantias">Sin depósito por adelantado · Precio cerrado confirmado antes de salir · 60 min de espera incluida en llegadas.</p>
-              </div>
-            </div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ======================================================================
-       3. DESTINOS — carrusel a la vista, sin pestaña
-       ====================================================================== -->
-  <section class="seccion" id="destinos">
-    <div class="contenedor">
-
-      <div class="seccion__encabezado revelar">
-        <span class="etiqueta">Destinos</span>
-        <h2>¿Qué destinos puedo visitar desde Ciudad de Panamá?</h2>
-        <p>Deslice para recorrerlos. Toque cualquier imagen para verla completa.</p>
-        <div class="linea-dorada"></div>
-      </div>
-
-      <div class="tarifas__bloque revelar">
-        <p>
-          Desde el centro de la ciudad, las Esclusas de Miraflores quedan a unos 15
-          minutos, el Casco Antiguo a 10 minutos del barrio bancario y la selva y
-          cascadas del Camino de Oriente a menos de una hora. Las playas del
-          Pacífico como Coronado o Playa Blanca están a 60-90 minutos, y el lado
-          caribe —el río Chagres y las comunidades Emberá— a una hora y media de
-          auto más la piragua. El Valle de Antón, en la montaña, queda a unas dos
-          horas. Los recorridos privados parten de USD 120 por cuatro horas, con
-          paradas a demanda: la ruta se arma según el tiempo que usted tenga.
-        </p>
-      </div>
-
-
-      <div class="carrusel">
-        <button class="carrusel__flecha carrusel__flecha--ant" id="carrusel-ant" type="button" aria-label="Ver destinos anteriores">
-          <svg class="ico" aria-hidden="true"><use href="#i-flecha-izq"></use></svg>
-        </button>
-
-        <div class="carrusel__pista" id="carrusel-pista">
-
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: Canal de Panamá">
-            <img src="fotos/d01-canal-de-panama.webp" data-completa="fotos/completas/d01-canal-de-panama.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Buque de carga atravesando las esclusas del Canal de Panamá">
-            <figcaption class="galeria__pie">Canal de Panamá</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: esclusas de Miraflores">
-            <img src="fotos/d02-esclusas-de-miraflores.webp" data-completa="fotos/completas/d02-esclusas-de-miraflores.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Visitantes en el mirador de las esclusas de Miraflores">
-            <figcaption class="galeria__pie">Esclusas de Miraflores</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: paso de buques">
-            <img src="fotos/d03-paso-de-buques.webp" data-completa="fotos/completas/d03-paso-de-buques.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Público observando el paso de un buque por el Canal de Panamá">
-            <figcaption class="galeria__pie">Paso de buques</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: remolcadores del Canal">
-            <img src="fotos/d04-remolcadores-del-canal.webp" data-completa="fotos/completas/d04-remolcadores-del-canal.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Remolcadores atracados en las esclusas del Canal de Panamá">
-            <figcaption class="galeria__pie">Remolcadores del Canal</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: visita al Canal">
-            <img src="fotos/d05-visita-al-canal.webp" data-completa="fotos/completas/d05-visita-al-canal.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Pasajeras de OrcLuxuryTransport durante la visita al Canal de Panamá">
-            <figcaption class="galeria__pie">Visita al Canal</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: Casco Antiguo">
-            <img src="fotos/d06-casco-antiguo.webp" data-completa="fotos/completas/d06-casco-antiguo.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Calle del Casco Antiguo de la Ciudad de Panamá decorada con sombreros de colores">
-            <figcaption class="galeria__pie">Casco Antiguo</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: arquitectura colonial">
-            <img src="fotos/d07-arquitectura-colonial.webp" data-completa="fotos/completas/d07-arquitectura-colonial.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Fachada de piedra de una iglesia colonial en el Casco Antiguo de Panamá">
-            <figcaption class="galeria__pie">Arquitectura colonial</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: monos capuchinos">
-            <img src="fotos/d08-monos-capuchinos.webp" data-completa="fotos/completas/d08-monos-capuchinos.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Dos monos capuchinos en su hábitat natural">
-            <figcaption class="galeria__pie">Monos capuchinos</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: fauna silvestre">
-            <img src="fotos/d09-fauna-silvestre.webp" data-completa="fotos/completas/d09-fauna-silvestre.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Mono capuchino alimentándose durante un recorrido por la selva">
-            <figcaption class="galeria__pie">Fauna silvestre</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: selva panameña">
-            <img src="fotos/d10-selva-panamena.webp" data-completa="fotos/completas/d10-selva-panamena.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Mono entre las ramas de la selva panameña">
-            <figcaption class="galeria__pie">Selva panameña</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: ríos y cascadas">
-            <img src="fotos/d11-rios-y-cascadas.webp" data-completa="fotos/completas/d11-rios-y-cascadas.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Cascada en el interior de Panamá">
-            <figcaption class="galeria__pie">Ríos y cascadas</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: cascadas naturales">
-            <img src="fotos/d12-cascadas-naturales.webp" data-completa="fotos/completas/d12-cascadas-naturales.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Pasajeros disfrutando de una cascada natural durante una excursión">
-            <figcaption class="galeria__pie">Cascadas naturales</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: paseo en bote">
-            <img src="fotos/d13-paseo-en-bote-por-la-selva.webp" data-completa="fotos/completas/d13-paseo-en-bote-por-la-selva.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Paseo en bote por la selva panameña">
-            <figcaption class="galeria__pie">Paseo en bote</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: comunidad Emberá">
-            <img src="fotos/d14-comunidad-embera.webp" data-completa="fotos/completas/d14-comunidad-embera.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Visita a una comunidad Emberá en Panamá">
-            <figcaption class="galeria__pie">Comunidad Emberá</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: navegación en piragua">
-            <img src="fotos/d15-navegacion-en-piragua.webp" data-completa="fotos/completas/d15-navegacion-en-piragua.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Piraguas en el río durante la excursión a la comunidad Emberá">
-            <figcaption class="galeria__pie">Navegación en piragua</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: senderos y ríos">
-            <img src="fotos/d16-senderos-y-rios.webp" data-completa="fotos/completas/d16-senderos-y-rios.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Recorrido por senderos y ríos del interior de Panamá">
-            <figcaption class="galeria__pie">Senderos y ríos</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: recorrido en comunidad">
-            <img src="fotos/d17-recorrido-en-comunidad.webp" data-completa="fotos/completas/d17-recorrido-en-comunidad.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Grupo de pasajeros durante un recorrido en una comunidad">
-            <figcaption class="galeria__pie">Recorrido en comunidad</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: excursión en grupo">
-            <img src="fotos/d18-excursion-en-grupo.webp" data-completa="fotos/completas/d18-excursion-en-grupo.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Excursión en grupo por la selva panameña">
-            <figcaption class="galeria__pie">Excursión en grupo</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: grupos y excursiones">
-            <img src="fotos/d19-grupos-y-excursiones.webp" data-completa="fotos/completas/d19-grupos-y-excursiones.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Grupo de pasajeros en una excursión de OrcLuxuryTransport">
-            <figcaption class="galeria__pie">Grupos y excursiones</figcaption>
-          </figure>
-          <figure class="galeria__item" tabindex="0" role="button" aria-label="Ampliar imagen: gastronomía típica">
-            <img src="fotos/d20-gastronomia-tipica.webp" data-completa="fotos/completas/d20-gastronomia-tipica.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Plato de comida típica panameña servido durante un recorrido">
-            <figcaption class="galeria__pie">Gastronomía típica</figcaption>
-          </figure>
-
-        </div>
-
-        <button class="carrusel__flecha carrusel__flecha--sig" id="carrusel-sig" type="button" aria-label="Ver más destinos">
-          <svg class="ico" aria-hidden="true"><use href="#i-flecha-der"></use></svg>
-        </button>
-      </div>
-
-      <div class="carrusel__puntos" id="carrusel-puntos" aria-label="Ir a un destino"></div>
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       4. PESTAÑAS — Servicios · Por qué elegirnos
-       ====================================================================== -->
-  <section class="seccion seccion--alterna" id="informacion">
-    <div class="contenedor">
-
-      <div class="tabs__lista" role="tablist" aria-label="Información del servicio">
-        <button class="tab" role="tab" id="tab-servicios" aria-controls="panel-servicios" aria-selected="true">Servicios</button>
-        <button class="tab" role="tab" id="tab-porque" aria-controls="panel-porque" aria-selected="false">Por qué elegirnos</button>
-      </div>
-
-      <!-- ---- Pestaña 1: Servicios ---- -->
-      <div class="tab__panel" role="tabpanel" id="panel-servicios" aria-labelledby="tab-servicios" tabindex="0">
-        <span class="ancla" id="servicios"></span>
-        <div class="rejilla-3">
-
-          <article class="servicio">
-            <div class="servicio__cabecera">
-              <span class="servicio__icono"><svg class="ico" aria-hidden="true"><use href="#i-avion"></use></svg></span>
-              <h3>Traslados al Aeropuerto</h3>
-            </div>
-            <p>Tocumen y Albrook, con seguimiento del vuelo. Lo esperamos aunque se retrase.</p>
-            <p class="servicio__precio">Tocumen desde USD 32 · Albrook desde USD 25</p>
-          </article>
-
-          <article class="servicio">
-            <div class="servicio__cabecera">
-              <span class="servicio__icono"><svg class="ico" aria-hidden="true"><use href="#i-maletin"></use></svg></span>
-              <h3>Transporte Corporativo</h3>
-            </div>
-            <p>Ejecutivos y personal entre reuniones, hoteles y oficinas, con horarios coordinados.</p>
-            <p class="servicio__precio">Servicio por hora desde USD 35</p>
-          </article>
-
-          <article class="servicio">
-            <div class="servicio__cabecera">
-              <span class="servicio__icono"><svg class="ico" aria-hidden="true"><use href="#i-usuario"></use></svg></span>
-              <h3>Servicio Privado</h3>
-            </div>
-            <p>Vehículo y conductor solo para usted, por trayecto o por jornada completa.</p>
-            <p class="servicio__precio">4 h desde USD 120 · 8 h desde USD 200</p>
-          </article>
-
-          <article class="servicio">
-            <div class="servicio__cabecera">
-              <span class="servicio__icono"><svg class="ico" aria-hidden="true"><use href="#i-camara"></use></svg></span>
-              <h3>Turismo y Recorridos</h3>
-            </div>
-            <p>Casco Antiguo, Canal, playas y montaña. Rutas según el tiempo que tenga.</p>
-            <p class="servicio__precio">Recorrido de 4 h desde USD 120</p>
-          </article>
-
-          <article class="servicio">
-            <div class="servicio__cabecera">
-              <span class="servicio__icono"><svg class="ico" aria-hidden="true"><use href="#i-calendario"></use></svg></span>
-              <h3>Eventos Especiales</h3>
-            </div>
-            <p>Bodas, congresos y celebraciones, con transporte puntual para los invitados.</p>
-            <p class="servicio__precio">Cotización a medida</p>
-          </article>
-
-          <article class="servicio">
-            <div class="servicio__cabecera">
-              <span class="servicio__icono"><svg class="ico" aria-hidden="true"><use href="#i-pin"></use></svg></span>
-              <h3>Viajes Personalizados</h3>
-            </div>
-            <p>¿Otra ruta? Cuéntenos su itinerario y lo armamos a su medida.</p>
-            <p class="servicio__precio">Precio cerrado según itinerario</p>
-          </article>
-
-        </div>
-      </div>
-
-      <!-- ---- Pestaña 2: Por qué elegirnos ---- -->
-      <div class="tab__panel" role="tabpanel" id="panel-porque" aria-labelledby="tab-porque" tabindex="0" hidden>
-        <div class="rejilla-3">
-          <article class="beneficio">
-            <span class="beneficio__check"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span>
-            <div><h3>Puntualidad</h3><p>Llegamos antes de la hora acordada.</p></div>
-          </article>
-          <article class="beneficio">
-            <span class="beneficio__check"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span>
-            <div><h3>Seguridad</h3><p>Unidades revisadas y conducción responsable.</p></div>
-          </article>
-          <article class="beneficio">
-            <span class="beneficio__check"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span>
-            <div><h3>Vehículos Cómodos</h3><p>Aire acondicionado y espacio para equipaje.</p></div>
-          </article>
-          <article class="beneficio">
-            <span class="beneficio__check"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span>
-            <div><h3>Conductores Profesionales</h3><p>Con experiencia y conocimiento de las rutas.</p></div>
-          </article>
-          <article class="beneficio">
-            <span class="beneficio__check"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span>
-            <div><h3>Atención Personalizada</h3><p>Coordina con una persona, no con un sistema.</p></div>
-          </article>
-          <article class="beneficio">
-            <span class="beneficio__check"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg></span>
-            <div><h3>Disponibilidad 24/7</h3><p>Madrugadas, fines de semana y feriados.</p></div>
-          </article>
-        </div>
-
-        <div class="pasos">
-          <p class="pasos__titulo">Cómo funciona la reserva</p>
-          <div class="rejilla-3">
-            <article class="paso">
-              <span class="paso__numero">1</span>
-              <div><h3>Nos escribe</h3><p>Fecha, hora, recogida, destino y número de vuelo si aplica.</p></div>
-            </article>
-            <article class="paso">
-              <span class="paso__numero">2</span>
-              <div><h3>Confirmamos</h3><p>Precio cerrado y vehículo asignado, sin cargos sorpresa.</p></div>
-            </article>
-            <article class="paso">
-              <span class="paso__numero">3</span>
-              <div><h3>Lo esperamos</h3><p>El conductor llega antes de la hora acordada.</p></div>
-            </article>
+          <div class="f-campo f-campo--todo">
+            <label for="f-destino">Destino <b>*</b></label>
+            <input type="text" id="f-destino" name="destino" required list="destinos" placeholder="¿Hacia dónde vas?">
+            <datalist id="destinos"><option value="Ciudad de Panamá"></option><option value="Casco Antiguo"></option><option value="Esclusas de Miraflores"></option><option value="Playa Blanca"></option><option value="El Valle de Antón"></option><option value="Comunidad Emberá (río Chagres)"></option></datalist>
           </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       5. TARIFAS Y PREGUNTAS — bloques citables y FAQ
-       ====================================================================== -->
-  <section class="seccion" id="tarifas">
-    <div class="contenedor">
-
-      <div class="seccion__encabezado revelar">
-        <span class="etiqueta">Tarifas</span>
-        <h2>Tarifas de transporte en Panamá</h2>
-        <p>Precios de referencia en dólares. El precio final se confirma por WhatsApp antes de salir, sin cargos sorpresa.</p>
-        <div class="linea-dorada"></div>
-      </div>
-
-      <div class="tarifas__bloque revelar">
-        <h3>¿Cuánto cuesta un traslado al aeropuerto de Panamá (Tocumen)?</h3>
-        <p>
-          Un traslado privado desde el Aeropuerto Internacional de Tocumen (TO) hasta
-          Ciudad de Panamá cuesta desde USD 32 en sedán para hasta 3 pasajeros y desde
-          USD 45 en minivan para hasta 6. El precio es cerrado: se confirma por WhatsApp
-          antes de salir e incluye peajes, estacionamiento, seguimiento del vuelo y 60
-          minutos de espera gratuita en llegadas internacionales. No hay recargos por
-          horario: madrugadas, fines de semana y feriados cuestan lo mismo. El trayecto
-          toma entre 25 y 45 minutos según el tráfico, en una distancia de unos 24
-          kilómetros. El traslado desde el aeropuerto de Albrook, dentro de la ciudad,
-          parte de USD 25. Para reservar, envíe fecha, hora, número de vuelo y destino
-          por WhatsApp y recibirá el precio final en pocos minutos.
-        </p>
-      </div>
-
-      <div class="tarifas__bloque revelar">
-        <h3>¿Cuánto se tarda de Tocumen a la ciudad?</h3>
-        <p>
-          Son unos 24 kilómetros: entre 25 y 45 minutos según el tráfico. Las horas
-          pico (12:00-14:00 y 17:00-19:00) son las más densas. Para un vuelo
-          internacional de salida, recomendamos dejar el hotel con tres horas de
-          anticipación; para vuelos nacionales bastan dos.
-        </p>
-      </div>
-
-      <div class="tarifas__bloque revelar">
-        <h3>¿Cómo reservo un traslado con OrcLuxuryTransport?</h3>
-        <p>
-          Escriba por WhatsApp al +507 6802-6916 con la fecha, la hora, el punto de
-          recogida, el destino y el número de vuelo si es un traslado al aeropuerto.
-          En pocos minutos recibe la confirmación con el precio cerrado y el vehículo
-          asignado, sin depósitos ni cargos sorpresa. El conductor llega antes de la
-          hora acordada y monitorea su vuelo: en las llegadas, la espera ante demoras
-          está incluida. También puede enviar el formulario de esta página, que arma
-          el mensaje por usted.
-        </p>
-      </div>
-
-      <p class="pasos__titulo">Preguntas frecuentes</p>
-      <div class="faq revelar">
-        <details><summary>¿Me esperan si mi vuelo se retrasa?</summary><p>Sí. Seguimos el estado de su vuelo y el conductor lo espera en la sala de arribos, sin costo adicional hasta 60 minutos después de aterrizar.</p></details>
-        <details><summary>¿Dónde me encuentro con el conductor en Tocumen?</summary><p>El conductor lo espera en la sala de arribos con un cartel con su nombre, apenas pasa control de aduanas. Si prefiere otro punto de encuentro, lo coordinamos por WhatsApp.</p></details>
-        <details><summary>¿Cómo pago el traslado?</summary><p>No hay pagos online ni depósito por adelantado: confirma el precio cerrado por WhatsApp y paga al conductor en dólares o balboas, en efectivo o según lo coordinado.</p></details>
-        <details><summary>¿Tienen sillas para niños?</summary><p>Sí. Al reservar indique la edad de los niños y preparamos la silla correspondiente, sin costo adicional y sujeta a disponibilidad.</p></details>
-        <details><summary>¿Cuántas maletas caben?</summary><p>En el sedán entran 2 o 3 maletas grandes; en la minivan de siete asientos, entre 4 y 6 según el número de pasajeros. Si viaja con más equipaje, se lo aclaramos al confirmar.</p></details>
-        <details><summary>¿Los conductores hablan inglés?</summary><p>Sí. El equipo atiende en español e inglés, y la coordinación por WhatsApp también es bilingüe, 24/7.</p></details>
-        <details><summary>¿Está incluida la propina?</summary><p>El precio cerrado incluye vehículo, conductor, peajes y estacionamiento. La propina no es obligatoria; es decisión suya.</p></details>
-        <details><summary>¿Puedo contratar el vehículo por varias horas?</summary><p>Sí. El servicio por hora parte de USD 35 con un mínimo de dos horas, y el servicio privado de medio o día completo incluye las paradas que usted elija.</p></details>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ======================================================================
-       6. OPINIONES
-       El contenido se genera desde la lista RESENAS del <script>.
-       ====================================================================== -->
-  <section class="seccion seccion--alterna" id="opiniones">
-    <div class="contenedor">
-
-      <div class="seccion__encabezado revelar">
-        <span class="etiqueta">Opiniones</span>
-        <h2>Lo que dicen nuestros pasajeros</h2>
-        <div class="linea-dorada"></div>
-      </div>
-
-      <div id="opiniones-contenido"></div>
-
-      <!-- Formulario para dejar una opinión. Se envía a /api/resenas y queda
-           guardada SIN publicar hasta que el dueño la apruebe. -->
-      <div class="dejar revelar">
-        <h3 class="dejar__titulo">Deje su opinión</h3>
-        <p class="dejar__nota">
-          Su opinión se revisa antes de publicarse. Los campos con
-          <span style="color:var(--dorado)">*</span> son obligatorios.
-        </p>
-
-        <form id="form-resena" novalidate>
-
-          <div class="formulario__rejilla">
-
-            <div class="campo">
-              <label for="r-nombre">Su nombre <span>*</span></label>
-              <input type="text" id="r-nombre" name="nombre" required maxlength="60"
-                     autocomplete="name" placeholder="Como quiere que aparezca">
-            </div>
-
-            <div class="campo">
-              <label for="r-servicio">Servicio que usó</label>
-              <input type="text" id="r-servicio" name="servicio" maxlength="60"
-                     list="lista-servicios" placeholder="Traslado, tour, corporativo...">
-              <datalist id="lista-servicios">
-                <option value="Traslado al aeropuerto"></option>
-                <option value="Transporte corporativo"></option>
-                <option value="Servicio privado"></option>
-                <option value="Turismo y recorridos"></option>
-                <option value="Eventos especiales"></option>
-              </datalist>
-            </div>
-
-            <fieldset class="campo campo--completo puntuacion">
-              <legend>Puntuación <span>*</span></legend>
-              <!-- En orden inverso a propósito: permite pintar las estrellas
-                   anteriores con CSS puro, sin JavaScript -->
-              <div class="puntuacion__grupo">
-                <input type="radio" name="estrellas" id="p5" value="5">
-                <label for="p5" title="5 estrellas"><span class="oculto">5 estrellas</span>
-                  <svg class="ico ico--relleno" aria-hidden="true"><use href="#i-estrella"></use></svg></label>
-                <input type="radio" name="estrellas" id="p4" value="4">
-                <label for="p4" title="4 estrellas"><span class="oculto">4 estrellas</span>
-                  <svg class="ico ico--relleno" aria-hidden="true"><use href="#i-estrella"></use></svg></label>
-                <input type="radio" name="estrellas" id="p3" value="3">
-                <label for="p3" title="3 estrellas"><span class="oculto">3 estrellas</span>
-                  <svg class="ico ico--relleno" aria-hidden="true"><use href="#i-estrella"></use></svg></label>
-                <input type="radio" name="estrellas" id="p2" value="2">
-                <label for="p2" title="2 estrellas"><span class="oculto">2 estrellas</span>
-                  <svg class="ico ico--relleno" aria-hidden="true"><use href="#i-estrella"></use></svg></label>
-                <input type="radio" name="estrellas" id="p1" value="1">
-                <label for="p1" title="1 estrella"><span class="oculto">1 estrella</span>
-                  <svg class="ico ico--relleno" aria-hidden="true"><use href="#i-estrella"></use></svg></label>
-              </div>
-            </fieldset>
-
-            <div class="campo campo--completo">
-              <label for="r-texto">Su opinión <span>*</span></label>
-              <textarea id="r-texto" name="texto" required minlength="10" maxlength="1000"
-                        placeholder="¿Cómo le fue con el servicio?"></textarea>
-            </div>
-
-            <!-- Campo trampa: invisible para las personas, lo rellenan los robots -->
-            <div class="trampa" aria-hidden="true">
-              <label for="r-web">No complete este campo</label>
-              <input type="text" id="r-web" name="web" tabindex="-1" autocomplete="off">
-            </div>
-
-            <div class="formulario__pie">
-              <button class="boton boton--principal boton--ancho" type="submit" id="r-enviar">
-                <svg class="ico ico--relleno" aria-hidden="true"><use href="#i-estrella"></use></svg>
-                Enviar mi opinión
-              </button>
-              <div class="formulario__aviso" id="aviso-resena" role="status" aria-live="polite"></div>
-            </div>
-
+          <div class="f-campo">
+            <label for="f-fecha">Fecha <b>*</b></label>
+            <input type="date" id="f-fecha" name="fecha" required>
           </div>
+          <div class="f-campo">
+            <label for="f-hora">Hora <b>*</b></label>
+            <input type="time" id="f-hora" name="hora" required>
+          </div>
+          <div class="f-campo f-campo--todo">
+            <label for="f-vuelo">Número de vuelo</label>
+            <input type="text" id="f-vuelo" name="vuelo" placeholder="Para monitorear tu vuelo en tiempo real" autocomplete="off">
+          </div>
+          <div class="f-campo">
+            <label for="f-adultos">Adultos</label>
+            <select id="f-adultos" name="adultos"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+          </div>
+          <div class="f-campo">
+            <label for="f-ninos">Niños</label>
+            <select id="f-ninos" name="ninos"><option selected>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+          </div>
+          <div class="f-campo">
+            <label for="f-maletas">Maletas</label>
+            <select id="f-maletas" name="maletas"><option>0</option><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
+          </div>
+          <fieldset class="f-extras">
+            <legend class="f-extras__titulo">Añade a tu reserva</legend>
+            <label class="extra-check"><input type="checkbox" name="extra" value="Fastrack VIP en Tocumen"><span>Asistencia Fastrack VIP en Tocumen<small>Migración y aduana aceleradas · se cotiza aparte</small></span></label>
+            <label class="extra-check"><input type="checkbox" name="extra" value="Silla de seguridad para niños"><span>Silla de seguridad para niños<span class="etiqueta-free">Sin costo</span><small>Indica la edad en el mensaje</small></span></label>
+            <label class="extra-check"><input type="checkbox" name="extra" value="eSIM con datos para Panamá"><span>eSIM con datos para Panamá<small>Conectividad desde que aterrizas</small></span></label>
+          </fieldset>
+          <button class="boton boton--oro f-enviar" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>Ver vehículos y tarifa final</button>
+          <div class="f-aviso" id="f-aviso" role="status" aria-live="polite"></div>
+          <p class="f-garantia">Sin pagos online ni depósito · Precio cerrado por WhatsApp antes de salir · 60 min de espera incluidos en llegadas</p>
         </form>
       </div>
+    </div>
+  </section>
 
+  <section class="confianza" aria-label="Garantías del servicio">
+    <div class="wrap confianza__rejilla">
+      <div class="conf-card rev"><span class="conf-icono"><svg class="ico" aria-hidden="true"><use href="#i-avion"></use></svg></span><div><b>Monitoreo de vuelo en tiempo real</b><small>Si tu vuelo se retrasa, ajustamos la recogida sin costo.</small></div></div>
+      <div class="conf-card rev" style="--d:.08s"><span class="conf-icono"><svg class="ico" aria-hidden="true"><use href="#i-usuario"></use></svg></span><div><b>Meet &amp; Greet incluido</b><small>Conductor esperando en llegadas con letrero y tu nombre.</small></div></div>
+      <div class="conf-card rev" style="--d:.16s"><span class="conf-icono"><svg class="ico" aria-hidden="true"><use href="#i-escudo"></use></svg></span><div><b>Tarifa fija cerrada</b><small>Peajes y estacionamiento incluidos. Sin cargos ocultos.</small></div></div>
+      <div class="conf-card rev" style="--d:.24s"><span class="conf-icono"><svg class="ico" aria-hidden="true"><use href="#i-estrella"></use></svg></span><div><b>4.9/5 de valoración</b><small><span class="estrellas-inline" role="img" aria-label="5 de 5 estrellas"><svg class="ico" aria-hidden="true"><use href="#i-estrella"></use></svg><svg class="ico" aria-hidden="true"><use href="#i-estrella"></use></svg><svg class="ico" aria-hidden="true"><use href="#i-estrella"></use></svg><svg class="ico" aria-hidden="true"><use href="#i-estrella"></use></svg><svg class="ico" aria-hidden="true"><use href="#i-estrella"></use></svg></span>Experiencia verificada de pasajeros.</small></div></div>
+    </div>
+  </section>
+
+  <section class="seccion" id="flota">
+    <div class="wrap">
+      <div class="centro rev">
+        <span class="kicker">Flota</span>
+        <h2>El vehículo perfecto para cada viaje</h2>
+        <p>Unidades impecables con aire acondicionado, agua embotellada y espacio real para tu equipaje. Conductor exclusivo en cada servicio.</p>
+      </div>
+      <div class="flota__rejilla">
+        <article class="vehiculo rev">
+          <div class="vehiculo__visual"><span class="vehiculo__capacidad">1-3 pasajeros</span><svg class="ico" aria-hidden="true"><use href="#i-auto"></use></svg></div>
+          <div class="vehiculo__cuerpo">
+            <h3>Sedán Ejecutivo</h3>
+            <span class="vehiculo__modelo">Ideal para parejas y viajes de negocios</span>
+            <ul class="specs">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-usuario"></use></svg>Hasta 3 pasajeros</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-maleta"></use></svg>2-3 maletas grandes</li>
+            </ul>
+            <div class="amenidades">
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>A/C</span>
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-agua"></use></svg>Agua</span>
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-wifi"></use></svg>Wi-Fi</span>
+            </div>
+            <div class="precio-linea"><small>Tocumen desde</small><strong>USD 32</strong></div>
+            <a class="boton boton--navy" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20un%20Sed%C3%A1n%20Ejecutivo%20para%20mi%20traslado%20en%20Panam%C3%A1." data-wa="Hola, quiero un Sedán Ejecutivo para mi traslado en Panamá." target="_blank" rel="noopener">Seleccionar vehículo</a>
+          </div>
+        </article>
+        <article class="vehiculo rev" style="--d:.08s">
+          <div class="vehiculo__visual"><span class="vehiculo__capacidad">4-5 pasajeros</span><svg class="ico" aria-hidden="true"><use href="#i-suv"></use></svg></div>
+          <div class="vehiculo__cuerpo">
+            <h3>SUV de Lujo</h3>
+            <span class="vehiculo__modelo">Chevrolet Tahoe / Suburban</span>
+            <ul class="specs">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-usuario"></use></svg>Hasta 5 pasajeros</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-maleta"></use></svg>4 maletas grandes</li>
+            </ul>
+            <div class="amenidades">
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>A/C</span>
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-agua"></use></svg>Agua</span>
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-wifi"></use></svg>Wi-Fi</span>
+            </div>
+            <div class="precio-linea"><small>Máximo confort ·</small><strong>Cotizar</strong></div>
+            <a class="boton boton--navy" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20una%20SUV%20de%20Lujo%20para%20mi%20traslado%20en%20Panam%C3%A1." data-wa="Hola, quiero una SUV de Lujo para mi traslado en Panamá." target="_blank" rel="noopener">Seleccionar vehículo</a>
+          </div>
+        </article>
+        <article class="vehiculo rev" style="--d:.16s">
+          <div class="vehiculo__visual"><span class="vehiculo__capacidad">Hasta 6 pasajeros</span><svg class="ico" aria-hidden="true"><use href="#i-van"></use></svg></div>
+          <div class="vehiculo__cuerpo">
+            <h3>Minivan Ejecutiva</h3>
+            <span class="vehiculo__modelo">Perfecta para familias con equipaje</span>
+            <ul class="specs">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-usuario"></use></svg>Hasta 6 pasajeros</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-maleta"></use></svg>4-6 maletas según ocupación</li>
+            </ul>
+            <div class="amenidades">
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>A/C</span>
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-agua"></use></svg>Agua</span>
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-wifi"></use></svg>Wi-Fi</span>
+            </div>
+            <div class="precio-linea"><small>Tocumen desde</small><strong>USD 45</strong></div>
+            <a class="boton boton--navy" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20la%20Minivan%20Ejecutiva%20para%20mi%20traslado%20en%20Panam%C3%A1." data-wa="Hola, quiero la Minivan Ejecutiva para mi traslado en Panamá." target="_blank" rel="noopener">Seleccionar vehículo</a>
+          </div>
+        </article>
+        <article class="vehiculo rev" style="--d:.24s">
+          <div class="vehiculo__visual"><span class="vehiculo__capacidad">15-20 pasajeros</span><svg class="ico" aria-hidden="true"><use href="#i-bus"></use></svg></div>
+          <div class="vehiculo__cuerpo">
+            <h3>Minibús · Sprinter</h3>
+            <span class="vehiculo__modelo">Grupos corporativos y eventos</span>
+            <ul class="specs">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-usuario"></use></svg>Bodas, congresos y excursiones</li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-reloj"></use></svg>Itinerario coordinado a tu medida</li>
+            </ul>
+            <div class="amenidades">
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>A/C</span>
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-agua"></use></svg>Agua</span>
+              <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-pin"></use></svg>Multiunidad</span>
+            </div>
+            <div class="precio-linea"><small>Precio cerrado por grupo ·</small><strong>Cotizar</strong></div>
+            <a class="boton boton--navy" href="https://wa.me/50768026916?text=Hola%2C%20somos%20un%20grupo%20y%20necesitamos%20transporte%20en%20Panam%C3%A1." data-wa="Hola, somos un grupo y necesitamos transporte en Panamá." target="_blank" rel="noopener">Seleccionar vehículo</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion tours" id="tours">
+    <div class="wrap">
+      <div class="centro rev">
+        <span class="kicker">Tours y escalas</span>
+        <h2>Aprovecha tu tiempo en Panamá</h2>
+        <p>Recorridos privados con vehículo y conductor solo para ti. Reserva ahora y paga después, al conductor.</p>
+      </div>
+      <div class="tours__rejilla">
+        <article class="tour rev">
+          <img src="fotos/d02-esclusas-de-miraflores.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Visitantes en el mirador de las esclusas de Miraflores">
+          <div class="tour__badges"><span class="badge badge--oro">Ideal para escalas</span><span class="badge">Reserva ahora, paga después</span></div>
+          <div class="tour__cuerpo">
+            <h3>Canal de Panamá &amp; Casco Antiguo</h3>
+            <p>Las esclusas de Miraflores y el barrio colonial en un solo recorrido, con el regreso calculado según tu vuelo.</p>
+            <div class="tour__meta"><span><svg class="ico" aria-hidden="true"><use href="#i-reloj"></use></svg>4 h</span><span><svg class="ico" aria-hidden="true"><use href="#i-pin"></use></svg>15 min del centro</span></div>
+            <div class="precio-linea"><small>Desde</small><strong>USD 120</strong></div>
+            <a class="boton boton--oro" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20el%20tour%20Canal%20de%20Panam%C3%A1%20y%20Casco%20Antiguo." data-wa="Hola, quiero el tour Canal de Panamá y Casco Antiguo." target="_blank" rel="noopener">Reservar este tour</a>
+          </div>
+        </article>
+        <article class="tour rev" style="--d:.08s">
+          <img src="fotos/d13-paseo-en-bote-por-la-selva.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Paseo en bote por el Lago Gatún rodeado de selva">
+          <div class="tour__badges"><span class="badge">Reserva ahora, paga después</span></div>
+          <div class="tour__cuerpo">
+            <h3>Isla de los Monos &amp; Lago Gatún</h3>
+            <p>Navega el lago y la selva del Canal en bote, con monos capuchinos y aves en su hábitat. El favorito de las familias.</p>
+            <div class="tour__meta"><span><svg class="ico" aria-hidden="true"><use href="#i-reloj"></use></svg>4-5 h</span><span><svg class="ico" aria-hidden="true"><use href="#i-pin"></use></svg>menos de 1 h</span></div>
+            <div class="precio-linea"><small>Desde</small><strong>USD 120</strong></div>
+            <a class="boton boton--oro" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20el%20tour%20a%20la%20Isla%20de%20los%20Monos%20y%20el%20Lago%20Gat%C3%BAn." data-wa="Hola, quiero el tour a la Isla de los Monos y el Lago Gatún." target="_blank" rel="noopener">Reservar este tour</a>
+          </div>
+        </article>
+        <article class="tour rev" style="--d:.16s">
+          <img src="fotos/d12-cascadas-naturales.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Pasajeros disfrutando de una cascada natural durante una excursión">
+          <div class="tour__badges"><span class="badge">Reserva ahora, paga después</span></div>
+          <div class="tour__cuerpo">
+            <h3>Cascadas del Camino de Oriente</h3>
+            <p>Selva tropical, ríos y cascadas naturales para refrescarte, a menos de una hora de la ciudad.</p>
+            <div class="tour__meta"><span><svg class="ico" aria-hidden="true"><use href="#i-reloj"></use></svg>4-5 h</span><span><svg class="ico" aria-hidden="true"><use href="#i-pin"></use></svg>menos de 1 h</span></div>
+            <div class="precio-linea"><small>Desde</small><strong>USD 120</strong></div>
+            <a class="boton boton--oro" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20el%20tour%20a%20las%20cascadas%20del%20Camino%20de%20Oriente." data-wa="Hola, quiero el tour a las cascadas del Camino de Oriente." target="_blank" rel="noopener">Reservar este tour</a>
+          </div>
+        </article>
+        <article class="tour rev" style="--d:.24s">
+          <img src="fotos/d14-comunidad-embera.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Visita a una comunidad Emberá en Panamá">
+          <div class="tour__badges"><span class="badge">Reserva ahora, paga después</span></div>
+          <div class="tour__cuerpo">
+            <h3>Comunidad Emberá</h3>
+            <p>Piragua por el río Chagres hasta una comunidad Emberá: danzas, artesanía y gastronomía junto al río.</p>
+            <div class="tour__meta"><span><svg class="ico" aria-hidden="true"><use href="#i-reloj"></use></svg>Día completo</span><span><svg class="ico" aria-hidden="true"><use href="#i-pin"></use></svg>1 h 30 + piragua</span></div>
+            <div class="precio-linea"><small>Desde</small><strong>USD 200</strong></div>
+            <a class="boton boton--oro" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20el%20tour%20a%20la%20comunidad%20Ember%C3%A1." data-wa="Hola, quiero el tour a la comunidad Emberá." target="_blank" rel="noopener">Reservar este tour</a>
+          </div>
+        </article>
+      </div>
+      <div class="playas rev">
+        <p>¿Playa en vez de ciudad? <b>Traslados privados a Playa Blanca y Riviera Pacífica</b> con tarifa cerrada desde Tocumen.</p>
+        <a class="boton boton--oro" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20un%20traslado%20a%20Playa%20Blanca%20o%20Riviera%20Pac%C3%ADfica." data-wa="Hola, quiero un traslado a Playa Blanca o Riviera Pacífica." target="_blank" rel="noopener">Cotizar mi traslado a la playa</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="nosotros">
+    <div class="wrap nosotros__rejilla">
+      <div class="nosotros__foto rev">
+        <img src="fotos/nosotros.webp" width="1200" height="900" loading="lazy" decoding="async" alt="Equipo de OrcLuxuryTransport recibiendo pasajeros en Panamá">
+        <div class="nosotros__placa"><span class="res-num">5+</span><small>años moviendo<br>pasajeros en Panamá</small></div>
+      </div>
+      <div class="rev" style="--d:.1s">
+        <span class="kicker">Sobre nosotros</span>
+        <h2>Una empresa boutique, una persona atendiendo, cero sorpresas</h2>
+        <p style="margin-top:14px;color:var(--muted)">Somos una empresa panameña de transporte turístico y ejecutivo. Coordinas directo con nosotros por WhatsApp o llamada: sin intermediarios, sin apps ni formularios eternos. Cada servicio con conductor exclusivo y vehículo solo para ti.</p>
+        <ul class="nosotros__lista">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>Conductores profesionales uniformados, con recepción en aeropuerto.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>Atención bilingüe español / inglés, todos los días del año.</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>Precio cerrado antes de subir al vehículo: lo cotizado es lo que pagas.</li>
+        </ul>
+        <div class="stats">
+          <div class="stat"><strong>5+</strong><small>años de experiencia</small></div>
+          <div class="stat"><strong>24/7</strong><small>atención y reservas</small></div>
+          <div class="stat"><strong>ES·EN</strong><small>servicio bilingüe</small></div>
+          <div class="stat"><strong>100%</strong><small>servicio privado</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="tarifas" style="background:var(--soft);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="centro rev">
+        <span class="kicker">Tarifas</span>
+        <h2>Tarifas fijas por zona</h2>
+        <p>Precios cerrados en dólares: la misma zona siempre cuesta lo mismo, sin taxímetro. El precio final se confirma por WhatsApp antes de salir.</p>
+      </div>
+      <ul class="tarifas__panel rev">
+        <li><strong>Tocumen (PTY) → Ciudad de Panamá · Sedán</strong><span>desde USD 32</span></li>
+        <li><strong>Tocumen (PTY) → Ciudad de Panamá · Minivan</strong><span>desde USD 45</span></li>
+        <li><strong>Albrook (PAC) → Ciudad de Panamá</strong><span>desde USD 25</span></li>
+        <li><strong>Servicio por hora (mínimo 2 h)</strong><span>desde USD 35</span></li>
+        <li><strong>Recorrido privado de 4 horas</strong><span>desde USD 120</span></li>
+        <li><strong>Día completo (8 horas)</strong><span>desde USD 200</span></li>
+      </ul>
+      <p class="tarifas__nota">Tarifa fija por zona: incluye peajes, estacionamiento, seguimiento de vuelo y 60 min de espera en llegadas. Sin recargos por horario. Precios fijos garantizados.</p>
+    </div>
+  </section>
+
+  <section class="seccion" id="resenas">
+    <div class="wrap">
+      <div class="centro rev">
+        <span class="kicker">Opiniones</span>
+        <h2>Lo que dicen nuestros pasajeros</h2>
+      </div>
+      <div id="res-contenido"></div>
+      <div class="dejar rev">
+        <h3 style="text-align:center;margin-bottom:4px">Deja tu opinión</h3>
+        <p style="text-align:center;font-size:.85rem;color:var(--muted);margin-bottom:18px">Tu opinión se revisa antes de publicarse.</p>
+        <form class="f-grid" id="form-resena" novalidate>
+          <div class="f-campo">
+            <label for="r-nombre">Tu nombre <b>*</b></label>
+            <input type="text" id="r-nombre" name="nombre" required maxlength="60" autocomplete="name" placeholder="Como quieres que aparezca">
+          </div>
+          <div class="f-campo">
+            <label for="r-servicio">Servicio usado</label>
+            <input type="text" id="r-servicio" name="servicio" maxlength="60" list="lista-serv" placeholder="Traslado, tour, corporativo…">
+            <datalist id="lista-serv"><option value="Traslado al aeropuerto"></option><option value="Transporte corporativo"></option><option value="Servicio privado"></option><option value="Turismo y recorridos"></option><option value="Eventos especiales"></option></datalist>
+          </div>
+          <div class="f-campo f-campo--todo">
+            <label for="r-estrellas">Puntuación <b>*</b></label>
+            <select id="r-estrellas" name="estrellas">
+              <option value="5" selected>★★★★★</option><option value="4">★★★★☆</option><option value="3">★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option>
+            </select>
+          </div>
+          <div class="f-campo f-campo--todo">
+            <label for="r-texto">Tu opinión <b>*</b></label>
+            <textarea id="r-texto" name="texto" required minlength="10" maxlength="1000" placeholder="¿Cómo te fue con el servicio?"></textarea>
+          </div>
+          <div class="trampa" aria-hidden="true">
+            <label for="r-web">No completes este campo</label>
+            <input type="text" id="r-web" name="web" tabindex="-1" autocomplete="off">
+          </div>
+          <button class="boton boton--navy f-enviar" type="submit" id="r-enviar"><svg class="ico" aria-hidden="true"><use href="#i-estrella"></use></svg>Enviar mi opinión</button>
+          <div class="f-aviso" id="r-aviso" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="faq" style="background:var(--soft);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="centro rev">
+        <span class="kicker">FAQ</span>
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq rev">
+        <details><summary>¿Me esperan si mi vuelo se retrasa?</summary><p>Sí. Seguimos el estado de tu vuelo en tiempo real y el conductor te espera en la sala de arribos, sin costo adicional hasta 60 minutos después de aterrizar.</p></details>
+        <details><summary>¿Dónde me encuentro con el conductor en Tocumen?</summary><p>En la sala de arribos, con un letrero con tu nombre, apenas pasas migración y aduanas. Es un servicio Meet &amp; Greet incluido en todas las llegadas.</p></details>
+        <details><summary>¿Cómo pago el traslado?</summary><p>No hay pagos online ni depósito: confirmas el precio cerrado por WhatsApp y le pagas al conductor en dólares o balboas. También coordinamos tarjetas de crédito, PayPal o punto de venta inalámbrico si lo prefieres.</p></details>
+        <details><summary>¿Puedo cancelar mi reserva?</summary><p>Sí. Cancelación gratuita hasta 24 horas antes del servicio. Dentro de las últimas 24 horas, escríbenos igual: buscamos la solución más justa para ambos.</p></details>
+        <details><summary>¿Tienen sillas para niños?</summary><p>Sí. Al reservar indica la edad de los niños y preparamos la silla correspondiente, sin costo adicional y sujeta a disponibilidad.</p></details>
+        <details><summary>¿Cuántas maletas caben?</summary><p>En el sedán entran 2 o 3 maletas grandes; en la minivan, entre 4 y 6 según el número de pasajeros. Si llevas más equipaje, te lo aclaramos al confirmar.</p></details>
+        <details><summary>¿Los conductores hablan inglés?</summary><p>Sí. El equipo atiende en español e inglés, y la coordinación por WhatsApp también es bilingüe, 24/7.</p></details>
+      </div>
     </div>
   </section>
 
 </main>
 
-<!-- ===== PIE DE PÁGINA ===== -->
-<footer class="footer">
-  <div class="contenedor">
-    <div class="footer__rejilla">
-
+<footer class="pie" id="contacto">
+  <div class="wrap">
+    <div class="pie__rejilla">
       <div>
-        <span class="logo__nombre" style="font-size:1.25rem;font-weight:700">
-          Orc<span style="color:var(--dorado)">Luxury</span>Transport
-        </span>
-        <div class="linea-dorada linea-dorada--izq" style="margin-top:12px"></div>
-        <p class="footer__eslogan">
-          Transporte turístico y ejecutivo en Panamá. Puntualidad, seguridad y comodidad
-          en cada viaje.
-        </p>
+        <span class="logo__nombre" style="font-size:1.2rem">Orc<b style="color:var(--gold-2)">Luxury</b>Transport</span>
+        <p style="margin-top:12px;max-width:300px;font-size:.9rem">Transporte turístico y ejecutivo boutique en Panamá. Puntualidad, seguridad y comodidad en cada viaje.</p>
+        <p style="margin-top:10px;font-size:.9rem"><a href="https://www.instagram.com/orcluxurytransport/" target="_blank" rel="noopener">@orcluxurytransport</a></p>
       </div>
-
       <div>
-        <h3>Secciones</h3>
-        <ul class="footer__lista">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#reservar">Reservar</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#destinos">Destinos</a></li>
-          <li><a href="#opiniones">Opiniones</a></li>
+        <h3>Explora</h3>
+        <ul class="pie__lista">
+          <li><a href="https://orcluxurytransport.com/escala-tocumen/">Tour de escala en Tocumen</a></li>
+          <li><a href="#tarifas">Traslado Tocumen → Ciudad de Panamá</a></li>
+          <li><a href="#tarifas">Transfer Tocumen → Playa Blanca</a></li>
+          <li><a href="#tours">Tours desde el aeropuerto</a></li>
+          <li><a href="#flota">Nuestra flota</a></li>
         </ul>
       </div>
-
       <div>
         <h3>Contacto</h3>
-        <ul class="footer__lista">
-          <li><a href="tel:+50768026916">6802-6916</a></li>
+        <ul class="pie__lista">
+          <li><a href="tel:+50768026916">+507 6802-6916</a></li>
           <li><a href="mailto:orielca507@gmail.com">orielca507@gmail.com</a></li>
-          <li><a id="whatsapp-footer" href="#" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li style="color:var(--texto-tenue)">Panamá · 24/7</li>
+          <li><a href="https://wa.me/50768026916?text=Hola%2C%20necesito%20ayuda%20para%20cotizar%20un%20traslado%20desde%20Tocumen." data-wa="Hola, necesito ayuda para cotizar un traslado desde Tocumen." target="_blank" rel="noopener">WhatsApp · 24/7</a></li>
+          <li>Ciudad de Panamá, Panamá</li>
         </ul>
       </div>
-
+      <div>
+        <h3>Formas de pago</h3>
+        <div class="pago-pills">
+          <span class="pago-pill"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>Efectivo USD/Balboas</span>
+          <span class="pago-pill"><svg class="ico" aria-hidden="true"><use href="#i-tarjeta"></use></svg>Tarjetas de crédito</span>
+          <span class="pago-pill"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>PayPal</span>
+          <span class="pago-pill"><svg class="ico" aria-hidden="true"><use href="#i-tarjeta"></use></svg>POS inalámbrico</span>
+        </div>
+        <div class="pie__cancelacion"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg><span><b>Cancelación gratuita hasta 24 h antes</b> del servicio. Sin pagos online ni depósitos.</span></div>
+      </div>
     </div>
-    <div class="footer__base">
-      &copy; <span id="anio">2026</span> OrcLuxuryTransport. Todos los derechos reservados.
-    </div>
+    <div class="pie__base">&copy; <span id="anio">2026</span> OrcLuxuryTransport. Todos los derechos reservados.</div>
   </div>
 </footer>
 
-<a class="whatsapp" id="whatsapp-flotante" href="#" target="_blank" rel="noopener"
-   aria-label="Escribir por WhatsApp a OrcLuxuryTransport">
+<a class="wa-float" href="https://wa.me/50768026916?text=Hola%2C%20necesito%20ayuda%20para%20cotizar%20un%20traslado%20desde%20Tocumen." data-wa="Hola, necesito ayuda para cotizar un traslado desde Tocumen." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp a OrcLuxuryTransport">
   <svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>
-  <span>WhatsApp</span>
+  <span class="wa-texto">WhatsApp</span>
 </a>
 
-<div class="visor" id="visor" role="dialog" aria-modal="true" aria-label="Visor de imágenes">
-  <button class="visor__boton visor__boton--cerrar" id="visor-cerrar" aria-label="Cerrar el visor">
-    <svg class="ico" aria-hidden="true"><use href="#i-cerrar"></use></svg>
-  </button>
-  <button class="visor__boton visor__boton--ant" id="visor-ant" aria-label="Imagen anterior">
-    <svg class="ico" aria-hidden="true"><use href="#i-flecha-izq"></use></svg>
-  </button>
-  <div class="visor__medio" id="visor-medio"></div>
-  <button class="visor__boton visor__boton--sig" id="visor-sig" aria-label="Imagen siguiente">
-    <svg class="ico" aria-hidden="true"><use href="#i-flecha-der"></use></svg>
-  </button>
-  <p class="visor__titulo" id="visor-titulo"></p>
-</div>
-
 <script>
-/* ==========================================================================
-   1. CONFIGURACIÓN Y OPINIONES
-   ========================================================================== */
-var CONFIG = {
-  /* Código de país + número, sin espacios ni guiones. Panamá = 507 */
-  whatsapp: "50768026916",
-  mensajeDirecto: "Hola, deseo solicitar información sobre sus servicios de transporte.",
-  encabezadoReserva: "Hola OrcLuxuryTransport, deseo solicitar una reserva."
-};
-
-/* --------------------------------------------------------------------------
-   OPINIONES PUBLICADAS
-
-   Para añadir una, copie el bloque de ejemplo, quítele las barras // y
-   complételo. Para borrarla, elimine su bloque. El promedio, las estrellas
-   y el conteo se calculan solos a partir de esta lista.
-
-     nombre    : cómo aparece firmada
-     foto      : opcional. Ruta dentro de /fotos/resenas/
-                 Sin foto se muestran las iniciales del nombre.
-     estrellas : número del 1 al 5
-     servicio  : qué servicio usó
-     fecha     : texto libre, por ejemplo "Julio 2026"
-     texto     : la opinión, tal como la escribió la persona
-
-   La lista está vacía porque todavía no hay opiniones reales autorizadas.
-   -------------------------------------------------------------------------- */
+var CONFIG = { whatsapp: "50768026916" };
 var RESENAS = [
-
-  // {
-  //   nombre:    "María Fernández",
-  //   foto:      "fotos/resenas/maria.webp",
-  //   estrellas: 5,
-  //   servicio:  "Traslado al aeropuerto",
-  //   fecha:     "Julio 2026",
-  //   texto:     "Nos recogieron a las cinco de la mañana y el conductor ya estaba esperando."
-  // },
-
+  { nombre: "Sarah M.", servicio: "Traslado Tocumen → hotel", estrellas: 5, texto: "El conductor nos estaba esperando con un letrero apenas salimos de migración. Auto impecable, agua fría y llegamos al hotel en 30 minutos. Cero estrés." },
+  { nombre: "James & Katie", servicio: "Tour de escala (Canal y Casco)", estrellas: 5, texto: "Teníamos 7 horas de escala en Tocumen y lo aprovechamos al máximo: Miraflores y el Casco Viejo con tiempo perfecto y regreso calculado para nuestro vuelo." },
+  { nombre: "Familia Rodríguez", servicio: "Tour Comunidad Emberá", estrellas: 5, texto: "Un día increíble. Nos coordinaron la silla para el bebé sin costo y todo el día fue puntual. Se lo recomendamos a cualquiera que visite Panamá." }
 ];
 
 function enlaceWhatsApp(texto){
   return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(texto);
 }
-document.documentElement.classList.add("js");
-
-
-/* ==========================================================================
-   2. ENLACES DE WHATSAPP
-   ========================================================================== */
 (function(){
-  var url = enlaceWhatsApp(CONFIG.mensajeDirecto);
-  ["whatsapp-flotante","whatsapp-directo","whatsapp-footer"].forEach(function(id){
-    var el = document.getElementById(id);
-    if(el) el.href = url;
+  document.querySelectorAll("a[data-wa]").forEach(function(a){
+    a.href = enlaceWhatsApp(a.getAttribute("data-wa"));
   });
-
 })();
 
-
-/* ==========================================================================
-   3. OPINIONES: promedio, estrellas y tarjetas
-   ========================================================================== */
 (function(){
-  var caja = document.getElementById("opiniones-contenido");
-  if(!caja) return;
+  var c = document.getElementById("topbar");
+  function al(){ c.classList.toggle("bajo", window.scrollY > 8); }
+  var esperando = false;
+  window.addEventListener("scroll", function(){
+    if(esperando) return; esperando = true;
+    requestAnimationFrame(function(){ al(); esperando = false; });
+  }, { passive:true });
+  al();
+})();
 
-  function escapar(s){
-    return String(s).replace(/[&<>"']/g, function(c){
-      return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c];
-    });
+(function(){
+  var burger = document.getElementById("burger");
+  var panel = document.getElementById("panel");
+  var velo = document.getElementById("velo");
+  var cerrar = document.getElementById("cerrar-panel");
+  function set(abierto){
+    panel.classList.toggle("abierto", abierto);
+    velo.classList.toggle("on", abierto);
+    burger.setAttribute("aria-expanded", abierto ? "true" : "false");
   }
+  burger.addEventListener("click", function(){ set(true); });
+  cerrar.addEventListener("click", function(){ set(false); });
+  velo.addEventListener("click", function(){ set(false); });
+  panel.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ set(false); }); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") set(false); });
+})();
 
-  /* Cinco estrellas, llenas hasta la puntuación indicada */
+(function(){
+  var modo = "traslado";
+  var tabs = document.querySelectorAll(".tab");
+  tabs.forEach(function(t){
+    t.addEventListener("click", function(){
+      tabs.forEach(function(x){ x.setAttribute("aria-selected", x === t ? "true" : "false"); });
+      modo = t.id === "tab-horas" ? "horas" : "traslado";
+    });
+  });
+
+  var form = document.getElementById("f-form");
+  var aviso = document.getElementById("f-aviso");
+  var campoFecha = document.getElementById("f-fecha");
+  if(campoFecha){
+    var hoy = new Date();
+    campoFecha.min = hoy.getFullYear() + "-" + String(hoy.getMonth()+1).padStart(2,"0") + "-" + String(hoy.getDate()).padStart(2,"0");
+  }
+  function msg(html){
+    aviso.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-cerrar"></use></svg><span>' + html + '</span>';
+    aviso.classList.add("on");
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = new FormData(form);
+    function v(c){ return (d.get(c) || "").toString().trim(); }
+    if(!v("recogida") || !v("destino") || !v("fecha") || !v("hora")){ return msg("Falta completar un campo obligatorio."); }
+    var f = v("fecha").split("-");
+    var fecha = f.length === 3 ? f[2] + "/" + f[1] + "/" + f[0] : v("fecha");
+    var extras = d.getAll("extra");
+    var lineas = [ modo === "horas" ? "*Hola OrcLuxuryTransport, deseo el servicio por horas o tour.*" : "*Hola OrcLuxuryTransport, deseo solicitar un traslado.*", "",
+      "*Recogida:* " + v("recogida"),
+      "*Destino:* " + v("destino"),
+      "*Fecha:* " + fecha + "  ·  *Hora:* " + v("hora") ];
+    if(v("vuelo")) lineas.push("*Vuelo:* " + v("vuelo"));
+    lineas.push("*Adultos:* " + v("adultos") + "  ·  *Niños:* " + v("ninos") + "  ·  *Maletas:* " + v("maletas"));
+    if(extras.length) lineas.push("*Extras:* " + extras.join(", "));
+    var url = enlaceWhatsApp(lineas.join("\n"));
+    if(!window.open(url, "_blank", "noopener")) window.location.href = url;
+    aviso.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg><span>Abriendo WhatsApp con tu solicitud. Si no se abrió, <a href="' + url + '" target="_blank" rel="noopener">toca aquí</a>.</span>';
+    aviso.classList.add("on");
+  });
+})();
+
+(function(){
+  var caja = document.getElementById("res-contenido");
+  if(!caja) return;
+  function escapar(s){
+    return String(s).replace(/[&<>"']/g, function(c){ return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]; });
+  }
   function estrellas(n){
-    var h = '<span class="estrellas" role="img" aria-label="' + n + ' de 5 estrellas">';
-    for(var i=1;i<=5;i++){
-      h += '<svg class="ico ico--relleno' + (i > n ? " vacia" : "") + '" aria-hidden="true">'
-         + '<use href="#i-estrella"></use></svg>';
-    }
+    var h = '<span class="res-estrellas" role="img" aria-label="' + n + ' / 5">';
+    for(var i=1;i<=5;i++){ h += '<svg class="ico' + (i > n ? " vacia" : "") + '" aria-hidden="true"><use href="#i-estrella"></use></svg>'; }
     return h + "</span>";
   }
-
-  function iniciales(nombre){
-    var p = String(nombre).trim().split(/\s+/);
+  function iniciales(n){
+    var p = String(n).trim().split(/\s+/);
     return (((p[0]||"")[0]||"") + ((p[1]||"")[0]||"")).toUpperCase();
   }
-
-  /* Fecha ISO -> "Julio 2026" */
-  var MESES = ["enero","febrero","marzo","abril","mayo","junio",
-               "julio","agosto","septiembre","octubre","noviembre","diciembre"];
-  function mesYAno(iso){
-    if(!iso) return "";
-    var d = new Date(iso);
-    if(isNaN(d)) return "";
-    var m = MESES[d.getMonth()];
-    return m.charAt(0).toUpperCase() + m.slice(1) + " " + d.getFullYear();
-  }
-
   function pintar(lista){
     if(!lista.length){
-      caja.innerHTML =
-        '<div class="opiniones__vacio revelar">' +
-          '<svg class="ico ico--relleno" aria-hidden="true"><use href="#i-estrella"></use></svg>' +
-          '<h3>Aún no hay opiniones publicadas</h3>' +
-          '<p>¿Ya viajó con nosotros? Sea la primera persona en contar cómo le fue.</p>' +
-        '</div>';
+      caja.innerHTML = '<div class="res-vacio" style="max-width:560px;margin:0 auto;padding:34px 26px;text-align:center;border:1px dashed #CBD5DF;border-radius:20px;color:var(--muted)"><h3>Aún no hay opiniones publicadas</h3><p>¿Ya viajaste con nosotros? Sé la primera persona en contar cómo te fue.</p></div>';
       return;
     }
-
     var suma = lista.reduce(function(t,r){ return t + Number(r.estrellas || 0); }, 0);
-    var promedio = suma / lista.length;
-    var promedioTexto = (Math.round(promedio * 10) / 10).toFixed(1).replace(".", ",");
-
-    var html =
-      '<div class="opiniones__resumen revelar">' +
-        '<div class="opiniones__nota">' +
-          '<span class="opiniones__numero">' + promedioTexto + '</span>' +
-          '<span class="opiniones__sobre">/ 5</span>' +
-        '</div>' +
-        '<div class="opiniones__detalle">' +
-          estrellas(Math.round(promedio)) +
-          '<p class="opiniones__conteo">' + lista.length +
-            (lista.length === 1 ? " opinión publicada" : " opiniones publicadas") + '</p>' +
-        '</div>' +
-      '</div>' +
-      '<div class="opiniones__lista">';
-
-    lista.forEach(function(r, i){
-      var avatar = r.foto
-        ? '<img class="resena__foto" src="' + escapar(r.foto) + '" width="48" height="48" loading="lazy" alt="Foto de ' + escapar(r.nombre) + '">'
-        : '<span class="resena__iniciales" aria-hidden="true">' + escapar(iniciales(r.nombre)) + '</span>';
-
-      var fecha = r.fecha || mesYAno(r.creada);
-      var meta  = [r.servicio, fecha].filter(Boolean).map(escapar).join(" · ");
-
-      html +=
-        '<article class="resena revelar" style="--retraso:' + ((i % 3) * 0.07) + 's">' +
-          '<div class="resena__cabecera">' + avatar +
-            '<div>' +
-              '<span class="resena__nombre">' + escapar(r.nombre) + '</span>' +
-              '<span class="resena__meta">' + meta + '</span>' +
-            '</div>' +
-          '</div>' +
-          '<div class="resena__estrellas">' + estrellas(Number(r.estrellas)) + '</div>' +
-          '<blockquote>' + escapar(r.texto) + '</blockquote>' +
-        '</article>';
+    var prom = (Math.round((suma / lista.length) * 10) / 10).toFixed(1);
+    var html = '<div class="res-summary rev on"><span class="res-numero">' + prom + '</span><div><div>' + estrellas(Math.round(suma / lista.length)) + '</div><small style="color:var(--muted)">' + lista.length + ' opiniones publicadas</small></div></div>';
+    html += '<div class="res-carrusel rev on"><div class="res-pista" id="res-pista">';
+    lista.forEach(function(r){
+      html += '<article class="res-card"><div class="res-card__cabeza"><span class="res-iniciales" aria-hidden="true">' + escapar(iniciales(r.nombre)) + '</span><div><b>' + escapar(r.nombre) + '</b><br><small style="color:var(--muted)">' + escapar(r.servicio || "") + '</small></div></div>' + estrellas(Number(r.estrellas)) + '<blockquote>' + escapar(r.texto) + '</blockquote></article>';
     });
-
-    caja.innerHTML = html + '</div>';
+    html += '</div><div class="res-flechas"><button class="res-flecha" id="res-prev" aria-label="Opiniones anteriores"><svg class="ico" aria-hidden="true"><use href="#i-flecha-izq"></use></svg></button><button class="res-flecha" id="res-next" aria-label="Opiniones siguientes"><svg class="ico" aria-hidden="true"><use href="#i-flecha-der"></use></svg></button></div></div>';
+    caja.innerHTML = html;
+    var pista = document.getElementById("res-pista");
+    var paso = 356;
+    document.getElementById("res-prev").addEventListener("click", function(){ pista.scrollBy({ left:-paso, behavior:"smooth" }); });
+    document.getElementById("res-next").addEventListener("click", function(){ pista.scrollBy({ left:paso, behavior:"smooth" }); });
   }
-
-  /* Se piden al servidor las opiniones ya aprobadas. Si la consulta falla
-     (por ejemplo al abrir el archivo suelto, sin servidor), se usa la lista
-     RESENAS escrita a mano más arriba. */
   pintar(RESENAS);
   if(window.fetch){
     fetch("/api/resenas", { headers:{ "Accept":"application/json" } })
       .then(function(r){ return r.ok ? r.json() : null; })
-      .then(function(d){
-        if(d && d.ok && Array.isArray(d.resenas)) pintar(RESENAS.concat(d.resenas));
-      })
-      .catch(function(){ /* sin servidor: se queda la lista manual */ });
+      .then(function(d){ if(d && d.ok && Array.isArray(d.resenas)) pintar(RESENAS.concat(d.resenas)); })
+      .catch(function(){});
   }
 })();
 
-
-/* ==========================================================================
-   3b. FORMULARIO PARA DEJAR UNA OPINIÓN
-
-   Envía los datos a /api/resenas. La opinión queda guardada sin publicar
-   hasta que el dueño la aprueba, así que nada aparece solo en la página.
-   ========================================================================== */
 (function(){
-  var form  = document.getElementById("form-resena");
-  var aviso = document.getElementById("aviso-resena");
+  var form = document.getElementById("form-resena");
+  var aviso = document.getElementById("r-aviso");
   if(!form) return;
-
-  function mensaje(texto, icono){
-    aviso.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-' + icono + '"></use></svg>'
-                    + "<span>" + texto + "</span>";
-    aviso.classList.add("visible");
+  function msg(t, ok){
+    aviso.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-' + (ok ? "check" : "cerrar") + '"></use></svg><span>' + t + '</span>';
+    aviso.classList.add("on");
   }
-
   form.addEventListener("submit", function(e){
     e.preventDefault();
-
-    var nombre    = form.nombre.value.trim();
-    var texto     = form.texto.value.trim();
-    var servicio  = form.servicio.value.trim();
-    var elegida   = form.querySelector('input[name="estrellas"]:checked');
-
-    if(nombre.length < 2){ form.nombre.focus(); return mensaje("Escriba su nombre.", "cerrar"); }
-    if(!elegida){ return mensaje("Elija una puntuación de 1 a 5 estrellas.", "cerrar"); }
-    if(texto.length < 10){ form.texto.focus(); return mensaje("Cuéntenos un poco más sobre su experiencia.", "cerrar"); }
-
+    var nombre = form.nombre.value.trim();
+    var texto = form.texto.value.trim();
+    var servicio = form.servicio.value.trim();
+    var estrellas = form.estrellas.value;
+    if(nombre.length < 2){ return msg("Escribe tu nombre.", false); }
+    if(texto.length < 10){ return msg("Cuéntanos un poco más sobre tu experiencia.", false); }
     var boton = document.getElementById("r-enviar");
     boton.disabled = true;
-    mensaje("Enviando...", "reloj");
-
+    msg("Enviando…", true);
     fetch("/api/resenas", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        nombre: nombre,
-        estrellas: Number(elegida.value),
-        servicio: servicio,
-        texto: texto,
-        web: form.web.value
-      })
+      body: JSON.stringify({ nombre: nombre, estrellas: Number(estrellas), servicio: servicio, texto: texto, web: form.web.value })
     })
-    .then(function(r){ return r.json().then(function(d){ return { ok:r.ok, d:d }; }); })
+    .then(function(r){ return r.json().then(function(d){ return { ok: r.ok, d: d }; }); })
     .then(function(res){
-      if(res.ok && res.d.ok){
-        form.reset();
-        mensaje("¡Gracias! Recibimos su opinión. La revisamos antes de publicarla.", "check");
-      } else {
-        boton.disabled = false;
-        mensaje(res.d && res.d.error ? res.d.error : "No se pudo enviar. Intente de nuevo.", "cerrar");
-      }
+      if(res.ok && res.d.ok){ form.reset(); msg("¡Gracias! Recibimos tu opinión. La revisamos antes de publicarla.", true); }
+      else { boton.disabled = false; msg(res.d && res.d.error ? res.d.error : "No se pudo enviar. Intenta de nuevo.", false); }
     })
-    .catch(function(){
-      boton.disabled = false;
-      mensaje("No se pudo conectar. Revise su conexión e intente de nuevo.", "cerrar");
-    });
+    .catch(function(){ boton.disabled = false; msg("No se pudo conectar. Revisa tu conexión e intenta de nuevo.", false); });
   });
 })();
 
-
-/* ==========================================================================
-   4. PESTAÑAS
-   ========================================================================== */
 (function(){
-  var tabs = [].slice.call(document.querySelectorAll('[role="tab"]'));
-  if(!tabs.length) return;
-
-  function mostrar(tab, moverFoco){
-    tabs.forEach(function(t){
-      var sel = (t === tab);
-      t.setAttribute("aria-selected", sel ? "true" : "false");
-      var panel = document.getElementById(t.getAttribute("aria-controls"));
-      if(panel){
-        panel.hidden = !sel;
-        if(sel) panel.dispatchEvent(new CustomEvent("tab:mostrada", { bubbles:true }));
-      }
-    });
-    if(moverFoco) tab.focus();
-  }
-
-  tabs.forEach(function(tab, i){
-    tab.addEventListener("click", function(){ mostrar(tab); });
-    tab.addEventListener("keydown", function(e){
-      var n = null;
-      if(e.key === "ArrowRight") n = tabs[(i + 1) % tabs.length];
-      if(e.key === "ArrowLeft")  n = tabs[(i - 1 + tabs.length) % tabs.length];
-      if(e.key === "Home")       n = tabs[0];
-      if(e.key === "End")        n = tabs[tabs.length - 1];
-      if(n){ e.preventDefault(); mostrar(n, true); }
-    });
-  });
-
-  /* Los enlaces del menú y del pie abren la pestaña que corresponde */
-  document.querySelectorAll('[data-tab], a[href="#servicios"]').forEach(function(enlace){
-    enlace.addEventListener("click", function(){
-      var clave = enlace.getAttribute("data-tab")
-               || (enlace.getAttribute("href") || "").replace("#","");
-      var t = document.getElementById("tab-" + clave);
-      if(t) mostrar(t);
-    });
-  });
-
-  /* Permite llegar directo con /#destinos */
-  var hash = (location.hash || "").replace("#","");
-  if(hash === "servicios"){
-    var inicial = document.getElementById("tab-servicios");
-    if(inicial) mostrar(inicial);
-  }
+  var obs = new IntersectionObserver(function(entradas){
+    entradas.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("on"); obs.unobserve(en.target); } });
+  }, { rootMargin:"0px 0px -40px 0px" });
+  document.querySelectorAll(".rev").forEach(function(e){ obs.observe(e); });
 })();
 
-
-/* ==========================================================================
-   5. MENÚ EN CELULAR
-   ========================================================================== */
-(function(){
-  var boton = document.getElementById("boton-menu");
-  var nav   = document.getElementById("nav-principal");
-  var icono = document.getElementById("icono-menu");
-  if(!boton || !nav) return;
-
-  function cerrar(){
-    nav.classList.remove("abierto");
-    boton.setAttribute("aria-expanded","false");
-    boton.setAttribute("aria-label","Abrir el menú de navegación");
-    icono.innerHTML = '<use href="#i-menu"></use>';
-  }
-  boton.addEventListener("click", function(){
-    var abierto = nav.classList.toggle("abierto");
-    boton.setAttribute("aria-expanded", abierto ? "true" : "false");
-    boton.setAttribute("aria-label", abierto ? "Cerrar el menú de navegación" : "Abrir el menú de navegación");
-    icono.innerHTML = '<use href="#i-' + (abierto ? "cerrar" : "menu") + '"></use>';
-  });
-  nav.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", cerrar); });
-  document.addEventListener("keydown", function(e){
-    if(e.key === "Escape" && nav.classList.contains("abierto")) cerrar();
-  });
-})();
-
-
-/* ==========================================================================
-   6. ENCABEZADO AL BAJAR
-   ========================================================================== */
-(function(){
-  var header = document.getElementById("encabezado");
-  function actualizar(){
-    if(window.scrollY > 50) header.classList.add("fijo");
-    else header.classList.remove("fijo");
-  }
-  var esperando = false;
-  window.addEventListener("scroll", function(){
-    if(esperando) return;
-    esperando = true;
-    window.requestAnimationFrame(function(){ actualizar(); esperando = false; });
-  }, { passive:true });
-  actualizar();
-})();
-
-
-/* ==========================================================================
-   7. APARICIÓN PROGRESIVA
-   ========================================================================== */
-(function(){
-  function observar(){
-    var elementos = document.querySelectorAll(".revelar:not(.visible)");
-    if(!("IntersectionObserver" in window)){
-      elementos.forEach(function(e){ e.classList.add("visible"); });
-      return;
-    }
-    var obs = new IntersectionObserver(function(entradas){
-      entradas.forEach(function(en){
-        if(en.isIntersecting){ en.target.classList.add("visible"); obs.unobserve(en.target); }
-      });
-    }, { threshold:0, rootMargin:"0px 0px -60px 0px" });
-    elementos.forEach(function(e){ obs.observe(e); });
-  }
-  observar();
-  /* Las opiniones se pintan por JavaScript: se observan justo después */
-  setTimeout(observar, 60);
-  window.addEventListener("load", function(){
-    setTimeout(function(){
-      document.querySelectorAll(".revelar").forEach(function(e){
-        var r = e.getBoundingClientRect();
-        if(r.top < window.innerHeight && r.bottom > 0) e.classList.add("visible");
-      });
-    }, 300);
-  });
-})();
-
-
-/* ==========================================================================
-   8. CARRUSEL DE DESTINOS
-   ========================================================================== */
-(function(){
-  var pista = document.getElementById("carrusel-pista");
-  var ant   = document.getElementById("carrusel-ant");
-  var sig   = document.getElementById("carrusel-sig");
-  var caja  = document.getElementById("carrusel-puntos");
-  if(!pista || !ant || !sig || !caja) return;
-
-  var items = pista.querySelectorAll(".galeria__item");
-  if(!items.length) return;
-
-  var puntos = [];
-  for(var i=0;i<items.length;i++){
-    var b = document.createElement("button");
-    b.type = "button";
-    b.className = "carrusel__punto";
-    b.setAttribute("aria-label", "Ir al destino " + (i+1) + " de " + items.length);
-    (function(n){ b.addEventListener("click", function(){ pista.scrollTo({ left:n*paso(), behavior:"smooth" }); }); })(i);
-    caja.appendChild(b);
-    puntos.push(b);
-  }
-
-  /* Con la pestaña oculta las medidas son 0: se recalcula al mostrarla */
-  function paso(){
-    if(items.length > 1){
-      var d = items[1].offsetLeft - items[0].offsetLeft;
-      if(d > 0) return d;
-    }
-    return items[0].getBoundingClientRect().width || 1;
-  }
-
-  function actualizar(){
-    var idx = Math.round(pista.scrollLeft / paso());
-    if(idx < 0) idx = 0;
-    if(idx > puntos.length - 1) idx = puntos.length - 1;
-    puntos.forEach(function(pt,i){ pt.classList.toggle("activo", i === idx); });
-    ant.disabled = pista.scrollLeft <= 2;
-    sig.disabled = pista.scrollLeft + pista.clientWidth >= pista.scrollWidth - 2;
-  }
-
-  ant.addEventListener("click", function(){ pista.scrollBy({ left:-paso(), behavior:"smooth" }); });
-  sig.addEventListener("click", function(){ pista.scrollBy({ left: paso(), behavior:"smooth" }); });
-
-  pista.addEventListener("keydown", function(e){
-    var visor = document.getElementById("visor");
-    if(visor && visor.classList.contains("abierto")) return;
-    if(e.key === "ArrowLeft"){  e.preventDefault(); pista.scrollBy({ left:-paso(), behavior:"smooth" }); }
-    if(e.key === "ArrowRight"){ e.preventDefault(); pista.scrollBy({ left: paso(), behavior:"smooth" }); }
-  });
-
-  var esperando = false;
-  pista.addEventListener("scroll", function(){
-    if(esperando) return;
-    esperando = true;
-    window.requestAnimationFrame(function(){ actualizar(); esperando = false; });
-  }, { passive:true });
-
-  window.addEventListener("resize", actualizar);
-
-  /* El carrusel ya está a la vista desde el inicio: no hace falta
-     recalcular al abrir ninguna pestaña. */
-
-  actualizar();
-})();
-
-
-/* ==========================================================================
-   9. VISOR A PANTALLA COMPLETA
-   ========================================================================== */
-(function(){
-  var pista  = document.getElementById("carrusel-pista");
-  var visor  = document.getElementById("visor");
-  var medio  = document.getElementById("visor-medio");
-  var titulo = document.getElementById("visor-titulo");
-  if(!pista || !visor) return;
-
-  var items  = pista.querySelectorAll(".galeria__item");
-  var indice = 0, previo = null;
-
-  function mostrar(i){
-    if(i < 0) i = items.length - 1;
-    if(i >= items.length) i = 0;
-    indice = i;
-    var item = items[indice];
-    var img  = item.querySelector("img");
-    var pie  = item.querySelector(".galeria__pie");
-
-    medio.innerHTML = "";
-    if(img){
-      var clon = img.cloneNode(true);
-      /* En la tarjeta se ve el recorte 4:3; aquí la foto sin recortar */
-      var completa = clon.getAttribute("data-completa");
-      if(completa) clon.setAttribute("src", completa);
-      clon.removeAttribute("width");
-      clon.removeAttribute("height");
-      clon.removeAttribute("loading");
-      clon.style.aspectRatio = "auto";
-      medio.appendChild(clon);
-    }
-    titulo.textContent = (pie ? pie.textContent.trim() : "") + "  ·  " + (indice+1) + " de " + items.length;
-  }
-
-  function abrir(i){
-    previo = document.activeElement;
-    mostrar(i);
-    visor.classList.add("abierto");
-    document.body.style.overflow = "hidden";
-    document.getElementById("visor-cerrar").focus();
-  }
-  function cerrar(){
-    visor.classList.remove("abierto");
-    document.body.style.overflow = "";
-    medio.innerHTML = "";
-    if(previo) previo.focus();
-  }
-
-  items.forEach(function(item, n){
-    item.addEventListener("click", function(){ abrir(n); });
-    item.addEventListener("keydown", function(e){
-      if(e.key === "Enter" || e.key === " "){ e.preventDefault(); abrir(n); }
-    });
-  });
-
-  document.getElementById("visor-cerrar").addEventListener("click", cerrar);
-  document.getElementById("visor-ant").addEventListener("click", function(){ mostrar(indice-1); });
-  document.getElementById("visor-sig").addEventListener("click", function(){ mostrar(indice+1); });
-  visor.addEventListener("click", function(e){ if(e.target === visor) cerrar(); });
-  document.addEventListener("keydown", function(e){
-    if(!visor.classList.contains("abierto")) return;
-    if(e.key === "Escape")     cerrar();
-    if(e.key === "ArrowLeft")  mostrar(indice-1);
-    if(e.key === "ArrowRight") mostrar(indice+1);
-  });
-})();
-
-
-/* ==========================================================================
-   10. FORMULARIO DE RESERVA → WHATSAPP
-   ========================================================================== */
-(function(){
-  var form  = document.getElementById("form-reserva");
-  var aviso = document.getElementById("aviso-form");
-  var campoFecha = document.getElementById("f-fecha");
-  if(!form) return;
-
-  if(campoFecha){
-    var hoy = new Date();
-    campoFecha.min = hoy.getFullYear() + "-" +
-      String(hoy.getMonth()+1).padStart(2,"0") + "-" + String(hoy.getDate()).padStart(2,"0");
-  }
-
-  function formatearFecha(v){
-    if(!v) return "";
-    var p = v.split("-");
-    return p.length === 3 ? p[2] + "/" + p[1] + "/" + p[0] : v;
-  }
-  function formatearHora(v){
-    if(!v) return "";
-    var p = v.split(":"), h = parseInt(p[0],10);
-    var suf = h >= 12 ? "p.m." : "a.m.";
-    var h12 = h % 12; if(h12 === 0) h12 = 12;
-    return h12 + ":" + p[1] + " " + suf;
-  }
-
-  form.addEventListener("submit", function(e){
-    e.preventDefault();
-
-    var obligatorios = form.querySelectorAll("[required]");
-    for(var i=0;i<obligatorios.length;i++){
-      if(!obligatorios[i].value.trim()){
-        obligatorios[i].focus();
-        aviso.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-cerrar"></use></svg>'
-                        + "<span>Falta completar un campo obligatorio.</span>";
-        aviso.classList.add("visible");
-        return;
-      }
-    }
-
-    var d = new FormData(form);
-    function v(c){ return (d.get(c) || "").toString().trim(); }
-
-    var lineas = [ CONFIG.encabezadoReserva, "",
-      "*Nombre:* "   + v("nombre"),
-      "*Teléfono:* " + v("telefono") ];
-    if(v("correo")) lineas.push("*Correo:* " + v("correo"));
-    lineas.push(
-      "*Fecha:* "    + formatearFecha(v("fecha")),
-      "*Hora:* "     + formatearHora(v("hora")),
-      "*Recogida:* " + v("recogida"),
-      "*Destino:* "  + v("destino"));
-    if(v("mensaje")) lineas.push("", "*Detalles:* " + v("mensaje"));
-
-    var url = enlaceWhatsApp(lineas.join("\n"));
-    if(!window.open(url, "_blank", "noopener")) window.location.href = url;
-
-    aviso.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg>'
-      + '<span>Abriendo WhatsApp con su solicitud. Si no se abrió, '
-      + '<a href="' + url + '" target="_blank" rel="noopener">toque aquí</a>.</span>';
-    aviso.classList.add("visible");
-  });
-})();
-
-
-/* ==========================================================================
-   11. AÑO DEL PIE
-   ========================================================================== */
 (function(){
   var a = document.getElementById("anio");
   if(a) a.textContent = new Date().getFullYear();

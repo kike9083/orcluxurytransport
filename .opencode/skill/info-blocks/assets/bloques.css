@@ -1,0 +1,45 @@
+/* Bloques informativos estructurados — pegar una sola vez por archivo,
+   antes de la regla .faq{ dentro del <style> principal. */
+
+.tarifas__panel{ margin:20px 0 6px; padding:20px 22px; background:rgba(10,12,16,.55); border:1px solid var(--borde); border-radius:var(--radio-sm); }
+.tarifas__panel h4,.tarifas__incluye h4{ margin:0 0 12px; font-size:.98rem; font-weight:700; color:var(--oro-claro); }
+.tarifas__lista li{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:10px 0; border-bottom:1px dashed var(--borde); font-size:.94rem; }
+.tarifas__lista li:last-child{ border-bottom:none; padding-bottom:2px; }
+.tarifas__lista strong{ color:var(--marfil); font-weight:600; }
+.tarifas__lista span{ color:var(--texto); text-align:right; }
+.tarifas__precio{ color:var(--oro); font-weight:700; font-size:1.06em; white-space:nowrap; }
+.tarifas__incluye{ margin:14px 0; }
+.tarifas__incluye ul li{ position:relative; padding:6px 0 6px 26px; font-size:.92rem; color:var(--texto); }
+.tarifas__incluye ul li::before{ content:"\2713"; position:absolute; left:0; top:6px; color:var(--oro); font-weight:700; }
+.tarifas__reserva{ margin-top:16px; padding:16px 18px; background:rgba(200,164,77,.07); border:1px solid var(--borde-dorado); border-radius:var(--radio-sm); }
+.tarifas__reserva p{ margin:0 0 6px; font-size:.94rem; color:var(--texto); }
+.tarifas__reserva p:last-child{ margin:0; }
+.tarifas__reserva-titulo{ font-weight:700; color:var(--marfil); }
+.tarifas__reserva a{ color:var(--oro); font-weight:600; text-decoration:underline; }
+@media (max-width:600px){
+  .tarifas__lista li{ flex-direction:column; gap:2px; }
+  .tarifas__lista span{ text-align:left; }
+}
+
+/* Estructura de referencia del bloque:
+<div class="tarifas__bloque revelar">
+  <h3>[Pregunta de la seccion — sin cambios]</h3>
+  <p>[1-2 frases citables con el dato duro principal (GEO)]</p>
+  <div class="tarifas__panel">
+    <h4>[Titulo del panel]</h4>
+    <ul class="tarifas__lista">
+      <li><strong>[Etiqueta]</strong> <span class="tarifas__precio">[valor]</span></li>
+    </ul>
+  </div>
+  <div class="tarifas__incluye">
+    <h4>✔ [Que incluye / recomendaciones]</h4>
+    <ul>
+      <li><strong>[Dato]:</strong> [detalle].</li>
+    </ul>
+  </div>
+  <div class="tarifas__reserva">
+    <p class="tarifas__reserva-titulo">📲 [Llamado a la accion]</p>
+    <p>[Instruccion concreta de contacto, con enlace a #reservar si aplica]</p>
+  </div>
+</div>
+*/

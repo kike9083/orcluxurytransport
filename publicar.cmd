@@ -1,6 +1,8 @@
 @echo off
 REM ===========================================================================
 REM  Publica el sitio de OrcLuxuryTransport en Cloudflare Pages.
+REM  Metodo MANUAL de respaldo: el metodo principal es git push a main
+REM  (Cloudflare Pages hace el deploy automatico desde GitHub).
 REM
 REM  Antes de usarlo por primera vez, o cuando caduque la sesion:
 REM      npx wrangler login
@@ -11,22 +13,7 @@ setlocal
 cd /d "%~dp0"
 
 echo.
-echo   Preparando la carpeta dist...
-
-if exist dist rmdir /s /q dist
-mkdir dist
-mkdir dist\en
-
-copy /y "sitio-para-subir\index.html"    "dist\"    >nul
-copy /y "sitio-para-subir\404.html"      "dist\"    >nul
-copy /y "sitio-para-subir\sitemap.xml"   "dist\"    >nul
-copy /y "sitio-para-subir\robots.txt"    "dist\"    >nul
-copy /y "sitio-para-subir\llms.txt"      "dist\"    >nul
-copy /y "sitio-para-subir\en\index.html" "dist\en\" >nul
-xcopy /e /i /y "sitio-para-subir\fotos"  "dist\fotos" >nul
-
-echo   Listo. Subiendo a Cloudflare...
-echo.
+echo   Subiendo sitio-para-subir/ a Cloudflare Pages...
 
 npx wrangler pages deploy
 

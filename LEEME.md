@@ -14,10 +14,14 @@ le dé mantenimiento al sitio.
 sitio-para-subir/
   index.html          El sitio completo en español
   en/index.html       El sitio completo en inglés
+  escala-tocumen/     Landing del tour de escala (ES)
+  en/escala-tocumen/  Landing del tour de escala (EN)
   404.html            La página que se muestra si alguien entra a una dirección que no existe
+  sitemap.xml         Mapa del sitio para Google
+  robots.txt          Instrucciones para los buscadores
+  llms.txt            Resumen del sitio para asistentes de IA
   fotos/              Las fotos del sitio, ya optimizadas
   fotos/completas/    Las mismas fotos sin recortar (se usan al ampliar una imagen)
-  fotos/resenas/      Fotos de quienes dejan opiniones (vacía por ahora)
 
 functions/api/resenas.js   El código que recibe y entrega las opiniones
 esquema.sql                La estructura de la base de datos de opiniones
@@ -41,8 +45,20 @@ Cada archivo lleva una guía de edición comentada al inicio.
 
 ## Cómo publicar un cambio
 
-Hace falta tener instalado [Node.js](https://nodejs.org) y acceso a la cuenta de
-Cloudflare del propietario.
+El método principal es subir los cambios a GitHub (el sitio está conectado a
+Cloudflare Pages y se despliega solo):
+
+```
+git add -A
+git commit -m "cambio: descripción del cambio"
+git push
+```
+
+Con eso alcanza. Cloudflare Pages detecta el `push` a la rama `main` y publica
+la carpeta `sitio-para-subir/` en uno o dos minutos.
+
+**Método manual de respaldo** (si GitHub no está disponible). Hace falta tener
+instalado [Node.js](https://nodejs.org) y acceso a la cuenta de Cloudflare:
 
 **1. Iniciar sesión** (una sola vez; la sesión caduca cada cierto tiempo):
 
@@ -54,16 +70,6 @@ npx wrangler login
 
 ```
 publicar.cmd
-```
-
-Ese archivo copia lo necesario a la carpeta `dist` y lo sube. En Mac o Linux, los
-mismos pasos a mano:
-
-```
-cp sitio-para-subir/index.html sitio-para-subir/404.html dist/
-cp sitio-para-subir/en/index.html dist/en/
-cp -r sitio-para-subir/fotos dist/fotos
-npx wrangler pages deploy
 ```
 
 ---
@@ -134,3 +140,34 @@ negocio:
 Ver `PEDIR-RESENAS.md`. El sitio NO publica reseñas inventadas: solo reales y
 aprobadas. Cuando existan 3 o más publicadas se puede agregar `aggregateRating`
 al JSON-LD con valores calculados de las reseñas visibles.
+
+---
+
+## Video del hero
+
+El hero admite un video de fondo. El archivo va en `sitio-para-subir/fotos/`:
+
+- `hero.mp4` (H.264) — recomendado, compatible con todo
+- `hero.webm` (VP9) — opcional, más liviano
+
+Requisitos recomendados: **sin audio**, 8-12 segundos, bucle sin corte, 1920×1080 y
+**menos de 4 MB**. Duración corta y buena compresión: es lo que más pesa en la carga
+de la página.
+
+Si el archivo no existe, no carga o el visitante pidió menos movimiento, el sitio
+muestra automáticamente la foto `portada.webp` y no queda ningún hueco negro. No hay
+que tocar código: basta con dejar el archivo con ese nombre y volver a publicar.
+
+---
+
+## Tarjetas de destinos
+
+Las tarjetas de la sección Destinos y sus botones de WhatsApp son texto normal del
+HTML. Para cambiar el mensaje que envía cada botón, busque `data-wa` en
+`index.html`: ahí está el mensaje exacto que se abre en WhatsApp. Si cambia el
+número en `CONFIG.whatsapp` (dentro del `<script>`), los botones se actualizan
+solos al cargar la página.
+
+Los precios que muestran las tarjetas (USD 120 por 4 h, USD 200 por 8 h) son los
+mismos del servicio privado; si cambian las tarifas, busque "USD" y actualice
+tarjetas, itinerarios y sección Tarifas a la vez, en español e inglés.

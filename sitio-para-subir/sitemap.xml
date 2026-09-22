@@ -13,4 +13,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://orcluxurytransport.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://orcluxurytransport.com/"/>
   </url>
+  <url>
+    <loc>https://orcluxurytransport.com/escala-tocumen/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orcluxurytransport.com/escala-tocumen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orcluxurytransport.com/en/escala-tocumen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orcluxurytransport.com/escala-tocumen/"/>
+  </url>
+  <url>
+    <loc>https://orcluxurytransport.com/en/escala-tocumen/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://orcluxurytransport.com/escala-tocumen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://orcluxurytransport.com/en/escala-tocumen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://orcluxurytransport.com/escala-tocumen/"/>
+  </url>
 </urlset>

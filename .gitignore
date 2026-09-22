@@ -10,3 +10,6 @@ dist/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Stitch MCP API key (nunca commitear)
+.opencode/stitch.key
