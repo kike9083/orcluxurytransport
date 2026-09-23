@@ -218,6 +218,9 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
 .f-extras{ grid-column:1/-1; display:flex; flex-direction:column; gap:8px; padding:14px; background:var(--soft); border:1px dashed #D3DCE6; border-radius:14px; }
 .f-extras__titulo{ font-size:.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
 .extra-check{ display:flex; align-items:flex-start; gap:10px; font-size:.88rem; color:var(--ink); cursor:pointer; }
+.extra-check > span{ flex:1; }
+.extra-precio{ margin-left:auto; padding:3px 9px; border-radius:999px; font-size:.68rem; font-weight:800; color:var(--gold-ink); background:rgba(200,164,77,.16); white-space:nowrap; }
+.extra-precio--free{ color:#0B7A43; background:#E7F8EF; border:1px solid #C4EDD6; }
 .extra-check input{ width:17px; height:17px; margin:2px 0 0; accent-color:var(--gold); flex-shrink:0; }
 .extra-check small{ display:block; color:var(--muted); font-size:.78rem; }
 .extra-check .etiqueta-free{ display:inline-block; margin-left:6px; padding:2px 8px; border-radius:999px; font-size:.62rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#0B7A43; background:#E7F8EF; border:1px solid #C4EDD6; vertical-align:middle; }
@@ -228,7 +231,15 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
 .f-aviso a{ color:var(--navy); font-weight:700; text-decoration:underline; }
 .f-garantia{ grid-column:1/-1; margin:2px 0 0; text-align:center; font-size:.76rem; color:var(--muted); }
 
-.confianza{ background:var(--soft); border-block:1px solid var(--line); }
+.confianza{ background:transparent; border:none; margin-top:-46px; position:relative; z-index:5; }
+@media (max-width:699px){ .confianza{ background:var(--soft); border-block:1px solid var(--line); margin-top:0; } }
+.widget__cabeza{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; }
+.widget__badge{ display:inline-flex; align-items:center; gap:6px; margin-top:4px; padding:5px 11px; border-radius:999px; font-size:.68rem; font-weight:800; color:var(--gold-ink); background:rgba(200,164,77,.15); border:1px solid rgba(200,164,77,.4); white-space:nowrap; }
+.widget__badge .ico{ width:14px; height:14px; color:var(--gold); }
+.f-sugerencias{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; }
+.f-sugerencias small{ font-size:.66rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+.f-sugerido{ padding:5px 12px; border-radius:999px; font-size:.76rem; font-weight:600; color:var(--ink); background:var(--soft); border:1px solid var(--line); cursor:pointer; transition:background var(--t), border-color var(--t); }
+.f-sugerido:hover{ background:rgba(200,164,77,.14); border-color:var(--gold); }
 .confianza__rejilla{ display:grid; grid-template-columns:1fr; gap:14px; padding:30px 0; }
 .conf-card{ display:flex; align-items:flex-start; gap:13px; background:#fff; border:1px solid var(--line); border-radius:var(--radio-sm); padding:16px 18px; box-shadow:var(--sombra-2); }
 .conf-icono{ display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:12px; background:rgba(200,164,77,.15); color:var(--gold-ink); flex-shrink:0; }
@@ -245,6 +256,8 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
 .vehiculo__visual .ico{ width:64px; height:64px; color:var(--gold-2); opacity:.9; }
 .vehiculo__visual::after{ content:""; position:absolute; right:-24px; bottom:-24px; width:140px; height:140px; border-radius:50%; background:rgba(255,255,255,.06); }
 .vehiculo__capacidad{ position:absolute; top:12px; left:12px; padding:6px 12px; border-radius:999px; font-size:.7rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:#fff; background:rgba(7,26,53,.55); border:1px solid rgba(255,255,255,.25); backdrop-filter:blur(4px); }
+.vehiculo--destacado{ border:2px solid var(--gold-2); }
+.vehiculo__ribbon{ position:absolute; top:0; right:0; padding:5px 13px; border-radius:0 18px 0 12px; font-size:.62rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:var(--gold-ink); background:linear-gradient(135deg,var(--gold-2),var(--gold)); z-index:2; }
 .vehiculo__cuerpo{ display:flex; flex-direction:column; gap:12px; padding:20px 22px 22px; flex:1; }
 .vehiculo__cuerpo h3{ color:var(--navy); }
 .vehiculo__modelo{ font-size:.8rem; font-weight:600; color:var(--muted); }
@@ -297,6 +310,9 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
 .tarifas__panel li strong{ color:var(--ink); font-weight:700; }
 .tarifas__panel li span{ color:var(--navy); font-weight:800; white-space:nowrap; }
 .tarifas__nota{ max-width:780px; margin:14px auto 0; text-align:center; font-size:.82rem; color:var(--muted); }
+.tarifas__todo{ max-width:780px; margin:16px auto 0; display:flex; gap:12px; align-items:flex-start; padding:16px 18px; border-radius:16px; background:rgba(200,164,77,.12); border:1px solid rgba(200,164,77,.4); color:var(--ink); font-size:.9rem; }
+.tarifas__todo .ico{ width:20px; height:20px; color:var(--gold); margin-top:2px; }
+.tarifas__todo p{ margin:0; }
 
 .res-summary{ display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; max-width:560px; margin:0 auto 28px; padding:22px 26px; background:var(--soft); border:1px solid var(--line); border-radius:var(--radio); }
 .res-numero{ font-size:2.6rem; font-weight:800; color:var(--navy); line-height:1; }
@@ -457,8 +473,13 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
       </div>
 
       <div class="widget" id="traslados">
-        <h2 class="widget__titulo">Cotiza tu traslado en 30 segundos</h2>
-        <p class="widget__nota">Tarifa fija por zona: lo que te cotizamos es lo que pagas.</p>
+        <div class="widget__cabeza">
+          <div>
+            <h2 class="widget__titulo">Cotiza tu traslado en 30 segundos</h2>
+            <p class="widget__nota">Tarifa fija por zona: lo que te cotizamos es lo que pagas.</p>
+          </div>
+          <span class="widget__badge"><svg class="ico" aria-hidden="true"><use href="#i-escudo"></use></svg>Tarifa fija garantizada</span>
+        </div>
         <div class="tabs" role="tablist" aria-label="Tipo de servicio">
           <button class="tab" role="tab" id="tab-traslado" aria-selected="true" aria-controls="f-form">Traslado punto a punto</button>
           <button class="tab" role="tab" id="tab-horas" aria-selected="false" aria-controls="f-form">Por horas o tour</button>
@@ -474,6 +495,7 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
             <label for="f-destino">Destino <b>*</b></label>
             <input type="text" id="f-destino" name="destino" required list="destinos" placeholder="¿Hacia dónde vas?">
             <datalist id="destinos"><option value="Ciudad de Panamá"></option><option value="Casco Antiguo"></option><option value="Esclusas de Miraflores"></option><option value="Playa Blanca"></option><option value="El Valle de Antón"></option><option value="Comunidad Emberá (río Chagres)"></option></datalist>
+            <div class="f-sugerencias"><small>Sugeridos:</small><button type="button" class="f-sugerido" data-destino="Casco Antiguo">Casco Antiguo</button><button type="button" class="f-sugerido" data-destino="Costa del Este">Costa del Este</button><button type="button" class="f-sugerido" data-destino="Playa Blanca">Playa Blanca</button><button type="button" class="f-sugerido" data-destino="Buenaventura">Buenaventura</button></div>
           </div>
           <div class="f-campo">
             <label for="f-fecha">Fecha <b>*</b></label>
@@ -501,9 +523,9 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
           </div>
           <fieldset class="f-extras">
             <legend class="f-extras__titulo">Añade a tu reserva</legend>
-            <label class="extra-check"><input type="checkbox" name="extra" value="Fastrack VIP en Tocumen"><span>Asistencia Fastrack VIP en Tocumen<small>Migración y aduana aceleradas · se cotiza aparte</small></span></label>
-            <label class="extra-check"><input type="checkbox" name="extra" value="Silla de seguridad para niños"><span>Silla de seguridad para niños<span class="etiqueta-free">Sin costo</span><small>Indica la edad en el mensaje</small></span></label>
-            <label class="extra-check"><input type="checkbox" name="extra" value="eSIM con datos para Panamá"><span>eSIM con datos para Panamá<small>Conectividad desde que aterrizas</small></span></label>
+            <label class="extra-check"><input type="checkbox" name="extra" value="Fastrack VIP en Tocumen (+USD 45)"><span>Asistencia Fastrack VIP en Tocumen<small>Migración y aduana aceleradas</small></span><span class="extra-precio">+USD 45</span></label>
+            <label class="extra-check"><input type="checkbox" name="extra" value="Silla de seguridad para niños (sin costo)"><span>Silla de seguridad para niños<small>Indica la edad en el mensaje</small></span><span class="extra-precio extra-precio--free">Sin costo</span></label>
+            <label class="extra-check"><input type="checkbox" name="extra" value="eSIM con datos para Panamá (+USD 15)"><span>eSIM con datos para Panamá<small>Conectividad desde que aterrizas</small></span><span class="extra-precio">+USD 15</span></label>
           </fieldset>
           <button class="boton boton--oro f-enviar" type="submit"><svg class="ico" aria-hidden="true"><use href="#i-chat"></use></svg>Ver vehículos y tarifa final</button>
           <div class="f-aviso" id="f-aviso" role="status" aria-live="polite"></div>
@@ -548,8 +570,8 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
             <a class="boton boton--navy" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20un%20Sed%C3%A1n%20Ejecutivo%20para%20mi%20traslado%20en%20Panam%C3%A1." data-wa="Hola, quiero un Sedán Ejecutivo para mi traslado en Panamá." target="_blank" rel="noopener">Seleccionar vehículo</a>
           </div>
         </article>
-        <article class="vehiculo rev" style="--d:.08s">
-          <div class="vehiculo__visual"><span class="vehiculo__capacidad">4-5 pasajeros</span><svg class="ico" aria-hidden="true"><use href="#i-suv"></use></svg></div>
+        <article class="vehiculo vehiculo--destacado rev" style="--d:.08s">
+          <div class="vehiculo__visual"><span class="vehiculo__ribbon">Más solicitado</span><span class="vehiculo__capacidad">4-5 pasajeros</span><svg class="ico" aria-hidden="true"><use href="#i-suv"></use></svg></div>
           <div class="vehiculo__cuerpo">
             <h3>SUV de Lujo</h3>
             <span class="vehiculo__modelo">Chevrolet Tahoe / Suburban</span>
@@ -563,7 +585,7 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
               <span class="amenidad"><svg class="ico" aria-hidden="true"><use href="#i-wifi"></use></svg>Wi-Fi</span>
             </div>
             <div class="precio-linea"><small>Máximo confort ·</small><strong>Cotizar</strong></div>
-            <a class="boton boton--navy" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20una%20SUV%20de%20Lujo%20para%20mi%20traslado%20en%20Panam%C3%A1." data-wa="Hola, quiero una SUV de Lujo para mi traslado en Panamá." target="_blank" rel="noopener">Seleccionar vehículo</a>
+            <a class="boton boton--oro" href="https://wa.me/50768026916?text=Hola%2C%20quiero%20una%20SUV%20de%20Lujo%20para%20mi%20traslado%20en%20Panam%C3%A1." data-wa="Hola, quiero una SUV de Lujo para mi traslado en Panamá." target="_blank" rel="noopener">Seleccionar vehículo</a>
           </div>
         </article>
         <article class="vehiculo rev" style="--d:.16s">
@@ -706,7 +728,7 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
         <li><strong>Recorrido privado de 4 horas</strong><span>desde USD 120</span></li>
         <li><strong>Día completo (8 horas)</strong><span>desde USD 200</span></li>
       </ul>
-      <p class="tarifas__nota">Tarifa fija por zona: incluye peajes, estacionamiento, seguimiento de vuelo y 60 min de espera en llegadas. Sin recargos por horario. Precios fijos garantizados.</p>
+      <div class="tarifas__todo"><svg class="ico" aria-hidden="true"><use href="#i-check"></use></svg><p><b>Todo incluido:</b> peajes del Corredor Sur y Norte, estacionamiento del aeropuerto, seguimiento de vuelo y 60 minutos de espera sin recargo. Precios fijos garantizados, sin sorpresas.</p></div>
     </div>
   </section>
 
@@ -765,6 +787,7 @@ p{ margin:0 0 1em; } p:last-child{ margin-bottom:0; }
         <details><summary>¿Tienen sillas para niños?</summary><p>Sí. Al reservar indica la edad de los niños y preparamos la silla correspondiente, sin costo adicional y sujeta a disponibilidad.</p></details>
         <details><summary>¿Cuántas maletas caben?</summary><p>En el sedán entran 2 o 3 maletas grandes; en la minivan, entre 4 y 6 según el número de pasajeros. Si llevas más equipaje, te lo aclaramos al confirmar.</p></details>
         <details><summary>¿Los conductores hablan inglés?</summary><p>Sí. El equipo atiende en español e inglés, y la coordinación por WhatsApp también es bilingüe, 24/7.</p></details>
+        <details><summary>¿Están incluidos los peajes?</summary><p>Sí. Los peajes del Corredor Sur y Norte y el estacionamiento del aeropuerto están incluidos en tu tarifa. Nunca te pediremos dinero adicional por peajes.</p></details>
       </div>
     </div>
   </section>
@@ -987,6 +1010,15 @@ function enlaceWhatsApp(texto){
     entradas.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("on"); obs.unobserve(en.target); } });
   }, { rootMargin:"0px 0px -40px 0px" });
   document.querySelectorAll(".rev").forEach(function(e){ obs.observe(e); });
+})();
+
+(function(){
+  document.querySelectorAll(".f-sugerido").forEach(function(b){
+    b.addEventListener("click", function(){
+      var i = document.getElementById("f-destino");
+      if(i){ i.value = b.getAttribute("data-destino"); i.focus(); }
+    });
+  });
 })();
 
 (function(){
