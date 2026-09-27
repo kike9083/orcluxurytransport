@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Moderación de reseñas · Orc Luxury Transport</title>
+<style>
+:root{
+  --navy:#0B2447; --navy-2:#123B70; --gold:#C8A44D; --gold-2:#E4C879;
+  --ink:#1C2B3A; --muted:#5B6B7C; --bg:#F6F8FA; --line:#E4E9EF;
+  --ok:#1E8E5A; --danger:#B3372F; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
+button{font-family:inherit;cursor:pointer}
+[hidden]{display:none!important}
+
+/* ---- Gate ---- */
+#gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.gate-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:36px 32px;width:100%;max-width:380px;box-shadow:0 8px 30px rgba(11,36,71,.08)}
+.gate-brand{font-size:.72rem;letter-spacing:.22em;color:var(--gold);font-weight:700;text-align:center;margin-bottom:6px}
+.gate-card h1{font-size:1.15rem;color:var(--navy);text-align:center;margin-bottom:22px;font-weight:600}
+.gate-card label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px}
+.gate-card input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font-size:.95rem;color:var(--ink)}
+.gate-card input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,164,77,.18)}
+.gate-card button{width:100%;margin-top:16px;padding:12px;background:var(--navy);color:#fff;border:0;border-radius:10px;font-size:.95rem;font-weight:600;transition:background .15s}
+.gate-card button:hover{background:var(--navy-2)}
+.gate-error{margin-top:12px;color:var(--danger);font-size:.85rem;text-align:center;min-height:1.2em}
+
+/* ---- App ---- */
+.topbar{background:var(--navy);color:#fff;padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;position:sticky;top:0;z-index:5}
+.topbar .brand{font-size:.7rem;letter-spacing:.2em;color:var(--gold-2);font-weight:700}
+.topbar h1{font-size:1rem;font-weight:600}
+.topbar .spacer{flex:1}
+.topbar button{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:7px 14px;font-size:.83rem;transition:background .15s}
+.topbar button:hover{background:rgba(255,255,255,.12)}
+.stats{display:flex;gap:10px;padding:18px 20px 0;flex-wrap:wrap}
+.chip{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:.85rem;color:var(--muted)}
+.chip b{color:var(--navy);font-size:.95rem}
+.chip.pend b{color:#B07800}
+main{padding:18px 20px 48px;max-width:860px;margin:0 auto}
+h2.sec{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:26px 0 12px;font-weight:700}
+.empty{background:var(--white);border:1px dashed var(--line);border-radius:12px;padding:22px;text-align:center;color:var(--muted);font-size:.9rem}
+.card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:12px}
+.card-top{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.stars{color:var(--gold);font-size:1rem;letter-spacing:2px;white-space:nowrap}
+.who{font-weight:700;color:var(--navy);font-size:.98rem}
+.svc{display:inline-block;background:#F1F4F8;color:var(--navy-2);border-radius:999px;padding:2px 10px;font-size:.75rem;margin-left:8px;vertical-align:middle}
+.date{color:var(--muted);font-size:.78rem;margin-left:auto;white-space:nowrap}
+.card p.text{margin-top:10px;font-size:.92rem;line-height:1.55;color:var(--ink)}
+.actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.actions button{border-radius:8px;padding:8px 16px;font-size:.84rem;font-weight:600;border:1px solid transparent;transition:opacity .15s,background .15s}
+.actions button:disabled{opacity:.5;cursor:wait}
+.btn-approve{background:var(--ok);color:#fff}
+.btn-approve:hover{background:#17734a}
+.btn-hide{background:transparent;color:var(--navy);border-color:var(--line)}
+.btn-hide:hover{background:var(--bg)}
+.btn-del{background:transparent;color:var(--danger);border-color:#EBC9C6}
+.btn-del:hover{background:#FBF1F0}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:11px 22px;border-radius:999px;font-size:.87rem;box-shadow:0 6px 24px rgba(11,36,71,.3);opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}
+.toast.show{opacity:1}
+.toast.err{background:var(--danger)}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <form class="gate-card" id="gateForm">
+    <div class="gate-brand">ORC LUXURY TRANSPORT</div>
+    <h1>Moderación de reseñas</h1>
+    <label for="tok">Token de administración</label>
+    <input id="tok" type="password" autocomplete="current-password" placeholder="••••••••••••" required>
+    <button type="submit">Entrar</button>
+    <div class="gate-error" id="gateError"></div>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <header class="topbar">
+    <div>
+      <div class="brand">ORC LUXURY</div>
+      <h1>Moderación de reseñas</h1>
+    </div>
+    <div class="spacer"></div>
+    <button id="btnRefresh" type="button">Actualizar</button>
+    <button id="btnLogout" type="button">Salir</button>
+  </header>
+
+  <div class="stats">
+    <span class="chip pend">Pendientes: <b id="cPend">–</b></span>
+    <span class="chip">Publicadas: <b id="cPub">–</b></span>
+  </div>
+
+  <main>
+    <h2 class="sec">Pendientes de revisión</h2>
+    <div id="listaPend"></div>
+    <h2 class="sec">Publicadas</h2>
+    <div id="listaPub"></div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  var KEY = "orcAdminToken";
+  var TOKEN = sessionStorage.getItem(KEY) || "";
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function toast(msg, isError) {
+    var t = $("toast");
+    t.textContent = msg;
+    t.className = "toast show" + (isError ? " err" : "");
+    clearTimeout(t._h);
+    t._h = setTimeout(function () { t.className = "toast"; }, 2600);
+  }
+
+  function showGate(msg) {
+    $("app").hidden = true;
+    $("gate").hidden = false;
+    $("gateError").textContent = msg || "";
+  }
+
+  function showApp() {
+    $("gate").hidden = true;
+    $("app").hidden = false;
+  }
+
+  async function api(path, opts) {
+    opts = opts || {};
+    opts.headers = Object.assign({ "Content-Type": "application/json", "x-admin-token": TOKEN }, opts.headers || {});
+    var res = await fetch(path, opts);
+    var body = await res.json().catch(function () { return {}; });
+    if (res.status === 401) { sessionStorage.removeItem(KEY); TOKEN = ""; showGate("Token inválido."); throw new Error("401"); }
+    if (!res.ok) throw new Error(body.error || ("Error " + res.status));
+    return body;
+  }
+
+  function fecha(iso) {
+    try {
+      return new Date(iso).toLocaleDateString("es-PA", { day: "2-digit", month: "short", year: "numeric" });
+    } catch (e) { return esc(iso); }
+  }
+
+  function stars(n) {
+    n = Math.max(0, Math.min(5, n || 0));
+    return "★".repeat(n) + "☆".repeat(5 - n);
+  }
+
+  function card(r, publicada) {
+    var el = document.createElement("div");
+    el.className = "card";
+    el.innerHTML =
+      '<div class="card-top">' +
+        '<span class="stars">' + stars(r.estrellas) + "</span>" +
+        '<span class="who">' + esc(r.nombre) +
+          (r.servicio ? '<span class="svc">' + esc(r.servicio) + "</span>" : "") +
+        "</span>" +
+        '<span class="date">' + fecha(r.creada) + "</span>" +
+      "</div>" +
+      '<p class="text">' + esc(r.texto) + "</p>" +
+      '<div class="actions">' +
+        (publicada
+          ? '<button class="btn-hide" data-a="ocultar" type="button">Ocultar</button>'
+          : '<button class="btn-approve" data-a="aprobar" type="button">Aprobar</button>') +
+        '<button class="btn-del" data-a="borrar" type="button">Borrar</button>' +
+      "</div>";
+
+    el.querySelectorAll("button[data-a]").forEach(function (btn) {
+      btn.addEventListener("click", async function () {
+        var accion = btn.getAttribute("data-a");
+        if (accion === "borrar" && !confirm("¿Borrar esta reseña de forma permanente?")) return;
+        var all = el.querySelectorAll("button");
+        all.forEach(function (b) { b.disabled = true; });
+        try {
+          await api("/api/admin/resenas", { method: "POST", body: JSON.stringify({ id: r.id, accion: accion) });
+          toast(accion === "aprobar" ? "Reseña aprobada" : accion === "ocultar" ? "Reseña ocultada" : "Reseña borrada");
+          await load();
+        } catch (e) {
+          toast(e.message, true);
+          all.forEach(function (b) { b.disabled = false; });
+        }
+      });
+    });
+    return el;
+  }
+
+  function render(resenas) {
+    var pend = resenas.filter(function (r) { return !r.aprobada; });
+    var pub = resenas.filter(function (r) { return r.aprobada; });
+    $("cPend").textContent = pend.length;
+    $("cPub").textContent = pub.length;
+
+    var lp = $("listaPend"), lb = $("listaPub");
+    lp.innerHTML = ""; lb.innerHTML = "";
+    if (!pend.length) lp.innerHTML = '<div class="empty">No hay reseñas pendientes. ¡Todo al día!</div>';
+    if (!pub.length) lb.innerHTML = '<div class="empty">Aún no hay reseñas publicadas.</div>';
+    pend.forEach(function (r) { lp.appendChild(card(r, false)); });
+    pub.forEach(function (r) { lb.appendChild(card(r, true)); });
+  }
+
+  async function load() {
+    var data = await api("/api/admin/resenas");
+    render(data.resenas || []);
+  }
+
+  $("gateForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var v = $("tok").value.trim();
+    if (!v) return;
+    TOKEN = v;
+    try {
+      await load();
+      sessionStorage.setItem(KEY, TOKEN);
+      $("tok").value = "";
+      showApp();
+    } catch (err) {
+      if (err.message !== "401") $("gateError").textContent = err.message;
+    }
+  });
+
+  $("btnRefresh").addEventListener("click", function () {
+    load().catch(function (e) { toast(e.message, true); });
+  });
+  $("btnLogout").addEventListener("click", function () {
+    sessionStorage.removeItem(KEY);
+    TOKEN = "";
+    showGate();
+  });
+
+  if (TOKEN) {
+    load().then(showApp).catch(function (e) { if (e.message !== "401") toast(e.message, true); });
+  } else {
+    showGate();
+  }
+})();
+</script>
+</body>
+</html>

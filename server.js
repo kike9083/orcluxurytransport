@@ -5,6 +5,8 @@
  *
  *   GET  /api/resenas   approved reviews only
  *   POST /api/resenas   receives a new review, stores it UNAPPROVED
+ *   GET  /api/admin/resenas   list every review for moderation (ADMIN_TOKEN)
+ *   POST /api/admin/resenas   approve / hide / delete a review (ADMIN_TOKEN)
  *
  * The JSON contract is identical to the original Cloudflare Pages Function
  * (functions/api/resenas.js) so the frontend works unchanged. Storage is an
@@ -138,6 +140,62 @@ app.post("/api/resenas", async (req, res) => {
   } catch (e) {
     console.error("POST /api/resenas failed:", e.message);
     json(res, 500, { ok: false, error: "No se pudo guardar la opinión. Intente de nuevo." });
+  }
+});
+
+/* ---------- Admin moderation API (token-protected) ---------- */
+
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || "";
+const DOCUMENT_ID_RE = /^[a-f0-9]{32}$/;
+
+function adminAuth(req, res, next) {
+  if (!ADMIN_TOKEN) return json(res, 503, { ok: false, error: "Administración no habilitada en este entorno" });
+  const provided = req.get("x-admin-token") || "";
+  const a = crypto.createHash("sha256").update(provided).digest();
+  const b = crypto.createHash("sha256").update(ADMIN_TOKEN).digest();
+  if (!crypto.timingSafeEqual(a, b)) return json(res, 401, { ok: false, error: "Token inválido" });
+  next();
+}
+
+app.get("/api/admin/resenas", adminAuth, async (req, res) => {
+  try {
+    const params = new URLSearchParams();
+    params.append("queries[0]", JSON.stringify({ method: "orderDesc", attribute: "creada" }));
+    params.append("queries[1]", JSON.stringify({ method: "limit", values: [100] }));
+    const page = await awRequest(`${AW_DOCS}?${params}`);
+    const resenas = (page.documents || []).map((d) => ({
+      id: d.$id,
+      nombre: d.nombre,
+      estrellas: d.estrellas,
+      servicio: d.servicio == null ? null : d.servicio,
+      texto: d.texto,
+      creada: d.creada,
+      aprobada: d.aprobada
+    }));
+    json(res, 200, { ok: true, resenas });
+  } catch (e) {
+    console.error("GET /api/admin/resenas failed:", e.message);
+    json(res, 500, { ok: false, error: "No se pudieron leer las opiniones" });
+  }
+});
+
+app.post("/api/admin/resenas", adminAuth, async (req, res) => {
+  const { id, accion } = req.body || {};
+  if (typeof id !== "string" || !DOCUMENT_ID_RE.test(id)) return json(res, 400, { ok: false, error: "Documento inválido" });
+  if (accion !== "aprobar" && accion !== "ocultar" && accion !== "borrar") {
+    return json(res, 400, { ok: false, error: "Acción inválida" });
+  }
+  try {
+    if (accion === "borrar") {
+      await awRequest(`${AW_DOCS}/${id}`, { method: "DELETE" });
+      return json(res, 200, { ok: true, borrada: true });
+    }
+    const aprobada = accion === "aprobar" ? 1 : 0;
+    await awRequest(`${AW_DOCS}/${id}`, { method: "PATCH", body: JSON.stringify({ data: { aprobada } }) });
+    json(res, 200, { ok: true, aprobada });
+  } catch (e) {
+    console.error("POST /api/admin/resenas failed:", e.message);
+    json(res, 500, { ok: false, error: "No se pudo ejecutar la acción" });
   }
 });
 
