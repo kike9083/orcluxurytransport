@@ -1,0 +1,14 @@
+.git/
+.github/
+.wrangler/
+.opencode/
+.atl/
+node_modules/
+functions/
+*.md
+stitch-prompt.txt
+publicar.cmd
+esquema.sql
+wrangler.toml
+# Unreferenced full-size originals (4 MB) — not used by the site
+sitio-para-subir/fotos/completas/
