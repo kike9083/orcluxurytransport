@@ -181,7 +181,7 @@ h2.sec{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(
         var all = el.querySelectorAll("button");
         all.forEach(function (b) { b.disabled = true; });
         try {
-          await api("/api/admin/resenas", { method: "POST", body: JSON.stringify({ id: r.id, accion: accion) });
+          await api("/api/admin/resenas", { method: "POST", body: JSON.stringify({ id: r.id, accion: accion }) });
           toast(accion === "aprobar" ? "Reseña aprobada" : accion === "ocultar" ? "Reseña ocultada" : "Reseña borrada");
           await load();
         } catch (e) {
